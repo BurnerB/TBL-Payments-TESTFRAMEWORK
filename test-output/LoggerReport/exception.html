@@ -108,12 +108,12 @@
 				<div class="p-2 px-3 text-muted text-sm">Tags</div>
 					<div class="list-item attr">
 						<div class="list-body">
-							<a href="#" class="item-title _500">java.lang.IllegalArgumentException</a>
+							<a href="#" class="item-title _500">org.openqa.selenium.NoSuchFrameException</a>
 							<div class="item-except text-sm text-muted h-1x">
 								1 tests
 							</div>
 							<div class="tc d-none">
-								<h5 class="mb-4">java.lang.IllegalArgumentException</h5>
+								<h5 class="mb-4">org.openqa.selenium.NoSuchFrameException</h5>
 								<table class="table">
 									<thead><tr>
 										<th id="status-col"></th>
@@ -125,10 +125,10 @@
 									</tr></thead>
 									<tbody>
 	
-<tr class="s-fail" test-id="9" parent-id="1">
+<tr class="s-fail" test-id="12" parent-id="1">
 	<td><span class="w-32 avatar circle fail"><span class="badge">fail</span></span></td>
-	<td class="_600">When enters reference number in search results <br/><span class="text-muted text-sm">Approve Cash Till</span></td>
-	<td>0h 0m 0s+26msc</td>
+	<td class="_600">And clicks Approve from the dropdown <br/><span class="text-muted text-sm">Approve Cash Till</span></td>
+	<td>0h 0m 10s+104msc</td>
 	<td></td>
 	<td>
 	</td>
@@ -137,10 +137,13 @@
 <tr class="details">
 	<td colspan="5">
 		
-		<textarea disabled class="code-block">java.lang.IllegalArgumentException: Keys to send should be a not null CharSequence
-	at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:97)
-	at StepDefinitions.stepDefinitions.enters_in_search_results(stepDefinitions.java:200)
-	at ✽.enters reference number in search results(file:///C:/Users/v-bakam/eclipse-workspace/TechnoBrain-Payment/src/test/resources/FeatureFiles/Payment/c_AllocateNewCashTill.feature:19)
+		<textarea disabled class="code-block">org.openqa.selenium.NoSuchFrameException: No frame element found by name or id contentIFrame1
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-VUGFEQL', ip: '172.16.16.20', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '14.0.1'
+Driver info: driver.version: unknown
+	at org.openqa.selenium.remote.RemoteWebDriver$RemoteTargetLocator.frame(RemoteWebDriver.java:885)
+	at StepDefinitions.stepDefinitions.clicks_Approve_from_the_dropdown(stepDefinitions.java:220)
+	at ✽.clicks Approve from the dropdown(file:///C:/Users/v-bakam/eclipse-workspace/TechnoBrain-Payment/src/test/resources/FeatureFiles/Payment/c_AllocateNewCashTill.feature:114)
 </textarea>
 	</td>
 </tr>
@@ -151,12 +154,12 @@
 					</div>
 					<div class="list-item attr">
 						<div class="list-body">
-							<a href="#" class="item-title _500">org.openqa.selenium.NoSuchElementException</a>
+							<a href="#" class="item-title _500">org.openqa.selenium.NoSuchWindowException</a>
 							<div class="item-except text-sm text-muted h-1x">
-								2 tests
+								1 tests
 							</div>
 							<div class="tc d-none">
-								<h5 class="mb-4">org.openqa.selenium.NoSuchElementException</h5>
+								<h5 class="mb-4">org.openqa.selenium.NoSuchWindowException</h5>
 								<table class="table">
 									<thead><tr>
 										<th id="status-col"></th>
@@ -168,10 +171,10 @@
 									</tr></thead>
 									<tbody>
 	
-<tr class="s-fail" test-id="22" parent-id="1">
+<tr class="s-fail" test-id="18" parent-id="1">
 	<td><span class="w-32 avatar circle fail"><span class="badge">fail</span></span></td>
-	<td class="_600">When selects the ref number <br/><span class="text-muted text-sm">Cash Till Status Open</span></td>
-	<td>0h 0m 2s+79msc</td>
+	<td class="_600">When Enters the username "tripscrmuser3" and password "Passw0rd" to login <br/><span class="text-muted text-sm">Cash Till Status Open</span></td>
+	<td>0h 0m 0s+15msc</td>
 	<td></td>
 	<td>
 	</td>
@@ -180,15 +183,15 @@
 <tr class="details">
 	<td colspan="5">
 		
-		<textarea disabled class="code-block">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//option[@value='null']"}
+		<textarea disabled class="code-block">org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
+from unknown error: web view not found
   (Session info: chrome=84.0.4147.89)
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
 System info: host: 'DESKTOP-VUGFEQL', ip: '172.16.16.20', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '14.0.1'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 84.0.4147.89, chrome: {chromedriverVersion: 83.0.4103.39 (ccbf011cb2d2b..., userDataDir: C:\Users\v-bakam\AppData\Lo...}, goog:chromeOptions: {debuggerAddress: localhost:60789}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
-Session ID: cc01481ff4635cd2392854cfb2978a91
-*** Element info: {Using=xpath, value=//option[@value='null']}
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 84.0.4147.89, chrome: {chromedriverVersion: 83.0.4103.39 (ccbf011cb2d2b..., userDataDir: C:\Users\v-bakam\AppData\Lo...}, goog:chromeOptions: {debuggerAddress: localhost:63211}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 8f0294f7ad1f2b5d622a3b1df20a5b06
+*** Element info: {Using=id, value=loginForm:username}
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -201,53 +204,11 @@ Session ID: cc01481ff4635cd2392854cfb2978a91
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:372)
+	at org.openqa.selenium.By$ById.findElement(By.java:188)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-	at StepDefinitions.stepDefinitions.selects_the_ref_number(stepDefinitions.java:276)
-	at ✽.selects the ref number(file:///C:/Users/v-bakam/eclipse-workspace/TechnoBrain-Payment/src/test/resources/FeatureFiles/Payment/c_AllocateNewCashTill.feature:32)
-</textarea>
-	</td>
-</tr>
-	
-<tr class="s-fail" test-id="32" parent-id="1">
-	<td><span class="w-32 avatar circle fail"><span class="badge">fail</span></span></td>
-	<td class="_600">When selects the ref number <br/><span class="text-muted text-sm">Cash Till Status Suspended</span></td>
-	<td>0h 0m 2s+70msc</td>
-	<td></td>
-	<td>
-	</td>
-	<td class="static"><i class="static fa fa-external-link"></i></td>
-</tr>
-<tr class="details">
-	<td colspan="5">
-		
-		<textarea disabled class="code-block">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//option[@value='null']"}
-  (Session info: chrome=84.0.4147.89)
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'DESKTOP-VUGFEQL', ip: '172.16.16.20', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '14.0.1'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 84.0.4147.89, chrome: {chromedriverVersion: 83.0.4103.39 (ccbf011cb2d2b..., userDataDir: C:\Users\v-bakam\AppData\Lo...}, goog:chromeOptions: {debuggerAddress: localhost:60845}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
-Session ID: 71d10129f906424d5e489c08a5604e0f
-*** Element info: {Using=xpath, value=//option[@value='null']}
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-	at StepDefinitions.stepDefinitions.selects_the_ref_number(stepDefinitions.java:276)
-	at ✽.selects the ref number(file:///C:/Users/v-bakam/eclipse-workspace/TechnoBrain-Payment/src/test/resources/FeatureFiles/Payment/c_AllocateNewCashTill.feature:49)
+	at StepDefinitions.stepDefinitions.enters_the_username_something_and_password_something_to_login(stepDefinitions.java:74)
+	at ✽.Enters the username "tripscrmuser3" and password "Passw0rd" to login(file:///C:/Users/v-bakam/eclipse-workspace/TechnoBrain-Payment/src/test/resources/FeatureFiles/Payment/c_AllocateNewCashTill.feature:121)
 </textarea>
 	</td>
 </tr>
@@ -275,7 +236,7 @@ Session ID: 71d10129f906424d5e489c08a5604e0f
 						            </div>
 									<ul class="nav nav-xs flex-row no-border pull-right">
 <li><a href="#" class="b-l"><span class="badge badge-pull">ExtentReports</span></a></li>
-<li><a href="#" class="b-l"><span class="badge badge-pull">Jul 18, 2020 10:41:41 PM</span></a></li>
+<li><a href="#" class="b-l"><span class="badge badge-pull">Jul 18, 2020 11:35:14 PM</span></a></li>
 <li><a href="#" class="b-l"><span class="badge badge-pull">4.0</span></a></li>
 								    </ul>
 								</div>

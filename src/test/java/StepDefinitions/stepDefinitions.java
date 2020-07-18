@@ -197,8 +197,8 @@ public class stepDefinitions extends BaseClass{
     public void enters_in_search_results() throws Throwable {
     	WebDriverWait wait=new WebDriverWait(driver, 20);
     	WebElement search = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("crmGrid_findCriteria")));
-    	search.sendKeys(sharedatastep.P_CRMARN);
-//    	search.sendKeys("CT00001143");
+//    	search.sendKeys(sharedatastep.P_CRMARN);
+    	search.sendKeys("CT00001148");
     	search.sendKeys(Keys.ENTER);
     	
     	Thread.sleep(2000);
@@ -271,9 +271,9 @@ public class stepDefinitions extends BaseClass{
         Thread.sleep(2000);
         
         //click on the ref number of the specific cash till on the dropdown
-//        WebElement refNumber =driver.findElement(By.xpath("//option[@value='"+ sharedatastep.P_CRMARN +"']"));
+        WebElement refNumber =driver.findElement(By.xpath("//option[@value='CT00001148']"));
         
-        WebElement refNumber =driver.findElement(By.xpath("//option[@value='"+ sharedatastep.P_CRMARN +"']"));
+//        WebElement refNumber =driver.findElement(By.xpath("//option[@value='"+ sharedatastep.P_CRMARN +"']"));
         Thread.sleep(2000);
         refNumber.click();
         driver.findElement(By.xpath("//html")).click();
@@ -330,6 +330,64 @@ public class stepDefinitions extends BaseClass{
     	}
     }
     
+    @And("^clicks Decline from the dropdown$")
+    public void clicks_Decline_from_the_dropdown() throws Throwable {
+    	driver.switchTo().frame("contentIFrame1");
+    	Thread.sleep(7000);
+    	driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+
+    	Actions action=new Actions(driver);
+    	WebElement Outcome=driver.findElement(By.id(Pro.getProperty("Taxpayer_Accounting_Approval_Outcome_ID")));
+    	WebElement hasLoaded= driver.findElement(By.id("header_process_tbg_approvaloutcome_lock"));
+    			
+    	driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+    	Thread.sleep(7000);
+    	if(hasLoaded.isDisplayed()) {
+    		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+    	}else {
+    		action.doubleClick(Outcome).build().perform();
+        	Outcome.click();
+        	action.sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ENTER).perform();
+    	}
+    }
+    
+    @Then("^Enter Outcome Notes (.+)$")
+    public void enter_outcome_notes(String Notes) throws Throwable {
+    	Thread.sleep(3000);
+    	Actions action1 = new Actions(driver);
+	     WebElement element1=driver.findElement(By.id((Pro.getProperty("Individual_NextStage_RefNum_Reject_OutComeNotes_ID"))));
+	     action1.sendKeys(element1, Notes).build().perform();
+	     Thread.sleep(5000);
+    }
+    
+    @Then("^Enter Outcome Reason for Taxpayer accounting$")
+    public void enter_Outcome_Reason_for_Taxpayer_accounting() throws Throwable {
+    	WebElement specificframe=driver.findElement(By.id("WebResource_RevenueCollectionRejectionDataWebResource"));
+    	driver.switchTo().frame(specificframe);
+    	WebElement dropDown = driver.findElement(By.xpath("//*[@id=\"viewoption\"]"));	
+    	dropDown.click();
+    	
+    	driver.findElement(By.xpath("//option[@value='3']")).click();
+
+    }
+    
+    @Then("^cashTill status should be (.+)$")
+    public void cashtill_status_should_be(String status) throws Throwable {
+        String cashTillStatus = driver.findElement(By.id("CashTillMaintenance:TillStatus_label")).getText();
+        Assert.assertEquals(status, cashTillStatus);
+    }
+    
+    @Then("^error message displayed$")
+    public void error_message_displayed() throws Throwable {
+driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+    	
+    	WebElement Message = driver.findElement(By.xpath("//span[contains(text(),'Float Amount - A value is required')]"));
+    	if(Message.isDisplayed()) {
+    		Assert.assertTrue("Error message displayed",true);
+    	}else {
+    		Assert.fail("No Error message displayed");
+    	}
+    }
 }
 
 

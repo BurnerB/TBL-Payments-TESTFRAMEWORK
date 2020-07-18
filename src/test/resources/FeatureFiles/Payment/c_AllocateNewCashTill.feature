@@ -50,7 +50,7 @@ When selects the ref number
 Then Suspend CashTill
 Then Cash Till is now suspended
 
-@SUC:05-02
+#@SUC:05-02
 Scenario: UAT_M7_02-03-Verify the Process Supervisor Rejection
 Given User navigates to the login page
 When Enters the username "tripscrmuser3" and password "Passw0rd" to login
@@ -59,4 +59,69 @@ Given navigate to Revenue Collection>>Cash Till Maintenance
 When clicks on Request Cash Till button
 Then success message displayed
 
-Scenario: Reject Cash Till
+#@SUC:05-02
+Scenario Outline: Reject Cash Till
+Given Open CRM URL Module
+ And Close Popup Window
+ And Click on Case management dropdown
+ And click on Revenue Collection application
+Then switch to frame
+When enters reference number in search results
+Then switch to frame 
+When Click selected Reference Number
+And clicks Decline from the dropdown
+Then Enter Outcome Notes <Notes>
+And Enter Outcome Reason for Taxpayer accounting
+And click save on Payments
+Then Application Account Adjustment status should be "Rejected"
+
+Examples:
+|    Notes            |Reason|
+|Invalid Documentation|Duplicate entity found|
+
+#@SUC:05-02
+Scenario Outline: Cash Till Status Rejected
+Given User navigates to the login page
+When Enters the username "tripscrmuser3" and password "Passw0rd" to login
+Then User should be logged in 
+Given navigate to Revenue Collection>>Cash Till Maintenance
+When selects the ref number
+Then cashTill status should be <Status>
+
+Examples:
+|Status|
+|Rejected|
+
+#@SUC:05-02
+Scenario: UAT_M7_02-04-Verify the Process Float Not Added
+Given User navigates to the login page
+When Enters the username "tripscrmuser3" and password "Passw0rd" to login
+Then User should be logged in 
+Given navigate to Revenue Collection>>Cash Till Maintenance
+When clicks on Request Cash Till button
+Then success message displayed
+
+@SUC:05-02
+Scenario: Approve Cash Till
+Given Open CRM URL Module
+ And Close Popup Window
+ And Click on Case management dropdown
+ And click on Revenue Collection application
+Then switch to frame
+When enters reference number in search results
+Then switch to frame 
+When Click selected Reference Number
+And clicks Approve from the dropdown
+And click save on Payments
+Then Application Account Adjustment status should be "Approved"
+
+@SUC:05-02
+Scenario: Cash Till Status Open
+Given User navigates to the login page
+When Enters the username "tripscrmuser3" and password "Passw0rd" to login
+Then User should be logged in 
+Given navigate to Revenue Collection>>Cash Till Maintenance
+When selects the ref number
+And clicks Save
+Then error message displayed
+

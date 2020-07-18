@@ -44,6 +44,7 @@
 		<ul id='slide-out' class='side-nav fixed hide-on-med-and-down'>
 			<li class='waves-effect active'><a href='#!' view='test-view' onclick="configureView(0);chartsView('test');"><i class='material-icons'>dashboard</i></a></li>
 						<li class='waves-effect'><a href='#!' view='category-view' onclick="configureView(1)"><i class='material-icons'>label_outline</i></a></li>
+			<li class='waves-effect'><a href='#!' view='exception-view' onclick="configureView(2)"><i class='material-icons'>bug_report</i></a></li>
 			<li class='waves-effect'><a href='#!' onclick="configureView(-1);chartsView('dashboard');" view='dashboard-view'><i class='material-icons'>track_changes</i></a></li>
 		</ul>
 		<!-- report name -->
@@ -53,7 +54,7 @@
 		<!-- nav-right -->
 		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
 			<a href='#!'>
-			<span class='label blue darken-3 suite-start-time'>Jul 18, 2020 10:43:54 PM</span>
+			<span class='label blue darken-3 suite-start-time'>Jul 18, 2020 11:35:14 PM</span>
 			</a>
 		</ul>
 	</div>
@@ -69,6 +70,8 @@
 				</a>
 				<ul id='tests-toggle' class='dropdown-content'>
 										<li status='pass'><a href='#!'>Pass <i class='material-icons green-text'>check_circle</i></a></li>
+					<li status='fail'><a href='#!'>Fail <i class='material-icons red-text'>cancel</i></a></li>
+					<li status='skip'><a href='#!'>Skip <i class='material-icons cyan-text'>redo</i></a></li>
 					<li class='divider'></li>
 					<li status='clear' clear='true'><a href='#!'>Clear Filters <i class='material-icons'>clear</i></a></li>
 				</ul>
@@ -121,10 +124,10 @@
                     <canvas id='parent-analysis' width='90' height='70'></canvas>
                 </div>
                 <div class='block text-small'>
-                    <span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>1</span> feature(s) passed</span>
+                    <span class='tooltipped' data-position='top' data-tooltip='0%'><span class='strong'>0</span> feature(s) passed</span>
                 </div>
                 <div class='block text-small'>
-                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> feature(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> skipped
+                    <span class='strong tooltipped' data-position='top' data-tooltip='100%'>1</span> feature(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> skipped
                 </div>
             </div>
         </div>
@@ -135,10 +138,10 @@
                     <canvas id='child-analysis' width='90' height='70'></canvas>
                 </div>
                 <div class='block text-small'>
-                    <span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>4</span> scenario(s) passed</span>
+                    <span class='tooltipped' data-position='top' data-tooltip='0%'><span class='strong'>0</span> scenario(s) passed</span>
                 </div>
                 <div class='block text-small'>
-                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> scenario(s) failed, 
+                    <span class='strong tooltipped' data-position='top' data-tooltip='100%'>2</span> scenario(s) failed, 
                     <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> skipped, 
                     <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
                 </div>
@@ -151,12 +154,12 @@
                     <canvas id='grandchild-analysis' width='90' height='70'></canvas>
                 </div>
                 <div class='block text-small'>
-                    <span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>32</span> step(s) passed</span>
+                    <span class='tooltipped' data-position='top' data-tooltip='50%'><span class='strong'>9</span> step(s) passed</span>
                 </div>
                 <div class='block text-small'>
-                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> scenario(s) failed, 
-                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> skipped, 
-                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
+                    <span class='strong tooltipped' data-position='top' data-tooltip='11.111%'>2</span> scenario(s) failed, 
+                    <span class='strong tooltipped' data-position='top' data-tooltip='38.889%'>7</span> skipped, 
+                    <span class='strong tooltipped' data-position='top' data-tooltip='38.889%'>0</span> others
                 </div>
             </div>
         </div>
@@ -174,11 +177,11 @@
 </div>	<div class='subview-left left'>
 		<div class='view-summary'>
 			<ul id='test-collection' class='test-collection'>
-				<li class='test displayed active has-leaf pass' status='pass' bdd='true' test-id='1'>
+				<li class='test displayed active has-leaf fail' status='fail' bdd='true' test-id='1'>
 					<div class='test-heading'>
 						<span class='test-name'>[SUC:05-02] Allocate New Cash Till</span>
-						<span class='test-time'>Jul 18, 2020 10:43:54 PM</span>
-						<span class='test-status right pass'>pass</span>
+						<span class='test-time'>Jul 18, 2020 11:35:15 PM</span>
+						<span class='test-status right fail'>fail</span>
 					</div>
 					<div class='test-content hide'>
 <div class="sr-filters bdd-filters">
@@ -187,181 +190,130 @@
 	<a class="btn-floating waves-effect waves-light skip blue" title="skip"><i class='material-icons'>redo</i></a>
 	<a class="btn-floating waves-effect waves-light clear grey" title="clear"><i class='material-icons'>clear</i></a>
 </div>
-<div class='scenario node' test-id='2' status='pass'>
+<div class='scenario node' test-id='2' status='fail'>
 	<div class='category-list'>
 		<span class='category label'>@SUC:05-02</span>
 	</div>
-	<span class='duration right label'>0h 0m 28s+788ms</span>
+	<span class='duration right label'>0h 0m 57s+657ms</span>
 	<div class="bdd-test">
-		<div class="scenario-name"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span> Scenario: UAT_M7_02-01-UAT_M7_02-02-Verify the Process of Allocate Cash Till</div>
+		<div class="scenario-name"><span class='status fail' title='fail'><i class='material-icons'>cancel</i></span> Scenario: Approve Cash Till</div>
 	</div>
 	<ul class='steps'>
 		<li test-id='4' class='node given pass' status='pass'>
-			<div class="step-name" title="StepDefinitions.stepDefinitions.user_navigates_to_the_login_page()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Given User navigates to the login page</div>
-			<div class="node-step"></div>
-		</li>
-		<li test-id='5' class='node when pass' status='pass'>
-			<div class="step-name" title="StepDefinitions.stepDefinitions.enters_the_username_something_and_password_something_to_login(java.lang.String,java.lang.String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>When Enters the username "tripscrmuser3" and password "Passw0rd" to login</div>
-			<div class="node-step"></div>
-		</li>
-		<li test-id='6' class='node then pass' status='pass'>
-			<div class="step-name" title="StepDefinitions.stepDefinitions.user_should_be_logged_in()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then User should be logged in</div>
-			<div class="node-step"></div>
-		</li>
-		<li test-id='7' class='node given pass' status='pass'>
-			<div class="step-name" title="StepDefinitions.stepDefinitions.navigate_to_revenue_collectioncash_till_maintenance()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Given navigate to Revenue Collection>>Cash Till Maintenance</div>
-			<div class="node-step"></div>
-		</li>
-		<li test-id='8' class='node when pass' status='pass'>
-			<div class="step-name" title="StepDefinitions.stepDefinitions.clicks_on_request_cash_till_button()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>When clicks on Request Cash Till button</div>
-			<div class="node-step"></div>
-		</li>
-		<li test-id='9' class='node then pass' status='pass'>
-			<div class="step-name" title="StepDefinitions.stepDefinitions.success_message_displayed()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then success message displayed</div>
-			<div class="node-step"></div>
-		</li>
-	</ul>
-</div>
-<div class='scenario node' test-id='10' status='pass'>
-	<div class='category-list'>
-		<span class='category label'>@SUC:05-02</span>
-	</div>
-	<span class='duration right label'>0h 1m 14s+605ms</span>
-	<div class="bdd-test">
-		<div class="scenario-name"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span> Scenario: Approve Cash Till</div>
-	</div>
-	<ul class='steps'>
-		<li test-id='12' class='node given pass' status='pass'>
 			<div class="step-name" title="StepDefinitions.stepDefinitions.open_CRM_URL_Module()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Given Open CRM URL Module</div>
 			<div class="node-step"></div>
 		</li>
-		<li test-id='13' class='node and pass' status='pass'>
+		<li test-id='5' class='node and pass' status='pass'>
 			<div class="step-name" title="StepDefinitions.stepDefinitions.close_Popup_Window()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And Close Popup Window</div>
 			<div class="node-step"></div>
 		</li>
-		<li test-id='14' class='node and pass' status='pass'>
+		<li test-id='6' class='node and pass' status='pass'>
 			<div class="step-name" title="StepDefinitions.stepDefinitions.click_on_case_management_dropdown()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And Click on Case management dropdown</div>
 			<div class="node-step"></div>
 		</li>
-		<li test-id='15' class='node and pass' status='pass'>
+		<li test-id='7' class='node and pass' status='pass'>
 			<div class="step-name" title="StepDefinitions.stepDefinitions.click_on_revenue_collection_application()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And click on Revenue Collection application</div>
 			<div class="node-step"></div>
 		</li>
-		<li test-id='16' class='node then pass' status='pass'>
+		<li test-id='8' class='node then pass' status='pass'>
 			<div class="step-name" title="StepDefinitions.stepDefinitions.switch_to_frame()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then switch to frame</div>
 			<div class="node-step"></div>
 		</li>
-		<li test-id='17' class='node when pass' status='pass'>
+		<li test-id='9' class='node when pass' status='pass'>
 			<div class="step-name" title="StepDefinitions.stepDefinitions.enters_in_search_results()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>When enters reference number in search results</div>
 			<div class="node-step"></div>
 		</li>
-		<li test-id='18' class='node then pass' status='pass'>
+		<li test-id='10' class='node then pass' status='pass'>
 			<div class="step-name" title="StepDefinitions.stepDefinitions.switch_to_frame()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then switch to frame</div>
 			<div class="node-step"></div>
 		</li>
-		<li test-id='19' class='node when pass' status='pass'>
+		<li test-id='11' class='node when pass' status='pass'>
 			<div class="step-name" title="StepDefinitions.stepDefinitions.click_selected_Reference_Number()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>When Click selected Reference Number</div>
 			<div class="node-step"></div>
 		</li>
-		<li test-id='20' class='node and pass' status='pass'>
-			<div class="step-name" title="StepDefinitions.stepDefinitions.clicks_Approve_from_the_dropdown()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And clicks Approve from the dropdown</div>
-			<div class="node-step"></div>
+		<li test-id='12' class='node and fail' status='fail'>
+			<div class="step-name" title="StepDefinitions.stepDefinitions.clicks_Approve_from_the_dropdown()"><span class='status fail' title='fail'><i class='material-icons'>cancel</i></span>And clicks Approve from the dropdown</div>
+			<textarea disabled class="code-block">org.openqa.selenium.NoSuchFrameException: No frame element found by name or id contentIFrame1
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-VUGFEQL', ip: '172.16.16.20', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '14.0.1'
+Driver info: driver.version: unknown
+	at org.openqa.selenium.remote.RemoteWebDriver$RemoteTargetLocator.frame(RemoteWebDriver.java:885)
+	at StepDefinitions.stepDefinitions.clicks_Approve_from_the_dropdown(stepDefinitions.java:220)
+	at ✽.clicks Approve from the dropdown(file:///C:/Users/v-bakam/eclipse-workspace/TechnoBrain-Payment/src/test/resources/FeatureFiles/Payment/c_AllocateNewCashTill.feature:114)
+</textarea>
 		</li>
-		<li test-id='21' class='node and pass' status='pass'>
-			<div class="step-name" title="StepDefinitions.stepDefinitions.click_save_on_Payments()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And click save on Payments</div>
-			<div class="node-step"></div>
+		<li test-id='13' class='node and skip' status='skip'>
+			<div class="step-name" title="StepDefinitions.stepDefinitions.click_save_on_Payments()"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>And click save on Payments</div>
+			<div class="node-step">Step skipped</div>
 		</li>
-		<li test-id='22' class='node then pass' status='pass'>
-			<div class="step-name" title="StepDefinitions.stepDefinitions.application_account_adjustment_status_should_be_something(java.lang.String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then Application Account Adjustment status should be "Approved"</div>
-			<div class="node-step"></div>
-		</li>
-	</ul>
-</div>
-<div class='scenario outline node' test-id='23' status='pass'>
-	<div class='category-list'>
-		<span class='category label'>@SUC:05-02</span>
-	</div>
-	<span class='duration right label'>0h 0m 41s+656ms</span>
-	<div class="bdd-test">
-		<div class="scenario-name"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span> Scenario Outline: Cash Till Status Open</div>
-		<table class='runtime-table table-striped table'><tr><td>amount</td></tr><tr><td>5000</td></tr></table>
-	</div>
-	<ul class='steps'>
-		<li test-id='24' class='node scenario pass' status='pass'>
-			<div class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Cash Till Status Open</div>
-			<ul class='gc steps'>
-				<li test-id='26' class='gc given pass' status='pass'>
-					<h6 class="step-name" title="StepDefinitions.stepDefinitions.user_navigates_to_the_login_page()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Given User navigates to the login page</h6>
-					<div class="node-step"></div>
-				</li>
-				<li test-id='27' class='gc when pass' status='pass'>
-					<h6 class="step-name" title="StepDefinitions.stepDefinitions.enters_the_username_something_and_password_something_to_login(java.lang.String,java.lang.String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>When Enters the username "tripscrmuser3" and password "Passw0rd" to login</h6>
-					<div class="node-step"></div>
-				</li>
-				<li test-id='28' class='gc then pass' status='pass'>
-					<h6 class="step-name" title="StepDefinitions.stepDefinitions.user_should_be_logged_in()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then User should be logged in</h6>
-					<div class="node-step"></div>
-				</li>
-				<li test-id='29' class='gc given pass' status='pass'>
-					<h6 class="step-name" title="StepDefinitions.stepDefinitions.navigate_to_revenue_collectioncash_till_maintenance()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Given navigate to Revenue Collection>>Cash Till Maintenance</h6>
-					<div class="node-step"></div>
-				</li>
-				<li test-id='30' class='gc when pass' status='pass'>
-					<h6 class="step-name" title="StepDefinitions.stepDefinitions.selects_the_ref_number()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>When selects the ref number</h6>
-					<div class="node-step"></div>
-				</li>
-				<li test-id='31' class='gc and pass' status='pass'>
-					<h6 class="step-name" title="StepDefinitions.stepDefinitions.enters_float_amount(java.lang.String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And enters float amount 5000</h6>
-					<div class="node-step"></div>
-				</li>
-				<li test-id='32' class='gc and pass' status='pass'>
-					<h6 class="step-name" title="StepDefinitions.stepDefinitions.clicks_save()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And clicks Save</h6>
-					<div class="node-step"></div>
-				</li>
-				<li test-id='33' class='gc then pass' status='pass'>
-					<h6 class="step-name" title="StepDefinitions.stepDefinitions.cash_till_is_now_open()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then Cash Till is now open</h6>
-					<div class="node-step"></div>
-				</li>
-			</ul>
+		<li test-id='14' class='node then skip' status='skip'>
+			<div class="step-name" title="StepDefinitions.stepDefinitions.application_account_adjustment_status_should_be_something(java.lang.String)"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>Then Application Account Adjustment status should be "Approved"</div>
+			<div class="node-step">Step skipped</div>
 		</li>
 	</ul>
 </div>
-<div class='scenario node' test-id='34' status='pass'>
+<div class='scenario node' test-id='15' status='fail'>
 	<div class='category-list'>
 		<span class='category label'>@SUC:05-02</span>
 	</div>
-	<span class='duration right label'>0h 0m 38s+60ms</span>
+	<span class='duration right label'>0h 0m 6s+864ms</span>
 	<div class="bdd-test">
-		<div class="scenario-name"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span> Scenario: Cash Till Status Suspended</div>
+		<div class="scenario-name"><span class='status fail' title='fail'><i class='material-icons'>cancel</i></span> Scenario: Cash Till Status Open</div>
 	</div>
 	<ul class='steps'>
-		<li test-id='36' class='node given pass' status='pass'>
+		<li test-id='17' class='node given pass' status='pass'>
 			<div class="step-name" title="StepDefinitions.stepDefinitions.user_navigates_to_the_login_page()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Given User navigates to the login page</div>
 			<div class="node-step"></div>
 		</li>
-		<li test-id='37' class='node when pass' status='pass'>
-			<div class="step-name" title="StepDefinitions.stepDefinitions.enters_the_username_something_and_password_something_to_login(java.lang.String,java.lang.String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>When Enters the username "tripscrmuser3" and password "Passw0rd" to login</div>
-			<div class="node-step"></div>
+		<li test-id='18' class='node when fail' status='fail'>
+			<div class="step-name" title="StepDefinitions.stepDefinitions.enters_the_username_something_and_password_something_to_login(java.lang.String,java.lang.String)"><span class='status fail' title='fail'><i class='material-icons'>cancel</i></span>When Enters the username "tripscrmuser3" and password "Passw0rd" to login</div>
+			<textarea disabled class="code-block">org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=84.0.4147.89)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-VUGFEQL', ip: '172.16.16.20', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '14.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 84.0.4147.89, chrome: {chromedriverVersion: 83.0.4103.39 (ccbf011cb2d2b..., userDataDir: C:\Users\v-bakam\AppData\Lo...}, goog:chromeOptions: {debuggerAddress: localhost:63211}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 8f0294f7ad1f2b5d622a3b1df20a5b06
+*** Element info: {Using=id, value=loginForm:username}
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:372)
+	at org.openqa.selenium.By$ById.findElement(By.java:188)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at StepDefinitions.stepDefinitions.enters_the_username_something_and_password_something_to_login(stepDefinitions.java:74)
+	at ✽.Enters the username "tripscrmuser3" and password "Passw0rd" to login(file:///C:/Users/v-bakam/eclipse-workspace/TechnoBrain-Payment/src/test/resources/FeatureFiles/Payment/c_AllocateNewCashTill.feature:121)
+</textarea>
 		</li>
-		<li test-id='38' class='node then pass' status='pass'>
-			<div class="step-name" title="StepDefinitions.stepDefinitions.user_should_be_logged_in()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then User should be logged in</div>
-			<div class="node-step"></div>
+		<li test-id='19' class='node then skip' status='skip'>
+			<div class="step-name" title="StepDefinitions.stepDefinitions.user_should_be_logged_in()"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>Then User should be logged in</div>
+			<div class="node-step">Step skipped</div>
 		</li>
-		<li test-id='39' class='node given pass' status='pass'>
-			<div class="step-name" title="StepDefinitions.stepDefinitions.navigate_to_revenue_collectioncash_till_maintenance()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Given navigate to Revenue Collection>>Cash Till Maintenance</div>
-			<div class="node-step"></div>
+		<li test-id='20' class='node given skip' status='skip'>
+			<div class="step-name" title="StepDefinitions.stepDefinitions.navigate_to_revenue_collectioncash_till_maintenance()"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>Given navigate to Revenue Collection>>Cash Till Maintenance</div>
+			<div class="node-step">Step skipped</div>
 		</li>
-		<li test-id='40' class='node when pass' status='pass'>
-			<div class="step-name" title="StepDefinitions.stepDefinitions.selects_the_ref_number()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>When selects the ref number</div>
-			<div class="node-step"></div>
+		<li test-id='21' class='node when skip' status='skip'>
+			<div class="step-name" title="StepDefinitions.stepDefinitions.selects_the_ref_number()"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>When selects the ref number</div>
+			<div class="node-step">Step skipped</div>
 		</li>
-		<li test-id='41' class='node then pass' status='pass'>
-			<div class="step-name" title="StepDefinitions.stepDefinitions.suspend_cashtill()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then Suspend CashTill</div>
-			<div class="node-step"></div>
+		<li test-id='22' class='node and skip' status='skip'>
+			<div class="step-name" title="StepDefinitions.stepDefinitions.clicks_save()"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>And clicks Save</div>
+			<div class="node-step">Step skipped</div>
 		</li>
-		<li test-id='42' class='node then pass' status='pass'>
-			<div class="step-name" title="StepDefinitions.stepDefinitions.cash_till_is_now_suspended()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then Cash Till is now suspended</div>
-			<div class="node-step"></div>
+		<li test-id='23' class='node then skip' status='skip'>
+			<div class="step-name" title="StepDefinitions.stepDefinitions.error_message_displayed()"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>Then error message displayed</div>
+			<div class="node-step">Step skipped</div>
 		</li>
 	</ul>
 </div>
@@ -409,13 +361,13 @@
 					<div class='category-heading'>
 						<span class='category-name'>@SUC:05-02</span>
 						<span class='category-status right'>
-						<span class='label pass'>5</span>
+						<span class='label fail'>2</span>
 						</span>
 					</div>
 					<div class='category-content hide'>
 						<div class='category-status-counts'>
-							<span status="pass" class='label green accent-4 white-text'>Passed: 5</span>
 							
+							<span status="fail" class='label red lighten-1 white-text'>Failed: 2</span>
 							
 						</div>
 						<div class='category-tests'>
@@ -429,29 +381,14 @@
 								</thead>
 								<tbody>
 									<tr>
-										<td>Jul 18, 2020 10:43:54 PM</td>
-										<td class='linked' test-id='2'>UAT_M7_02-01-UAT_M7_02-02-Verify the Process of Allocate Cash Till</td>
-										<td><span class='test-status pass'>pass</span></td>
+										<td>Jul 18, 2020 11:35:15 PM</td>
+										<td class='linked' test-id='2'>Approve Cash Till</td>
+										<td><span class='test-status fail'>fail</span></td>
 									</tr>
 									<tr>
-										<td>Jul 18, 2020 10:44:23 PM</td>
-										<td class='linked' test-id='10'>Approve Cash Till</td>
-										<td><span class='test-status pass'>pass</span></td>
-									</tr>
-									<tr>
-										<td>Jul 18, 2020 10:45:38 PM</td>
-										<td class='linked' test-id='23'>Cash Till Status Open</td>
-										<td><span class='test-status pass'>pass</span></td>
-									</tr>
-									<tr>
-										<td>Jul 18, 2020 10:45:38 PM</td>
-										<td class='linked' test-id='24'>Cash Till Status Open</td>
-										<td><span class='test-status pass'>pass</span></td>
-									</tr>
-									<tr>
-										<td>Jul 18, 2020 10:46:19 PM</td>
-										<td class='linked' test-id='34'>Cash Till Status Suspended</td>
-										<td><span class='test-status pass'>pass</span></td>
+										<td>Jul 18, 2020 11:36:12 PM</td>
+										<td class='linked' test-id='15'>Cash Till Status Open</td>
+										<td><span class='test-status fail'>fail</span></td>
 									</tr>
 								</tbody>
 							</table>
@@ -467,7 +404,123 @@
 		</div>
 	</div>
 </div>
-<!-- category view --><!-- exception view --><div id='dashboard-view' class='view hide'>
+<!-- category view --><div id='exception-view' class='view hide'>
+	<section id='controls'>
+		<div class='controls grey lighten-4'>
+			<!-- search -->
+			<div class='chip transparent' alt='Search Tests' title='Search Tests'>
+				<a href="#" class='search-div'>
+				<i class='material-icons'>search</i> Search
+				</a>
+				<div class='input-field left hide'>
+					<input id='search-tests' type='text' class='validate browser-default' placeholder='Search Tests...'>
+				</div>
+			</div>
+			<!-- search -->
+		</div>
+	</section>
+	<div class='subview-left left'>
+		<div class='view-summary'>
+			<ul id='exception-collection' class='exception-collection'>
+				<li class='exception displayed active'>
+					<div class='exception-heading'>
+						<span class='exception-name'>org.openqa.selenium.NoSuchFrameException</span>
+						<span class='exception-count right'><span class='label red lighten-1 white-text'>1</span></span>
+					</div>
+					<div class='exception-content hide'>
+						<div class='exception-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Jul 18, 2020 11:36:02 PM</td>
+										<td class='linked' test-id='12'>And clicks Approve from the dropdown</td>
+										<td>
+											<textarea disabled class="code-block">org.openqa.selenium.NoSuchFrameException: No frame element found by name or id contentIFrame1
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-VUGFEQL', ip: '172.16.16.20', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '14.0.1'
+Driver info: driver.version: unknown
+	at org.openqa.selenium.remote.RemoteWebDriver$RemoteTargetLocator.frame(RemoteWebDriver.java:885)
+	at StepDefinitions.stepDefinitions.clicks_Approve_from_the_dropdown(stepDefinitions.java:220)
+	at ✽.clicks Approve from the dropdown(file:///C:/Users/v-bakam/eclipse-workspace/TechnoBrain-Payment/src/test/resources/FeatureFiles/Payment/c_AllocateNewCashTill.feature:114)
+</textarea>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='exception displayed active'>
+					<div class='exception-heading'>
+						<span class='exception-name'>org.openqa.selenium.NoSuchWindowException</span>
+						<span class='exception-count right'><span class='label red lighten-1 white-text'>1</span></span>
+					</div>
+					<div class='exception-content hide'>
+						<div class='exception-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Jul 18, 2020 11:36:19 PM</td>
+										<td class='linked' test-id='18'>When Enters the username "tripscrmuser3" and password "Passw0rd" to login</td>
+										<td>
+											<textarea disabled class="code-block">org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=84.0.4147.89)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-VUGFEQL', ip: '172.16.16.20', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '14.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 84.0.4147.89, chrome: {chromedriverVersion: 83.0.4103.39 (ccbf011cb2d2b..., userDataDir: C:\Users\v-bakam\AppData\Lo...}, goog:chromeOptions: {debuggerAddress: localhost:63211}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 8f0294f7ad1f2b5d622a3b1df20a5b06
+*** Element info: {Using=id, value=loginForm:username}
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:372)
+	at org.openqa.selenium.By$ById.findElement(By.java:188)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at StepDefinitions.stepDefinitions.enters_the_username_something_and_password_something_to_login(stepDefinitions.java:74)
+	at ✽.Enters the username "tripscrmuser3" and password "Passw0rd" to login(file:///C:/Users/v-bakam/eclipse-workspace/TechnoBrain-Payment/src/test/resources/FeatureFiles/Payment/c_AllocateNewCashTill.feature:121)
+</textarea>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div class='subview-right left'>
+		<div class='view-summary'>
+			<h5 class='exception-name'></h5>
+		</div>
+	</div>
+</div>
+<!-- exception view --><div id='dashboard-view' class='view hide'>
 	<div class='card-panel transparent np-v'>
 		<h5>Dashboard</h5>
 
@@ -481,31 +534,31 @@
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Scenarios
-					<div class='panel-lead'>4</div>
+					<div class='panel-lead'>2</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Steps
-					<div class='panel-lead'>32</div>
+					<div class='panel-lead'>18</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Start
-					<div class='panel-lead'>Jul 18, 2020 10:43:54 PM</div>
+					<div class='panel-lead'>Jul 18, 2020 11:35:14 PM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 			 		End
-			 		<div class='panel-lead'>Jul 18, 2020 10:46:58 PM</div>
+			 		<div class='panel-lead'>Jul 18, 2020 11:36:19 PM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Time Taken
-					<div class='panel-lead'>0h 3m 3s+556ms</div>
+					<div class='panel-lead'>0h 1m 4s+966ms</div>
 				</div>
 			</div>
 			<div class='col s6'>
@@ -522,11 +575,11 @@
 						</tr>
 						<tr>
 							<td>@SUC:05-02</td>
-							<td>5</td>
 							<td>0</td>
+							<td>2</td>
 							<td>0</td>
 							<td>
-									100%
+									0%
 							</td>
 						</tr>
 					</table>
@@ -541,38 +594,38 @@
 		<script>
 			var statusGroup = {
                 parentCount: 1,
-				passParent: 1,
-				failParent: 0,
+				passParent: 0,
+				failParent: 1,
 				fatalParent: 0,
 				errorParent: 0,
 				warningParent: 0,
 				skipParent: 0,
-				exceptionsParent: 0,
-				childCount: 4,
-				passChild: 4,
-				failChild: 0,
+				exceptionsParent: 1,
+				childCount: 2,
+				passChild: 0,
+				failChild: 2,
 				fatalChild: 0,
 				errorChild: 0,
 				warningChild: 0,
 				skipChild: 0,
 				infoChild: 0,
 				debugChild: 0,
-				exceptionsChild: 0,
-				grandChildCount: 32,
-				passGrandChild: 32,
-				failGrandChild: 0,
+				exceptionsChild: 2,
+				grandChildCount: 18,
+				passGrandChild: 9,
+				failGrandChild: 2,
 				fatalGrandChild: 0,
 				errorGrandChild: 0,
 				warningGrandChild: 0,
-				skipGrandChild: 0,
+				skipGrandChild: 7,
 				infoGrandChild: 0,
 				debugGrandChild: 0,
-				exceptionsGrandChild: 0,
+				exceptionsGrandChild: 9,
 			};
 		</script>
 		<script>
 			var timeline = {
-			        "[SUC:05-02] Allocate New Cash Till":183.137
+			        "[SUC:05-02] Allocate New Cash Till":64.533
 			};
 		</script>
 	
