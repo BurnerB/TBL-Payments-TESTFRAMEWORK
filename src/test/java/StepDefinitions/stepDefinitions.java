@@ -198,7 +198,7 @@ public class stepDefinitions extends BaseClass{
     	WebDriverWait wait=new WebDriverWait(driver, 20);
     	WebElement search = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("crmGrid_findCriteria")));
 //    	search.sendKeys(sharedatastep.P_CRMARN);
-    	search.sendKeys("CT00001148");
+    	search.sendKeys("CT00000721");
     	search.sendKeys(Keys.ENTER);
     	
     	Thread.sleep(2000);
@@ -271,12 +271,11 @@ public class stepDefinitions extends BaseClass{
         Thread.sleep(2000);
         
         //click on the ref number of the specific cash till on the dropdown
-        WebElement refNumber =driver.findElement(By.xpath("//option[@value='CT00001148']"));
+        WebElement refNumber =driver.findElement(By.xpath("//li[@data-label='CT00001148']"));
         
 //        WebElement refNumber =driver.findElement(By.xpath("//option[@value='"+ sharedatastep.P_CRMARN +"']"));
         Thread.sleep(2000);
         refNumber.click();
-        driver.findElement(By.xpath("//html")).click();
         
     }
     
@@ -373,8 +372,9 @@ public class stepDefinitions extends BaseClass{
     
     @Then("^cashTill status should be (.+)$")
     public void cashtill_status_should_be(String status) throws Throwable {
-        String cashTillStatus = driver.findElement(By.id("CashTillMaintenance:TillStatus_label")).getText();
-        Assert.assertEquals(status, cashTillStatus);
+    	WebElement cashTillStatus = driver.findElement(By.xpath("//*[@id=\"CashTillMaintenance:TillStatus_label\"]"));
+
+        Assert.assertEquals(status, cashTillStatus.getText());
     }
     
     @Then("^error message displayed$")
@@ -386,6 +386,38 @@ driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
     		Assert.assertTrue("Error message displayed",true);
     	}else {
     		Assert.fail("No Error message displayed");
+    	}
+    }
+    
+    @When("^selects the (.+)$")
+    public void selects_the(String refnumber) throws Throwable {
+    	WebElement cashTillReferenceDropdown=driver.findElement(By.xpath("//*[@id=\"CashTillMaintenance:TillReference\"]/div[3]"));
+        cashTillReferenceDropdown.click();
+        Thread.sleep(2000);
+        sharedatastep.P_CRMARN=refnumber;
+        //click on the ref number of the specific cash till on the dropdown
+        WebElement refrenceNumber =driver.findElement(By.xpath("//li[@data-label='"+refnumber+"']"));
+        
+        Thread.sleep(2000);
+        refrenceNumber.click();
+//        driver.findElement(By.xpath("//html")).click();
+        Thread.sleep(5000);
+    }
+    
+    @And("^clicks on Open Cash Till button$")
+    public void clicks_on_open_cash_till_button() throws Throwable {
+    	Thread.sleep(4000);
+    	driver.findElement(By.id(Pro.getProperty("openCashTill_id"))).click();
+    }
+    @Then("^successfuly awaits approval$")
+    public void successfuly_awaits_approval() throws Throwable {
+    	driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+    	
+    	WebElement Message = driver.findElement(By.xpath("//span[contains(text(),'Request has been sent successfully for approval')]"));
+    	if(Message.isDisplayed()) {
+    		Assert.assertTrue("Success message displayed",true);
+    	}else {
+    		Assert.fail("No Success message displayed");
     	}
     }
 }
