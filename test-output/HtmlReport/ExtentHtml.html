@@ -53,7 +53,7 @@
 		<!-- nav-right -->
 		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
 			<a href='#!'>
-			<span class='label blue darken-3 suite-start-time'>Jul 19, 2020 09:16:58 PM</span>
+			<span class='label blue darken-3 suite-start-time'>Jul 21, 2020 12:28:52 PM</span>
 			</a>
 		</ul>
 	</div>
@@ -80,7 +80,7 @@
 				<i class='material-icons'>local_offer</i> Category
 				</a>
 				<ul id='category-toggle' class='dropdown-content'>
-					<li><a href='#'>@SUC:05-02</a></li>
+					<li><a href='#'>@SUC:05-11</a></li>
 					<li class='divider'></li>
 					<li class='clear'><a href='#!' clear='true'>Clear Filters</a></li>
 				</ul>
@@ -151,7 +151,7 @@
                     <canvas id='grandchild-analysis' width='90' height='70'></canvas>
                 </div>
                 <div class='block text-small'>
-                    <span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>6</span> step(s) passed</span>
+                    <span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>7</span> step(s) passed</span>
                 </div>
                 <div class='block text-small'>
                     <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> scenario(s) failed, 
@@ -176,8 +176,8 @@
 			<ul id='test-collection' class='test-collection'>
 				<li class='test displayed active has-leaf pass' status='pass' bdd='true' test-id='1'>
 					<div class='test-heading'>
-						<span class='test-name'>[SUC:05-02] Allocate New Cash Till</span>
-						<span class='test-time'>Jul 19, 2020 09:16:58 PM</span>
+						<span class='test-name'>[SUC:05-11] Cash Office Reconciliation</span>
+						<span class='test-time'>Jul 21, 2020 12:28:52 PM</span>
 						<span class='test-status right pass'>pass</span>
 					</div>
 					<div class='test-content hide'>
@@ -189,23 +189,23 @@
 </div>
 <div class='scenario outline node' test-id='2' status='pass'>
 	<div class='category-list'>
-		<span class='category label'>@SUC:05-02</span>
+		<span class='category label'>@SUC:05-11</span>
 	</div>
-	<span class='duration right label'>0h 0m 42s+131ms</span>
+	<span class='duration right label'>0h 0m 40s+323ms</span>
 	<div class="bdd-test">
-		<div class="scenario-name"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span> Scenario Outline: status set to open</div>
-		<table class='runtime-table table-striped table'><tr><td>ref number</td><td>Status</td></tr><tr><td>CT00000721</td><td>Open</td></tr></table>
+		<div class="scenario-name"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span> Scenario Outline: UAT_M5_15-01-UAT_M5_15-02-Verify the Process of Open a Cash Office</div>
+		<table class='runtime-table table-striped table'><tr><td>cfN</td></tr><tr><td>Balaka Office1</td></tr></table>
 	</div>
 	<ul class='steps'>
 		<li test-id='3' class='node scenario pass' status='pass'>
-			<div class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>status set to open</div>
+			<div class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>UAT_M5_15-01-UAT_M5_15-02-Verify the Process of Open a Cash Office</div>
 			<ul class='gc steps'>
 				<li test-id='5' class='gc given pass' status='pass'>
 					<h6 class="step-name" title="StepDefinitions.stepDefinitions.user_navigates_to_the_login_page()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Given User navigates to the login page</h6>
 					<div class="node-step"></div>
 				</li>
 				<li test-id='6' class='gc when pass' status='pass'>
-					<h6 class="step-name" title="StepDefinitions.stepDefinitions.enters_the_username_something_and_password_something_to_login(java.lang.String,java.lang.String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>When Enters the username "tripscrmuser3" and password "Passw0rd" to login</h6>
+					<h6 class="step-name" title="StepDefinitions.stepDefinitions.enters_the_username_something_and_password_something_to_login(java.lang.String,java.lang.String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>When Enters the username "tripscrmuser11" and password "Passw0rd" to login</h6>
 					<div class="node-step"></div>
 				</li>
 				<li test-id='7' class='gc then pass' status='pass'>
@@ -213,15 +213,19 @@
 					<div class="node-step"></div>
 				</li>
 				<li test-id='8' class='gc given pass' status='pass'>
-					<h6 class="step-name" title="StepDefinitions.stepDefinitions.navigate_to_revenue_collectioncash_till_maintenance()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Given navigate to Revenue Collection>>Cash Till Maintenance</h6>
+					<h6 class="step-name" title="StepDefinitions.stepDefinitions.navigate_to_revenue_collectioncash_office_daily_control()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Given navigate to Revenue Collection>>Cash Office Daily Control</h6>
 					<div class="node-step"></div>
 				</li>
 				<li test-id='9' class='gc when pass' status='pass'>
-					<h6 class="step-name" title="StepDefinitions.stepDefinitions.selects_the(java.lang.String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>When selects the CT00000721</h6>
+					<h6 class="step-name" title="StepDefinitions.stepDefinitions.selects_cash_office_name(java.lang.String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>When selects Cash Office Name Balaka Office1</h6>
 					<div class="node-step"></div>
 				</li>
-				<li test-id='10' class='gc then pass' status='pass'>
-					<h6 class="step-name" title="StepDefinitions.stepDefinitions.cashtill_status_should_be(java.lang.String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then cashTill status should be Open</h6>
+				<li test-id='10' class='gc and pass' status='pass'>
+					<h6 class="step-name" title="StepDefinitions.stepDefinitions.clicks_open_cash_office()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And clicks Open Cash Office</h6>
+					<div class="node-step"></div>
+				</li>
+				<li test-id='11' class='gc then pass' status='pass'>
+					<h6 class="step-name" title="StepDefinitions.stepDefinitions.system_opens_the_cash_office()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then System opens the Cash Office</h6>
 					<div class="node-step"></div>
 				</li>
 			</ul>
@@ -270,7 +274,7 @@
 			<ul id='category-collection' class='category-collection'>
 				<li class='category displayed active'>
 					<div class='category-heading'>
-						<span class='category-name'>@SUC:05-02</span>
+						<span class='category-name'>@SUC:05-11</span>
 						<span class='category-status right'>
 						<span class='label pass'>2</span>
 						</span>
@@ -292,13 +296,13 @@
 								</thead>
 								<tbody>
 									<tr>
-										<td>Jul 19, 2020 09:16:58 PM</td>
-										<td class='linked' test-id='2'>status set to open</td>
+										<td>Jul 21, 2020 12:28:52 PM</td>
+										<td class='linked' test-id='2'>UAT_M5_15-01-UAT_M5_15-02-Verify the Process of Open a Cash Office</td>
 										<td><span class='test-status pass'>pass</span></td>
 									</tr>
 									<tr>
-										<td>Jul 19, 2020 09:16:58 PM</td>
-										<td class='linked' test-id='3'>status set to open</td>
+										<td>Jul 21, 2020 12:28:52 PM</td>
+										<td class='linked' test-id='3'>UAT_M5_15-01-UAT_M5_15-02-Verify the Process of Open a Cash Office</td>
 										<td><span class='test-status pass'>pass</span></td>
 									</tr>
 								</tbody>
@@ -335,25 +339,25 @@
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Steps
-					<div class='panel-lead'>6</div>
+					<div class='panel-lead'>7</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Start
-					<div class='panel-lead'>Jul 19, 2020 09:16:58 PM</div>
+					<div class='panel-lead'>Jul 21, 2020 12:28:52 PM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 			 		End
-			 		<div class='panel-lead'>Jul 19, 2020 09:17:40 PM</div>
+			 		<div class='panel-lead'>Jul 21, 2020 12:29:32 PM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Time Taken
-					<div class='panel-lead'>0h 0m 42s+641ms</div>
+					<div class='panel-lead'>0h 0m 40s+780ms</div>
 				</div>
 			</div>
 			<div class='col s6'>
@@ -369,7 +373,7 @@
 							<th>Passed %</th>
 						</tr>
 						<tr>
-							<td>@SUC:05-02</td>
+							<td>@SUC:05-11</td>
 							<td>2</td>
 							<td>0</td>
 							<td>0</td>
@@ -406,8 +410,8 @@
 				infoChild: 0,
 				debugChild: 0,
 				exceptionsChild: 0,
-				grandChildCount: 6,
-				passGrandChild: 6,
+				grandChildCount: 7,
+				passGrandChild: 7,
 				failGrandChild: 0,
 				fatalGrandChild: 0,
 				errorGrandChild: 0,
@@ -420,7 +424,7 @@
 		</script>
 		<script>
 			var timeline = {
-			        "[SUC:05-02] Allocate New Cash Till":42.131
+			        "[SUC:05-11] Cash Office Reconciliation":40.323
 			};
 		</script>
 	

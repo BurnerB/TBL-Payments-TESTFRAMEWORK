@@ -112,10 +112,11 @@ public class stepDefinitions extends BaseClass{
 
         if (openCashofficeButton) {
             driver.findElement(By.xpath("//*[@id='CashOfficeDailyControlform:btnOpenCashOffice']")).click();	
-        }else
-        driver.findElement(By.xpath("//*[@id=\"CashOfficeDailyControlform:btnReconcileCashOffice\"]")).click();
-        Thread.sleep(9000);
-        driver.findElement(By.xpath("//*[@id=\"CashOfficeDailyControlform:btnOpenCashOffice\"]/span")).click();
+        }
+        Thread.sleep(4000);
+        driver.findElement(By.id("CashOfficeDailyControlform:btnReconcileCashOffice")).click();
+        Thread.sleep(2000);
+        driver.findElement(By.id("CashOfficeDailyControlform:btnOpenCashOffice")).click();
     }
     
     @Then("^System opens the Cash Office$")
@@ -420,6 +421,175 @@ driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
     		Assert.fail("No Success message displayed");
     	}
     }
+    
+    @And("^enters payment collection (.+)$")
+    public void enters_payment_collection(String payment) throws Throwable {
+        WebElement paymentCollectionInput = driver.findElement(By.id("CashTillMaintenance:PaymentCollected_input"));
+        paymentCollectionInput.sendKeys(payment);
+    }
+    
+    @And("^clicks on close Cash Till button$")
+    public void clicks_on_close_cash_till_button() throws Throwable {
+    	Thread.sleep(4000);
+    	driver.findElement(By.id(Pro.getProperty("closeCashTill_id"))).click();
+    	Thread.sleep(3000);
+    }
+    
+    @Then("^prompt to click save appears$")
+    public void prompt_to_click_save_appears() throws Throwable {
+    	driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+    	
+    	WebElement Message = driver.findElement(By.xpath("//span[contains(text(),'To close the cash till, use')]"));
+    	if(Message.isDisplayed()) {
+    		Assert.assertTrue("Success message displayed",true);
+    	}else {
+    		Assert.fail("No Success message displayed");
+    	}
+    }
+    
+    @Then("^unreconciled error message displayed$")
+    public void unreconciled_error_message_displayed() throws Throwable {
+    	driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+    	
+    	WebElement Message = driver.findElement(By.xpath("//span[contains(text(),'Cash Till does not reconcile')]"));
+    	if(Message.isDisplayed()) {
+    		Assert.assertTrue("Error message displayed",true);
+    	}else {
+    		Assert.fail("No Error message displayed");
+    	}
+    }
+  
+///-----------------------------------------------Cash Office Reconciliation------------------------------------------------------------------------------------------///    
+    @And("^leaves cash office blank and click reconcile$")
+    public void leaves_cash_office_blank_and_click_reconcile() throws Throwable {
+    	driver.findElement(By.xpath(Pro.getProperty("cashOffice_NameDropdown_Xpath"))).click();
+        Thread.sleep(2000);
+        driver.findElement(By.id("CashOfficeDailyControlform:CashOfficeName_0")).click();
+        
+        WebElement reconcileButton = driver.findElement(By.xpath("//*[@id=\"CashOfficeDailyControlform:btnReconcileCashOffice\"]"));
+        reconcileButton.click();
+        Thread.sleep(4000);
+    }
+    @Then("^error message is displayed \"([^\"]*)\"$")
+    public void error_message_is_displayed_something(String strArg1) throws Throwable {
+    	driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+    	
+    	WebElement Message = driver.findElement(By.xpath("//span[contains(text(),'"+strArg1+"')]"));
+    	if(Message.isDisplayed()) {
+    		Assert.assertTrue("Error message displayed",true);
+    	}else {
+    		Assert.fail("No Error message displayed");
+    	}
+    }
+    
+    @When("^selects Cash Office Name (.+)$")
+    public void selects_cash_office_name(String cfn) throws Throwable {
+    	driver.findElement(By.xpath(Pro.getProperty("cashOffice_NameDropdown_Xpath"))).click();
+        Thread.sleep(2000);
+        
+        driver.findElement(By.xpath("//li[@data-label='"+cfn+"']")).click();  
+        Thread.sleep(4000);
+    }
+    
+    @And("^clicks reconcile Cash Office$")
+    public void clicks_reconcile_cash_office() throws Throwable {
+    	Thread.sleep(4000);
+    	WebElement reconcileButton = driver.findElement(By.id("CashOfficeDailyControlform:btnReconcileCashOffice"));
+        reconcileButton.click();
+        Thread.sleep(4000);
+    }
+    
+    @When("^enters cash till reference$")
+    public void enters_cash_till_reference() throws Throwable {
+       WebElement cashTillRefDropdown = driver.findElement(By.xpath("//*[@id=\"CashOfficeDailyControlform:CashTillReference\"]/div[3]"));
+       cashTillRefDropdown.click();
+       Thread.sleep(2000);
+       driver.findElement(By.id("CashOfficeDailyControlform:CashTillReference_1")).click();
+    }
+    
+    @Then("^The System displays the Unreconciled Cash Till details$")
+    public void the_system_displays_the_unreconciled_cash_till_details() throws Throwable {
+    	Thread.sleep(2000);
+        WebElement cashTillStatus = driver.findElement(By.id("CashOfficeDailyControlform:tillStatus"));
+        Assert.assertEquals(cashTillStatus.getAttribute("value"), "UNRECONCILED");
+    }
+    
+    @When("^user enters (.+)$")
+    public void user_enters(String adjustmentreason) throws Throwable {
+    	WebElement adjustmentReasonDropdown = driver.findElement(By.xpath("//*[@id=\"CashOfficeDailyControlform:AdjustmentReason\"]/div[3]"));
+    	adjustmentReasonDropdown.click();
+        Thread.sleep(2000);
+        driver.findElement(By.xpath("//li[@data-label='"+adjustmentreason+"']")).click();
+        
+        //Adjustment value is the total amount minus float minus payment collected
+        String totalAmount = driver.findElement(By.id("CashOfficeDailyControlform:totalAmount")).getAttribute("value");
+        
+        String floatAmount = driver.findElement(By.id("CashOfficeDailyControlform:floatAmount")).getAttribute("value");
+        String paymentCollected = driver.findElement(By.id("CashOfficeDailyControlform:paymentCollected")).getAttribute("value");
+        
+        System.out.print("floatAmount--"+floatAmount);
+        System.out.print("paymentCollected--"+paymentCollected);
+        System.out.print("totalAmount--"+totalAmount);
+        
+        
+        
+        //AdjustmentValue=totalAmount-(floatAmount+paymentCollected)
+        int totalSubtract = Integer.parseInt(floatAmount)+Integer.parseInt(paymentCollected);
+        System.out.print("totalSubtract--"+totalSubtract);
+        System.out.print("--------------------------------");
+        
+        float adjustmentValue = Float.parseFloat(totalAmount);
+        adjustmentValue=adjustmentValue-totalSubtract;
+        
+        WebElement adjustmentValueInput = driver.findElement(By.id("CashOfficeDailyControlform:AdjustmentValue_input"));
+        adjustmentValueInput.sendKeys(String.valueOf(adjustmentValue));
+    }
+    
+    @Then("^clicks on Save Button$")
+    public void clicks_on_save_button() throws Throwable {
+    	Thread.sleep(2000);
+        WebElement resolutionSaveButton = driver.findElement(By.id("CashOfficeDailyControlform:save"));
+        resolutionSaveButton.click();
+        Thread.sleep(4000);
+    }
+    
+    @When("^clicks Generate Unreconciled Report button$")
+    public void clicks_generate_unreconciled_report_button() throws Throwable {
+    	
+    	WebElement btnGenerateUnrRep = driver.findElement(By.id("CashOfficeDailyControlform:btnGenerateUnrRep"));
+    	btnGenerateUnrRep.click();
+	    Thread.sleep(4000);
+    }
+    
+    @Then("^Report download should be generate (.+) and (.+)$")
+    public void report_download_should_be_generate_and(String downloadpath, String filename) throws Throwable {
+    	boolean isPresent = false;
+	    File dir = new File(downloadpath);
+	    File[] dir_contents = dir.listFiles();
+	  	
+	    for (int i = 0; i < dir_contents.length; i++) {
+	        if (dir_contents[i].getName().equals(filename))
+	        	isPresent=true;
+	            }
+	    Thread.sleep(4000);
+	    Assert.assertTrue(isPresent);
+	    
+    }
+    
+    @And("^clicks  Cash Office Summary Report button$")
+    public void clicks_cash_office_summary_report_button() throws Throwable {
+    	WebElement btnSummaryRep = driver.findElement(By.id("CashOfficeDailyControlform:btnCashOffSumRep"));
+    	btnSummaryRep.click();
+	    Thread.sleep(4000);
+    }
+    
+    @And("^clicks Generate Bank Lodgement Report button$")
+    public void clicks_generate_bank_lodgement_report_button() throws Throwable {
+    	WebElement btnGenerateBankLodRep = driver.findElement(By.id("CashOfficeDailyControlform:btnGenerateBankLodRep"));
+    	btnGenerateBankLodRep.click();
+	    Thread.sleep(4000);
+    }
+
 }
 
 
