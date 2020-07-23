@@ -95,7 +95,7 @@ Examples:
 |cfN|	downloadpath	|filename|
 |Balaka Office1|	C:\Users\v-bakam\Downloads	|BankLodgementSlip.pdf|
 
-@SUC:05-11
+#@SUC:05-11
 Scenario Outline: UAT_M5_15-01-UAT_M5_15-02-Verify the Process of Open a Cash Office
 Given navigate to Revenue Collection>>Cash Office Daily Control
 When selects Cash Office Name <cfN>

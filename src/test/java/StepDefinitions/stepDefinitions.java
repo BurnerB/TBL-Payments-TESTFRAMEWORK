@@ -380,7 +380,7 @@ public class stepDefinitions extends BaseClass{
     
     @Then("^error message displayed$")
     public void error_message_displayed() throws Throwable {
-driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+    	driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
     	
     	WebElement Message = driver.findElement(By.xpath("//span[contains(text(),'Float Amount - A value is required')]"));
     	if(Message.isDisplayed()) {
@@ -472,7 +472,7 @@ driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
     }
     @Then("^error message is displayed \"([^\"]*)\"$")
     public void error_message_is_displayed_something(String strArg1) throws Throwable {
-    	driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+    	driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
     	
     	WebElement Message = driver.findElement(By.xpath("//span[contains(text(),'"+strArg1+"')]"));
     	if(Message.isDisplayed()) {
@@ -589,7 +589,328 @@ driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
     	btnGenerateBankLodRep.click();
 	    Thread.sleep(4000);
     }
+    
+    //----------------------------------------------------------Payment Receipting--------------------------------------------------------------------//
+    
+    @Given("^navigate to  Revenue Collection>>Receive Payment$")
+    public void navigate_to_revenue_collectionreceive_payment() throws Throwable {
+        driver.findElement(By.xpath(Pro.getProperty("RevenueCollection_RevenueCollection_XPATH"))).click();
+        Thread.sleep(2000);
+        driver.findElement(By.xpath(Pro.getProperty("RevenueCollection_recieve_Payment_XPATH"))).click();
+        Thread.sleep(4000);
+        
+    }
+    
+    @When("^click on Find Button$")
+    public void click_on_find_button() throws Throwable {
+    	WebDriverWait wait=new WebDriverWait(driver,10);
+  	  	wait.until(ExpectedConditions.elementToBeClickable(By.id("PaymentSummary:FindTin"))).click();
+    }
+    
+    @Then("^Find Entity pop up window should be displayed$")
+    public void find_entity_pop_up_window_should_be_displayed() throws Throwable {
+    	Thread.sleep(4000);
+    	//Switch to iframe to allow interaction with modal
+        WebElement frame = driver.findElement(By.tagName("iframe"));
+        driver.switchTo().frame(frame);
+        Thread.sleep(2000);
+        
+        String modalHeader = driver.findElement(By.id("SearchForm:directorHeader")).getText();
+        Assert.assertEquals(modalHeader, "Trips - Find Entity");
+    }
+    
+    @When("^User enters (.+) and (.+)$")
+    public void user_enters_and(String taxpayerclassificationtype, String tin) throws Throwable {
+        WebElement taxpayerClassificationdropDown=driver.findElement(By.xpath("//*[@id=\"SearchForm:DTYPE\"]/div[3]"));
+        taxpayerClassificationdropDown.click();
+        Thread.sleep(2000);
+        driver.findElement(By.xpath("//li[@data-label='"+taxpayerclassificationtype+"']")).click();
+        driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
 
+        WebElement tinInput = driver.findElement(By.id("SearchForm:accountNumber"));
+        tinInput.sendKeys(tin);
+    }
+    
+    ////---------------------------------------------View Payment--------------------------------------------------------------------------------------------//
+    @Given("^navigate to  Revenue Collection>>View Payment$")
+    public void navigate_to_revenue_collectionview_payment() throws Throwable {
+    	driver.findElement(By.xpath(Pro.getProperty("RevenueCollection_RevenueCollection_XPATH"))).click();
+        Thread.sleep(2000);
+        driver.findElement(By.xpath(Pro.getProperty("RevenueCollection_view_Payment_XPATH"))).click();
+        Thread.sleep(3000);
+    }
+    
+    @When("^From Find Payment window enters (.+) and (.+)$")
+    public void from_find_payment_window_enters_and(String tin, String paymentmethod) throws Throwable {
+    	WebElement tinInput = driver.findElement(By.id("SearchForm:TIN"));
+        tinInput.sendKeys(tin);
+        
+        WebElement paymentMethoddropDown=driver.findElement(By.xpath("//*[@id=\"SearchForm:PaymentMethod\"]/div[3]"));
+        paymentMethoddropDown.click();
+        Thread.sleep(2000);
+        driver.findElement(By.xpath("//li[@data-label='"+paymentmethod+"']")).click();
+        
+    }
+    
+    @And("^clicks search$")
+    public void clicks_search() throws Throwable {
+    	
+        WebElement searchButton = driver.findElement(By.id("SearchForm:j_idt42"));
+        searchButton.click();
+    }
+    
+    //////------------------------------------------------Payment Receipting-------------------------------------------------------------///
+    @Then("^System displays message Records Not Found$")
+    public void system_displays_message_records_not_found() throws Throwable {
+    	driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+    	
+    	String emptyDatatable = driver.findElement(By.xpath("//*[@id=\"SearchForm:resultsDataTable_data\"]/tr/td")).getText();
+        Assert.assertEquals(emptyDatatable, "No records found.");
+    }
+    
+    @And("^clicks search button$")
+    public void clicks_search_button() throws Throwable {
+    	WebElement searchButton = driver.findElement(By.id("SearchForm:j_idt21"));
+        searchButton.click();
+    }
+    
+    @Then("^Payment Summary window displayed (.+)$")
+    public void payment_summary_window_displayed(String tin) throws Throwable {
+    	driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+    	Thread.sleep(4000);
+        String paymentSummaryLabel = driver.findElement(By.id("PaymentSummary:TaxpayerHeader")).getText();
+        Assert.assertEquals(paymentSummaryLabel, "Taxpayer Account");
+        
+        String TIN = driver.findElement(By.id("PaymentSummary:TIN")).getAttribute("value");
+        Assert.assertEquals(TIN, tin);
+        
+    }
+    
+    @When("^From Payment Summary window enters (.+)$")
+    public void from_payment_summary_window_enters(String nameofpersonpaying) throws Throwable {
+        WebElement personPayingInput = driver.findElement(By.id("PaymentSummary:personPaying_id"));
+        personPayingInput.sendKeys(nameofpersonpaying);
+    }
+    
+    @And("^clicks add button$")
+    public void clicks_add_button() throws Throwable {
+        WebElement paymentSummaryAddBtn = driver.findElement(By.id("PaymentSummary:PaymentListDataTable:AddBtn"));
+        paymentSummaryAddBtn.click();
+        Thread.sleep(4000);
+    }
+    
+    @Then("^Payment Details should be displayed$")
+    public void payment_details_should_be_displayed() throws Throwable {
+        String paymentDetailsHeader = driver.findElement(By.xpath("//*[@id=\"PaymentDetails:paymentAccordion\"]/ul/li")).getText();
+        Assert.assertEquals(paymentDetailsHeader, "Payment Details");
+        
+    }
+    
+    @When("^user fills Payment Amount as (.+)$")
+    public void user_fills_payment_amount_as(String amount) throws Throwable {
+    	WebElement paymentAmountInput = driver.findElement(By.id("PaymentDetails:paymentAccordion:paymentAmount_id_input"));
+    	paymentAmountInput.sendKeys(amount);
+    }
+    
+    @And("^clicks Next button$")
+    public void clicks_next_button() throws Throwable {
+    	WebElement nextBtn = driver.findElement(By.id("PaymentDetails:paymentAccordion:Next"));
+    	nextBtn.click();
+    	Thread.sleep(4000);
+    }
+    
+    @Then("^Payment Allocation Summary tab should be displayed$")
+    public void payment_allocation_summary_tab_should_be_displayed() throws Throwable {
+        WebElement paymentAllocationSummaryTab = driver.findElement(By.xpath("//*[@id=\"PaymentDetails:paymentAccordion\"]/ul/li[2]"));
+        Assert.assertTrue(paymentAllocationSummaryTab.isDisplayed());
+    }
+    
+    @When("^clicks on On Account Button$")
+    public void clicks_on_on_account_button() throws Throwable {
+        WebElement onAccountBtn = driver.findElement(By.id("PaymentDetails:paymentAccordion:PaymentSpread:OnAccount"));
+        onAccountBtn.click();
+        Thread.sleep(4000);
+    }
+     
+    @Then("^Account Payment Details pop up window should be displayed$")
+    public void account_payment_details_pop_up_window_should_be_displayed() throws Throwable {	
+    	WebElement paymentonAccountHeader = driver.findElement(By.xpath("//*[@id=\"PaymentDetails:paymentAccordion:PaymentSpread:OnAccount_dlg\"]/div[1]"));
+        Assert.assertTrue(paymentonAccountHeader.isDisplayed());
+    }
+    
+    @When("^On Account Payment Details enters (.+) and (.+)$")
+    public void on_account_payment_details_enters_and(String taxtype, String amountallocated) throws Throwable {
+    	//Switch to iframe to allow interaction with modal
+        WebElement frame = driver.findElement(By.tagName("iframe"));
+        driver.switchTo().frame(frame);
+        Thread.sleep(2000);
+        
+        //Enter tax type
+        WebElement taxTypedropDown = driver.findElement(By.xpath("//*[@id=\"OnAccountPayment:RegimeType\"]/div[3]"));
+        taxTypedropDown.click();
+        Thread.sleep(2000);
+        driver.findElement(By.xpath("//li[@data-label='"+taxtype+"']")).click();
+        
+        //Enter returnType
+//        WebElement returnTypeDropdown = driver.findElement(By.xpath("//*[@id=\"OnAccountPayment:ReturnType\"]/div[3]"));
+//        returnTypeDropdown.click();
+//        Thread.sleep(2000);
+//        driver.findElement(By.id("OnAccountPayment:ReturnType_1")).click();
+        
+        //Enter amount
+        Thread.sleep(2000);
+        driver.findElement(By.id("OnAccountPayment:AmountAllocated_input")).sendKeys(amountallocated);
+    }
+    
+    @And("^clicks ok$")
+    public void clicks_ok() throws Throwable {
+//    	//Switch to iframe to allow interaction with modal
+//        WebElement frame = driver.findElement(By.tagName("iframe"));
+//        driver.switchTo().frame(frame);
+//        Thread.sleep(2000);
+    	
+    	
+        WebElement okButton = driver.findElement(By.id("OnAccountPayment:Ok"));
+        okButton.click();
+        Thread.sleep(4000);
+    }
+    
+    @Given("^From Payment Details window click on Save Button$")
+    public void from_payment_details_window_click_on_save_button() throws Throwable { 	
+    	WebElement paymentAllocationBtn = driver.findElement(By.id("PaymentDetails:Ok"));
+    	paymentAllocationBtn.click();
+	    Thread.sleep(4000);
+    }
+    
+    @Given("^Payment Summary window click on Save Button$")
+    public void payment_summary_window_click_on_save_button() throws Throwable {
+    	WebElement paymentSummarySaveBtn = driver.findElement(By.id("PaymentSummary:Save"));
+    	paymentSummarySaveBtn.click();
+	    Thread.sleep(4000);
+    }
+    
+    @And("^check non registered taxpayer$")
+    public void check_non_registered_taxpayer() throws Throwable {
+        WebElement nonRegisteredTaxCheckBox = driver.findElement(By.xpath("//*[@id=\"PaymentSummary:taxpayerType\"]/div[2]"));
+        nonRegisteredTaxCheckBox.click();
+    }
+    
+    @And("^enters Non Registered Taxpayer Details (.+) and (.+) and (.+) and (.+)$")
+    public void enters_non_registered_taxpayer_details_and_and_and(String firstname, String lastname, String nationalidno, String address) throws Throwable {
+    	Thread.sleep(4000);
+        WebElement firstNameInput = driver.findElement(By.id("PaymentSummary:FirstName"));
+        firstNameInput.sendKeys(firstname);
+        
+        WebElement lastNameInput = driver.findElement(By.id("PaymentSummary:LastName"));
+        lastNameInput.sendKeys(lastname);
+        
+        WebElement nationalidnoInput = driver.findElement(By.id("PaymentSummary:NationalId"));
+        nationalidnoInput.sendKeys(nationalidno);
+        
+        WebElement addressInput = driver.findElement(By.id("PaymentSummary:Address"));
+        addressInput.sendKeys(address);
+    }
+    
+    @And("^clicks proceed on the popup$")
+    public void clicks_proceed_on_the_popup() throws Throwable {
+    	Thread.sleep(4000);
+    	//Switch to iframe to allow interaction with modal
+//        WebElement frame = driver.findElement(By.tagName("iframe"));
+//        driver.switchTo().frame(frame);
+//        Thread.sleep(2000);
+        
+        WebElement confirmationYesButton = driver.findElement(By.id("PaymentDetails:j_idt46"));
+        confirmationYesButton.click();
+    }
+    
+    @Then("^account payment error message is displayed \"([^\"]*)\"$")
+    public void account_payment_error_message_is_displayed_something(String strArg1) throws Throwable {
+    	driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+    	
+    	WebElement Message = driver.findElement(By.xpath("//span[contains(text(),'"+strArg1+"')]"));
+    	if(Message.isDisplayed()) {
+    		Assert.assertTrue("Error message displayed",true);
+    	}else {
+    		Assert.fail("No Error message displayed");
+    	}
+    }
+    
+    //-----------------------------------------------Receipt Document Control-----------------------------------------------------------------
+    
+    @Given("^navigate to  Revenue Collection>>Receipt Document Control$")
+    public void navigate_to_revenue_collectionreceipt_document_control() throws Throwable {
+    	driver.findElement(By.xpath(Pro.getProperty("RevenueCollection_RevenueCollection_XPATH"))).click();
+        Thread.sleep(2000);
+        driver.findElement(By.xpath(Pro.getProperty("RecieptDocumentControl_xpath"))).click();
+        Thread.sleep(3000);
+    }
+    
+    @When("^enters Receipt Document Control (.+) and (.+) and (.+) and (.+)$")
+    public void enters_receipt_document_control_and_and_and(String cashoffice, String receiptnumberfrom, String receiptnumberto, String distributionstatus) throws Throwable {
+        WebElement cashOfficedropDown = driver.findElement(By.xpath("//*[@id=\"ReceiptDocumentControl:CashOfficeDD\"]/div[3]"));
+        cashOfficedropDown.click();
+        Thread.sleep(4000);
+        System.out.print(cashoffice);
+        driver.findElement(By.id("ReceiptDocumentControl:CashOfficeDD_2")).click();
+        
+        WebElement recieptNumberFromInput = driver.findElement(By.id("ReceiptDocumentControl:ReceiptNumFrom"));
+        recieptNumberFromInput.sendKeys(receiptnumberfrom);
+        
+        WebElement recieptNumberToInput = driver.findElement(By.id("ReceiptDocumentControl:ReceiptNumTo"));
+        recieptNumberToInput.sendKeys(receiptnumberto);
+        
+        WebElement distributionStatusDropdown = driver.findElement(By.xpath("//*[@id=\"ReceiptDocumentControl:distributionStatus\"]/div[3]"));
+        distributionStatusDropdown.click();
+        Thread.sleep(2000);
+        driver.findElement(By.xpath("//li[@data-label='"+distributionstatus+"']")).click();
+        
+    }
+    
+    @And("^clicks on Receipt Document Control Save Button$")
+    public void clicks_on_receipt_document_control_save_button() throws Throwable {
+    	WebElement ReceiptbtnSave=driver.findElement(By.id("ReceiptDocumentControl:btnSave"));
+    	ReceiptbtnSave.click();
+    }
+    
+    @Then("^The System saves the updated Receipt Document record$")
+    public void the_system_saves_the_updated_receipt_document_record() throws Throwable {
+    	driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+    	
+    	WebElement Message = driver.findElement(By.xpath("//span[contains(text(),'Document Details Saved Successfully')]"));
+    	if(Message.isDisplayed()) {
+    		Assert.assertTrue("Success message displayed",true);
+    	}else {
+    		Assert.fail("No Success message displayed");
+    	}
+    }
+    
+    @When("^enters Receipt Document Control (.+) and (.+) leaving other blank$")
+    public void enters_receipt_document_control_and_leaving_other_blank(String cashoffice, String distributionstatus) throws Throwable {
+    	driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+    	WebElement cashOfficedropDown = driver.findElement(By.xpath("//*[@id=\"ReceiptDocumentControl:CashOfficeDD\"]/div[3]"));
+        cashOfficedropDown.click();
+        Thread.sleep(4000);
+        System.out.print(cashoffice);
+        driver.findElement(By.id("ReceiptDocumentControl:CashOfficeDD_2")).click();
+        
+        WebElement distributionStatusDropdown = driver.findElement(By.xpath("//*[@id=\"ReceiptDocumentControl:distributionStatus\"]/div[3]"));
+        distributionStatusDropdown.click();
+        Thread.sleep(2000);
+        driver.findElement(By.xpath("//li[@data-label='"+distributionstatus+"']")).click();
+    }
+    
+    @And("^checks Issued To Cashier$")
+    public void checks_issued_to_cashier() throws Throwable {
+        WebElement cashierOfficeCheckBox = driver.findElement(By.xpath("//*[@id=\"ReceiptDocumentControl:issuedTo\"]/tbody/tr/td[1]/div/div[2]"));
+        cashierOfficeCheckBox.click();
+    }
+    
+    @And("^checks Issued To Cash Officer$")
+    public void checks_issued_to_cash_officer() throws Throwable {
+    	
+    	WebElement cashierOfficerCheckBox = driver.findElement(By.xpath("//*[@id=\"ReceiptDocumentControl:issuedTo\"]/tbody/tr/td[2]/div/div[2]"));
+    	cashierOfficerCheckBox.click();
+    }
 }
 
 
