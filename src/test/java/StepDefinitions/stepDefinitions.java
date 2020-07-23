@@ -572,6 +572,7 @@ public class stepDefinitions extends BaseClass{
 	        	isPresent=true;
 	            }
 	    Thread.sleep(4000);
+	    System.out.print(isPresent);
 	    Assert.assertTrue(isPresent);
 	    
     }
@@ -911,6 +912,103 @@ public class stepDefinitions extends BaseClass{
     	WebElement cashierOfficerCheckBox = driver.findElement(By.xpath("//*[@id=\"ReceiptDocumentControl:issuedTo\"]/tbody/tr/td[2]/div/div[2]"));
     	cashierOfficerCheckBox.click();
     }
+    
+    ////------------------------------------------------------------Revenue Collection Reports-------------------------------------------------------------------------------------///
+
+
+    @Given("^navigate to  Reporting>>Reports$")
+    public void navigate_to_reportingreports() throws Throwable {
+        driver.findElement(By.xpath(Pro.getProperty("reportingButton"))).click();
+        driver.findElement(By.xpath(Pro.getProperty("reportsButton"))).click();
+        Thread.sleep(3000);
+    }
+    
+    @When("^clicks Cashiering Report$")
+    public void clicks_cashiering_report() throws Throwable {
+        WebElement casheeringReport = driver.findElement(By.id("ReportTree:t1:7_0:j_idt42"));
+        casheeringReport.click();
+        Thread.sleep(5000);
+    }
+    
+    @Then("^Report screen should be displayed (.+)$")
+    public void report_screen_should_be_displayed(String reportname) throws Throwable {
+        String reportDetails = driver.findElement(By.id("frmReportDetails:frmReportDetailsLabel")).getText();
+        Assert.assertEquals(reportDetails, "Report Details");
+        
+        String reportName = driver.findElement(By.id("frmReportDetails:ReportName")).getAttribute("value");
+        Assert.assertEquals(reportName, reportname);
+        
+    }
+    
+    @When("^enters cash till reference as \"([^\"]*)\"$")
+    public void enters_cash_till_reference_as_something(String reference) throws Throwable {
+        WebElement cashTillRefInput = driver.findElement(By.id("frmReportDetails:CASH_TILL_ID"));
+        cashTillRefInput.sendKeys(reference);
+    }
+    
+    @And("^clicks run report button$")
+    public void clicks_run_report_button() throws Throwable {
+        WebElement runReportbtn = driver.findElement(By.id("frmReportDetails:RunReport"));
+        runReportbtn.click();
+        Thread.sleep(4000);
+    }
+    
+    @When("^clicks Daily Payment Report$")
+    public void clicks_daily_payment_report() throws Throwable {
+    	 WebElement casheeringReport = driver.findElement(By.id("ReportTree:t1:7_1:j_idt42"));
+         casheeringReport.click();
+         Thread.sleep(5000);
+    }
+    
+    @When("^enters Daily Payment report parameters$")
+    public void enters_daily_payment_report_parameters() throws Throwable {
+        WebElement endDate = driver.findElement(By.id("frmReportDetails:EndDate_input"));
+        endDate.sendKeys(Keys.ENTER);
+        
+        WebElement taxOfficeDropdown = driver.findElement(By.xpath("//*[@id=\"frmReportDetails:TAX_OFFICE\"]/div[3]"));
+        taxOfficeDropdown.click();
+        Thread.sleep(2000);
+        driver.findElement(By.id("frmReportDetails:TAX_OFFICE_1")).click();
+        
+        Thread.sleep(5000);
+    }
+    
+    @When("^clicks Receipt Document Summary$")
+    public void clicks_receipt_document_summary() throws Throwable {
+    	WebElement reportDocSumm = driver.findElement(By.id("ReportTree:t1:7_2:j_idt42"));
+    	reportDocSumm.click();
+        Thread.sleep(5000);
+    }
+    
+    @When("^enters Receipt Document Summary report parameters$")
+    public void enters_receipt_document_summary_report_parameters() throws Throwable {
+    	WebElement toendDate = driver.findElement(By.id("frmReportDetails:EndDate_input"));
+    	toendDate.sendKeys(Keys.ENTER);
+        
+        WebElement recieptStatusDropdown = driver.findElement(By.xpath("//*[@id=\"frmReportDetails:Distribution_Status\"]/div[3]"));
+        recieptStatusDropdown.click();
+        Thread.sleep(2000);
+        driver.findElement(By.id("frmReportDetails:Distribution_Status_1")).click();
+        
+        Thread.sleep(5000);
+    }
+    
+    @And("^clicks cancel button$")
+    public void clicks_cancel_button() throws Throwable {
+        WebElement cancelBtn = driver.findElement(By.id("frmReportDetails:btnCancel"));
+        cancelBtn.click();
+        Thread.sleep(5000);
+    }
+    
+    @Then("^navigated back to Reports screen$")
+    public void navigated_back_to_reports_screen() throws Throwable {
+        String reportListHeader = driver.findElement(By.id("ReportTree:ReportReprintLabel")).getText();
+        Assert.assertEquals(reportListHeader, "Reports List");
+    }
+    
+    /////------------------------------------------------------------Open Suspended Cash Till-------------------------------------------------------------------------------------///
+
+
 }
 
 
