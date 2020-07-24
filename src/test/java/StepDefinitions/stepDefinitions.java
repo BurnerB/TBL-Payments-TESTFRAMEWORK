@@ -307,8 +307,6 @@ public class stepDefinitions extends BaseClass{
     	}
     }
     
-    //Cash Till is then suspended to allow for creation of other Cash Tills
-    //Delete this if no other cash till is to be created further down
     @Then("^Suspend CashTill$")
     public void suspend_cashtill() throws Throwable {
     	Thread.sleep(5000);
@@ -1006,9 +1004,29 @@ public class stepDefinitions extends BaseClass{
         Assert.assertEquals(reportListHeader, "Reports List");
     }
     
-    /////------------------------------------------------------------Open Suspended Cash Till-------------------------------------------------------------------------------------///
+    /////------------------------------------------------------------Print Refund Documents-------------------------------------------------------------------------------------///
 
+    @And("^clicks yes on confirmation prompt$")
+    public void clicks_yes_on_confirmation_prompt() throws Throwable {
+    	driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
+        
+        WebElement yesBtn = driver.findElement(By.id("PaymentDetails:j_idt46"));
+        yesBtn.click();
+        
+    }
+    
+    @Then("^Reciept generated successfully$")
+    public void reciept_generated_successfully() throws Throwable {
+driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+    	
+    	WebElement Message = driver.findElement(By.xpath("//span[contains(text(),'PaymentReceipt.pdf')]"));
+    	if(Message.isDisplayed()) {
+    		Assert.assertTrue("Success message displayed",true);
+    	}else {
+    		Assert.fail("No Success message displayed");
+    	}
+    }
 }
 
 

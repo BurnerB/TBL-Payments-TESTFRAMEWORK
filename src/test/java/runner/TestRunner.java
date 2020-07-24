@@ -17,7 +17,7 @@ import io.cucumber.junit.CucumberOptions;
 @CucumberOptions(
 		features = "src\\test\\resources\\FeatureFiles",
 		glue = "StepDefinitions" ,
-		tags = "@SUC:05-13",
+		tags = "@SUC:13-11",
 		dryRun = false,    //checks whether each feature has a mapped step definition
 		monochrome = true,// neat output after tc run
 		plugin = {"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:","json:target/positive/cucumber.json", "pretty", "html:target/positive/cucumber.html"}
