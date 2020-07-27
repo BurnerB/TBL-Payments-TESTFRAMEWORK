@@ -125,10 +125,10 @@
 									</tr></thead>
 									<tbody>
 	
-<tr class="s-fail" test-id="6" parent-id="1">
+<tr class="s-fail" test-id="15" parent-id="1">
 	<td><span class="w-32 avatar circle fail"><span class="badge">fail</span></span></td>
-	<td class="_600">When User clicks login as Taxpayer <br/><span class="text-muted text-sm">Portal Login</span></td>
-	<td>0h 0m 5s+38msc</td>
+	<td class="_600">And Clicks on Pay At The Bank button <br/><span class="text-muted text-sm">UAT_M7_18-01-UAT_M7_18-0-Verify the Process of Pay In Bank</span></td>
+	<td>0h 0m 0s+71msc</td>
 	<td></td>
 	<td>
 	</td>
@@ -137,20 +137,19 @@
 <tr class="details">
 	<td colspan="5">
 		
-		<textarea disabled class="code-block">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"/html/body/trips-app/div/app-portal-home/div/div/div[1]/div[3]/div[1]/p/a"}
+		<textarea disabled class="code-block">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"#c"}
   (Session info: chrome=84.0.4147.89)
 For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'DESKTOP-VUGFEQL', ip: '172.16.16.20', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '14.0.1'
+System info: host: 'DESKTOP-GJ59DJ5', ip: '172.16.16.28', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_251'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 84.0.4147.89, chrome: {chromedriverVersion: 83.0.4103.39 (ccbf011cb2d2b..., userDataDir: C:\Users\v-bakam\AppData\Lo...}, goog:chromeOptions: {debuggerAddress: localhost:51638}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
-Session ID: 8e03ed9261741a1782936b15870e5434
-*** Element info: {Using=xpath, value=/html/body/trips-app/div/app-portal-home/div/div/div[1]/div[3]/div[1]/p/a}
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 84.0.4147.89, chrome: {chromedriverVersion: 83.0.4103.39 (ccbf011cb2d2b..., userDataDir: C:\Users\v-bakam\AppData\Lo...}, goog:chromeOptions: {debuggerAddress: localhost:57669}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: ff103c5e1d483e3aff29345a97ebf0c1
+*** Element info: {Using=id, value=c}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
@@ -158,11 +157,11 @@ Session ID: 8e03ed9261741a1782936b15870e5434
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:372)
+	at org.openqa.selenium.By$ById.findElement(By.java:188)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-	at StepDefinitions.stepDefinitions.user_clicks_login_as_taxpayer(stepDefinitions.java:1163)
-	at ✽.User clicks login as Taxpayer(file:///C:/Users/v-bakam/eclipse-workspace/TechnoBrain-Payment/src/test/resources/FeatureFiles/Payment/o_TaxpayerPaymentPortal.feature:6)
+	at StepDefinitions.stepDefinitions.clicks_on_pay_at_the_bank_button(stepDefinitions.java:1216)
+	at ✽.Clicks on Pay At The Bank button(file:///C:/Users/v-bakam/eclipse-workspace/BazePayments/src/test/resources/FeatureFiles/Payment/o_TaxpayerPaymentPortal.feature:17)
 </textarea>
 	</td>
 </tr>
@@ -190,7 +189,7 @@ Session ID: 8e03ed9261741a1782936b15870e5434
 						            </div>
 									<ul class="nav nav-xs flex-row no-border pull-right">
 <li><a href="#" class="b-l"><span class="badge badge-pull">ExtentReports</span></a></li>
-<li><a href="#" class="b-l"><span class="badge badge-pull">Jul 26, 2020 10:37:27 PM</span></a></li>
+<li><a href="#" class="b-l"><span class="badge badge-pull">Jul 27, 2020 05:12:29 PM</span></a></li>
 <li><a href="#" class="b-l"><span class="badge badge-pull">4.0</span></a></li>
 								    </ul>
 								</div>

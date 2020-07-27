@@ -44,6 +44,7 @@
 		<ul id='slide-out' class='side-nav fixed hide-on-med-and-down'>
 			<li class='waves-effect active'><a href='#!' view='test-view' onclick="configureView(0);chartsView('test');"><i class='material-icons'>dashboard</i></a></li>
 						<li class='waves-effect'><a href='#!' view='category-view' onclick="configureView(1)"><i class='material-icons'>label_outline</i></a></li>
+			<li class='waves-effect'><a href='#!' view='exception-view' onclick="configureView(2)"><i class='material-icons'>bug_report</i></a></li>
 			<li class='waves-effect'><a href='#!' onclick="configureView(-1);chartsView('dashboard');" view='dashboard-view'><i class='material-icons'>track_changes</i></a></li>
 		</ul>
 		<!-- report name -->
@@ -53,7 +54,7 @@
 		<!-- nav-right -->
 		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
 			<a href='#!'>
-			<span class='label blue darken-3 suite-start-time'>Jul 26, 2020 10:44:43 PM</span>
+			<span class='label blue darken-3 suite-start-time'>Jul 27, 2020 05:12:29 PM</span>
 			</a>
 		</ul>
 	</div>
@@ -69,6 +70,7 @@
 				</a>
 				<ul id='tests-toggle' class='dropdown-content'>
 										<li status='pass'><a href='#!'>Pass <i class='material-icons green-text'>check_circle</i></a></li>
+					<li status='fail'><a href='#!'>Fail <i class='material-icons red-text'>cancel</i></a></li>
 					<li class='divider'></li>
 					<li status='clear' clear='true'><a href='#!'>Clear Filters <i class='material-icons'>clear</i></a></li>
 				</ul>
@@ -121,10 +123,10 @@
                     <canvas id='parent-analysis' width='90' height='70'></canvas>
                 </div>
                 <div class='block text-small'>
-                    <span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>1</span> feature(s) passed</span>
+                    <span class='tooltipped' data-position='top' data-tooltip='0%'><span class='strong'>0</span> feature(s) passed</span>
                 </div>
                 <div class='block text-small'>
-                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> feature(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> skipped
+                    <span class='strong tooltipped' data-position='top' data-tooltip='100%'>1</span> feature(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> skipped
                 </div>
             </div>
         </div>
@@ -135,10 +137,10 @@
                     <canvas id='child-analysis' width='90' height='70'></canvas>
                 </div>
                 <div class='block text-small'>
-                    <span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>1</span> scenario(s) passed</span>
+                    <span class='tooltipped' data-position='top' data-tooltip='0%'><span class='strong'>0</span> scenario(s) passed</span>
                 </div>
                 <div class='block text-small'>
-                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> scenario(s) failed, 
+                    <span class='strong tooltipped' data-position='top' data-tooltip='100%'>1</span> scenario(s) failed, 
                     <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> skipped, 
                     <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
                 </div>
@@ -151,10 +153,10 @@
                     <canvas id='grandchild-analysis' width='90' height='70'></canvas>
                 </div>
                 <div class='block text-small'>
-                    <span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>3</span> step(s) passed</span>
+                    <span class='tooltipped' data-position='top' data-tooltip='90%'><span class='strong'>9</span> step(s) passed</span>
                 </div>
                 <div class='block text-small'>
-                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> scenario(s) failed, 
+                    <span class='strong tooltipped' data-position='top' data-tooltip='10%'>1</span> scenario(s) failed, 
                     <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> skipped, 
                     <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
                 </div>
@@ -174,11 +176,11 @@
 </div>	<div class='subview-left left'>
 		<div class='view-summary'>
 			<ul id='test-collection' class='test-collection'>
-				<li class='test displayed active has-leaf pass' status='pass' bdd='true' test-id='1'>
+				<li class='test displayed active has-leaf fail' status='fail' bdd='true' test-id='1'>
 					<div class='test-heading'>
 						<span class='test-name'>[SUC:05-18] Taxpayer Payment - Portal</span>
-						<span class='test-time'>Jul 26, 2020 10:44:43 PM</span>
-						<span class='test-status right pass'>pass</span>
+						<span class='test-time'>Jul 27, 2020 05:12:33 PM</span>
+						<span class='test-status right fail'>fail</span>
 					</div>
 					<div class='test-content hide'>
 <div class="sr-filters bdd-filters">
@@ -187,26 +189,85 @@
 	<a class="btn-floating waves-effect waves-light skip blue" title="skip"><i class='material-icons'>redo</i></a>
 	<a class="btn-floating waves-effect waves-light clear grey" title="clear"><i class='material-icons'>clear</i></a>
 </div>
-<div class='scenario node' test-id='2' status='pass'>
+<div class='scenario outline node' test-id='2' status='fail'>
 	<div class='category-list'>
 		<span class='category label'>@SUC:05-18</span>
 	</div>
-	<span class='duration right label'>0h 0m 22s+0ms</span>
+	<span class='duration right label'>0h 0m 46s+652ms</span>
 	<div class="bdd-test">
-		<div class="scenario-name"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span> Scenario: Portal Login</div>
+		<div class="scenario-name"><span class='status fail' title='fail'><i class='material-icons'>cancel</i></span> Scenario Outline: UAT_M7_18-01-UAT_M7_18-0-Verify the Process of Pay In Bank</div>
+		<table class='runtime-table table-striped table'><tr><td>amount</td></tr><tr><td>100</td></tr></table>
 	</div>
 	<ul class='steps'>
-		<li test-id='5' class='node given pass' status='pass'>
-			<div class="step-name" title="StepDefinitions.stepDefinitions.user_navigates_to_the_portal_login_page()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Given User navigates to the Portal login page</div>
-			<div class="node-step"></div>
-		</li>
-		<li test-id='6' class='node when pass' status='pass'>
-			<div class="step-name" title="StepDefinitions.stepDefinitions.user_clicks_login_as_taxpayer()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>When User clicks login as Taxpayer</div>
-			<div class="node-step"></div>
-		</li>
-		<li test-id='7' class='node and pass' status='pass'>
-			<div class="step-name" title="StepDefinitions.stepDefinitions.enters_the_portal_username_something_and_password_something_to_login(java.lang.String,java.lang.String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And Enters the Portal username "MrManMan" and password "Password@123" to login</div>
-			<div class="node-step"></div>
+		<li test-id='3' class='node scenario fail' status='fail'>
+			<div class="step-name" title=""><span class='status fail' title='fail'><i class='material-icons'>cancel</i></span>UAT_M7_18-01-UAT_M7_18-0-Verify the Process of Pay In Bank</div>
+			<ul class='gc steps'>
+				<li test-id='6' class='gc given pass' status='pass'>
+					<h6 class="step-name" title="StepDefinitions.stepDefinitions.user_navigates_to_the_portal_login_page()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Given User navigates to the Portal login page</h6>
+					<div class="node-step"></div>
+				</li>
+				<li test-id='7' class='gc when pass' status='pass'>
+					<h6 class="step-name" title="StepDefinitions.stepDefinitions.user_clicks_login_as_taxpayer()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>When User clicks login as Taxpayer</h6>
+					<div class="node-step"></div>
+				</li>
+				<li test-id='8' class='gc and pass' status='pass'>
+					<h6 class="step-name" title="StepDefinitions.stepDefinitions.enters_the_portal_username_something_and_password_something_to_login(java.lang.String,java.lang.String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And Enters the Portal username "payereturns" and password "Codei@maseno2020" to login</h6>
+					<div class="node-step"></div>
+				</li>
+				<li test-id='9' class='gc given pass' status='pass'>
+					<h6 class="step-name" title="StepDefinitions.stepDefinitions.navigate_to_my_taxmake_payment()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Given navigate to My Tax>>make payment</h6>
+					<div class="node-step"></div>
+				</li>
+				<li test-id='10' class='gc then pass' status='pass'>
+					<h6 class="step-name" title="StepDefinitions.stepDefinitions.outstanding_payments_list_screen_should_be_displayed()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then Outstanding Payments List Screen should be displayed</h6>
+					<div class="node-step"></div>
+				</li>
+				<li test-id='11' class='gc given pass' status='pass'>
+					<h6 class="step-name" title="StepDefinitions.stepDefinitions.selects_the_tax_type_liability_to_be_paid()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Given Selects the Tax Type liability to be paid</h6>
+					<div class="node-step"></div>
+				</li>
+				<li test-id='12' class='gc and pass' status='pass'>
+					<h6 class="step-name" title="StepDefinitions.stepDefinitions.click_pay_selected_button()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And click Pay Selected Button</h6>
+					<div class="node-step"></div>
+				</li>
+				<li test-id='13' class='gc then pass' status='pass'>
+					<h6 class="step-name" title="StepDefinitions.stepDefinitions.payment_reference_number_screen_should_be_displayed()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then Payment Reference Number screen should be displayed</h6>
+					<div class="node-step"></div>
+				</li>
+				<li test-id='14' class='gc given pass' status='pass'>
+					<h6 class="step-name" title="StepDefinitions.stepDefinitions.user_submits_valid_payment_amount(java.lang.String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Given user submits valid payment amount 100</h6>
+					<div class="node-step"></div>
+				</li>
+				<li test-id='15' class='gc and fail' status='fail'>
+					<h6 class="step-name" title="StepDefinitions.stepDefinitions.clicks_on_pay_at_the_bank_button()"><span class='status fail' title='fail'><i class='material-icons'>cancel</i></span>And Clicks on Pay At The Bank button</h6>
+					<textarea disabled class="code-block">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"#c"}
+  (Session info: chrome=84.0.4147.89)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-GJ59DJ5', ip: '172.16.16.28', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_251'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 84.0.4147.89, chrome: {chromedriverVersion: 83.0.4103.39 (ccbf011cb2d2b..., userDataDir: C:\Users\v-bakam\AppData\Lo...}, goog:chromeOptions: {debuggerAddress: localhost:57669}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: ff103c5e1d483e3aff29345a97ebf0c1
+*** Element info: {Using=id, value=c}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:372)
+	at org.openqa.selenium.By$ById.findElement(By.java:188)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at StepDefinitions.stepDefinitions.clicks_on_pay_at_the_bank_button(stepDefinitions.java:1216)
+	at ✽.Clicks on Pay At The Bank button(file:///C:/Users/v-bakam/eclipse-workspace/BazePayments/src/test/resources/FeatureFiles/Payment/o_TaxpayerPaymentPortal.feature:17)
+</textarea>
+				</li>
+			</ul>
 		</li>
 	</ul>
 </div>
@@ -254,13 +315,13 @@
 					<div class='category-heading'>
 						<span class='category-name'>@SUC:05-18</span>
 						<span class='category-status right'>
-						<span class='label pass'>1</span>
+						<span class='label fail'>2</span>
 						</span>
 					</div>
 					<div class='category-content hide'>
 						<div class='category-status-counts'>
-							<span status="pass" class='label green accent-4 white-text'>Passed: 1</span>
 							
+							<span status="fail" class='label red lighten-1 white-text'>Failed: 2</span>
 							
 						</div>
 						<div class='category-tests'>
@@ -274,9 +335,14 @@
 								</thead>
 								<tbody>
 									<tr>
-										<td>Jul 26, 2020 10:44:43 PM</td>
-										<td class='linked' test-id='2'>Portal Login</td>
-										<td><span class='test-status pass'>pass</span></td>
+										<td>Jul 27, 2020 05:12:33 PM</td>
+										<td class='linked' test-id='2'>UAT_M7_18-01-UAT_M7_18-0-Verify the Process of Pay In Bank</td>
+										<td><span class='test-status fail'>fail</span></td>
+									</tr>
+									<tr>
+										<td>Jul 27, 2020 05:12:33 PM</td>
+										<td class='linked' test-id='3'>UAT_M7_18-01-UAT_M7_18-0-Verify the Process of Pay In Bank</td>
+										<td><span class='test-status fail'>fail</span></td>
 									</tr>
 								</tbody>
 							</table>
@@ -292,7 +358,87 @@
 		</div>
 	</div>
 </div>
-<!-- category view --><!-- exception view --><div id='dashboard-view' class='view hide'>
+<!-- category view --><div id='exception-view' class='view hide'>
+	<section id='controls'>
+		<div class='controls grey lighten-4'>
+			<!-- search -->
+			<div class='chip transparent' alt='Search Tests' title='Search Tests'>
+				<a href="#" class='search-div'>
+				<i class='material-icons'>search</i> Search
+				</a>
+				<div class='input-field left hide'>
+					<input id='search-tests' type='text' class='validate browser-default' placeholder='Search Tests...'>
+				</div>
+			</div>
+			<!-- search -->
+		</div>
+	</section>
+	<div class='subview-left left'>
+		<div class='view-summary'>
+			<ul id='exception-collection' class='exception-collection'>
+				<li class='exception displayed active'>
+					<div class='exception-heading'>
+						<span class='exception-name'>org.openqa.selenium.NoSuchElementException</span>
+						<span class='exception-count right'><span class='label red lighten-1 white-text'>1</span></span>
+					</div>
+					<div class='exception-content hide'>
+						<div class='exception-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Jul 27, 2020 05:13:19 PM</td>
+										<td class='linked' test-id='15'>And Clicks on Pay At The Bank button</td>
+										<td>
+											<textarea disabled class="code-block">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"#c"}
+  (Session info: chrome=84.0.4147.89)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-GJ59DJ5', ip: '172.16.16.28', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_251'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 84.0.4147.89, chrome: {chromedriverVersion: 83.0.4103.39 (ccbf011cb2d2b..., userDataDir: C:\Users\v-bakam\AppData\Lo...}, goog:chromeOptions: {debuggerAddress: localhost:57669}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: ff103c5e1d483e3aff29345a97ebf0c1
+*** Element info: {Using=id, value=c}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:372)
+	at org.openqa.selenium.By$ById.findElement(By.java:188)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at StepDefinitions.stepDefinitions.clicks_on_pay_at_the_bank_button(stepDefinitions.java:1216)
+	at ✽.Clicks on Pay At The Bank button(file:///C:/Users/v-bakam/eclipse-workspace/BazePayments/src/test/resources/FeatureFiles/Payment/o_TaxpayerPaymentPortal.feature:17)
+</textarea>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div class='subview-right left'>
+		<div class='view-summary'>
+			<h5 class='exception-name'></h5>
+		</div>
+	</div>
+</div>
+<!-- exception view --><div id='dashboard-view' class='view hide'>
 	<div class='card-panel transparent np-v'>
 		<h5>Dashboard</h5>
 
@@ -312,25 +458,25 @@
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Steps
-					<div class='panel-lead'>3</div>
+					<div class='panel-lead'>10</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Start
-					<div class='panel-lead'>Jul 26, 2020 10:44:43 PM</div>
+					<div class='panel-lead'>Jul 27, 2020 05:12:29 PM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 			 		End
-			 		<div class='panel-lead'>Jul 26, 2020 10:45:06 PM</div>
+			 		<div class='panel-lead'>Jul 27, 2020 05:13:20 PM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Time Taken
-					<div class='panel-lead'>0h 0m 23s+13ms</div>
+					<div class='panel-lead'>0h 0m 51s+144ms</div>
 				</div>
 			</div>
 			<div class='col s6'>
@@ -347,11 +493,11 @@
 						</tr>
 						<tr>
 							<td>@SUC:05-18</td>
-							<td>1</td>
 							<td>0</td>
+							<td>2</td>
 							<td>0</td>
 							<td>
-									100%
+									0%
 							</td>
 						</tr>
 					</table>
@@ -366,38 +512,38 @@
 		<script>
 			var statusGroup = {
                 parentCount: 1,
-				passParent: 1,
-				failParent: 0,
+				passParent: 0,
+				failParent: 1,
 				fatalParent: 0,
 				errorParent: 0,
 				warningParent: 0,
 				skipParent: 0,
-				exceptionsParent: 0,
+				exceptionsParent: 1,
 				childCount: 1,
-				passChild: 1,
-				failChild: 0,
+				passChild: 0,
+				failChild: 1,
 				fatalChild: 0,
 				errorChild: 0,
 				warningChild: 0,
 				skipChild: 0,
 				infoChild: 0,
 				debugChild: 0,
-				exceptionsChild: 0,
-				grandChildCount: 3,
-				passGrandChild: 3,
-				failGrandChild: 0,
+				exceptionsChild: 1,
+				grandChildCount: 10,
+				passGrandChild: 9,
+				failGrandChild: 1,
 				fatalGrandChild: 0,
 				errorGrandChild: 0,
 				warningGrandChild: 0,
 				skipGrandChild: 0,
 				infoGrandChild: 0,
 				debugGrandChild: 0,
-				exceptionsGrandChild: 0,
+				exceptionsGrandChild: 1,
 			};
 		</script>
 		<script>
 			var timeline = {
-			        "[SUC:05-18] Taxpayer Payment - Portal":22
+			        "[SUC:05-18] Taxpayer Payment - Portal":46.652
 			};
 		</script>
 	

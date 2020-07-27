@@ -471,8 +471,9 @@ public class stepDefinitions extends BaseClass{
     @Then("^message is displayed \"([^\"]*)\"$")
     public void message_is_displayed_something(String strArg1) throws Throwable {
     	driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+    	WebDriverWait wait=new WebDriverWait(driver,10);
     	
-    	WebElement Message = driver.findElement(By.xpath("//span[contains(text(),'"+strArg1+"')]"));
+    	WebElement Message = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[contains(text(),'"+strArg1+"')]")));
     	if(Message.isDisplayed()) {
     		Assert.assertTrue("Error message displayed",true);
     	}else {
@@ -1162,6 +1163,59 @@ driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
     	Thread.sleep(5000);
         WebElement taxPayer = driver.findElement(By.xpath("/html/body/trips-app/div/app-portal-home/div/div/div[1]/div[3]/div[1]/p/a"));
         taxPayer.click();
+    }
+    
+    //----------------------------------------------------Taxpayer Payment - Portal-------------------------------------------------------------------------------------///
+    @Given("^navigate to My Tax>>make payment$")
+    public void navigate_to_my_taxmake_payment() throws Throwable {
+       Thread.sleep(4000);
+       driver.findElement(By.id("id_btnMyTaxToggle")).click();
+ 
+       Thread.sleep(2000);
+       WebElement makePayment=driver.findElement(By.xpath("//*[@id=\"id_makeAPayment\"]"));
+       makePayment.click();
+    }
+    
+    @Then("^Outstanding Payments List Screen should be displayed$")
+    public void outstanding_payments_list_screen_should_be_displayed() throws Throwable {
+    	Thread.sleep(4000);
+    	String header=driver.findElement(By.id("id_outstandingPaymentForm")).getText();
+    	Assert.assertEquals(header, "Outstanding Payments");
+    }
+    
+    @Given("^Selects the Tax Type liability to be paid$")
+    public void selects_the_tax_type_liability_to_be_paid() throws Throwable {
+    	Thread.sleep(4000);
+        WebElement taxTaypeChosen=driver.findElement(By.xpath("/html/body/trips-app/div/ng-component/div/app-revenue-collection/app-outstanding-payment-list/div[2]/p-table/div/div[1]/table/tbody/tr[1]/td[8]/span[2]/div/p-tablecheckbox/div/div[2]"));
+        taxTaypeChosen.click();
+    }
+    
+    @And("^click Pay Selected Button$")
+    public void click_pay_selected_button() throws Throwable {
+    	WebElement payBtn=driver.findElement(By.id("paySelected"));
+        payBtn.click();
+    }
+    
+    @Then("^Payment Reference Number screen should be displayed$")
+    public void payment_reference_number_screen_should_be_displayed() throws Throwable {
+    	Thread.sleep(4000);
+    	String header=driver.findElement(By.id("id_paymentSelectionForm")).getText();
+    	Assert.assertEquals(header, "Payment Selection Details");
+    }
+    
+    @Given("^user submits valid payment amount (.+)$")
+    public void user_submits_valid_payment_amount(String amount) throws Throwable {
+        WebElement paymentInput=driver.findElement(By.xpath("/html/body/trips-app/div/ng-component/div/app-revenue-collection/ng-component/div[2]/p-table/div/div[1]/table/tbody/tr/td[8]/span[2]/tb-png-input-number/div/div[2]/span/input"));
+        paymentInput.clear();
+        Thread.sleep(2000);
+        paymentInput.sendKeys(amount);
+    }
+    
+    @And("^Clicks on Pay At The Bank button$")
+    public void clicks_on_pay_at_the_bank_button() throws Throwable {
+        WebElement payBankBtn=driver.findElement(By.id("c"));
+        payBankBtn.click();
+        
     }
 }
 
