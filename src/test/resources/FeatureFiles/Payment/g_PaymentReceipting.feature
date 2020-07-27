@@ -67,7 +67,7 @@ Then Payment Allocation Summary tab should be displayed
 When clicks on On Account Button
 Then Account Payment Details pop up window should be displayed
 And clicks ok
-Then error message is displayed "Cash Office Name: Validation Error: Value is required."
+Then message is displayed "Cash Office Name: Validation Error: Value is required."
 
 Examples:
 |Taxpayer Classification Type|TIN		|Name of Person Paying|amount|TaxType|Amount Allocated|
@@ -119,7 +119,7 @@ When clicks on On Account Button
 Then Account Payment Details pop up window should be displayed
 When On Account Payment Details enters <TaxType> and <Amount Allocated>
 And clicks ok
-Then error message is displayed "Amount Allocated cannot be greater"
+Then message is displayed "Amount Allocated cannot be greater"
 
 Examples:
 |Taxpayer Classification Type|TIN		|Name of Person Paying|amount|TaxType|Amount Allocated|

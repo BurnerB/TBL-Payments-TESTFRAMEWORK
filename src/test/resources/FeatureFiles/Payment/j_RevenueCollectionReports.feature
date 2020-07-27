@@ -91,7 +91,7 @@ Given navigate to  Reporting>>Reports
 When clicks Receipt Document Summary
 Then Report screen should be displayed <Report Name>
 And clicks run report button
-Then error message is displayed "Receipt Status: Validation Error: Value is required"
+Then message is displayed "Receipt Status: Validation Error: Value is required"
 When enters Receipt Document Summary report parameters
 And clicks run report button
 Then Report download should be generate <downloadpath> and <filename>

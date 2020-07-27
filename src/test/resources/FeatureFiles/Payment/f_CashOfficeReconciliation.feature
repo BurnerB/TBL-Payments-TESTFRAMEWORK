@@ -18,14 +18,14 @@ When the User clicks Cash Office Name
 And clicks Open Cash Office
 Then System opens the Cash Office
 And leaves cash office blank and click reconcile
-Then error message is displayed "Cash Office Name: Validation Error: Value is required."
+Then message is displayed "Cash Office Name: Validation Error: Value is required."
 
 #@SUC:05-11
 Scenario Outline: UAT_M5_11-04-Verify the Process of Unreconciled Tills
 Given navigate to Revenue Collection>>Cash Office Daily Control
 When selects Cash Office Name <cfN>
 And clicks reconcile Cash Office
-#Then error message is displayed "CashTills have been detected for this Cash Office"
+#Then message is displayed "CashTills have been detected for this Cash Office"
 When enters cash till reference
 Then The System displays the Unreconciled Cash Till details
 When user enters <Adjustment Reason>
@@ -43,11 +43,11 @@ Scenario Outline: UAT_M5_11-05-Verify the Process of Invalid Data
 Given navigate to Revenue Collection>>Cash Office Daily Control
 When selects Cash Office Name <cfN>
 And clicks reconcile Cash Office
-#Then error message is displayed "CashTills have been detected for this Cash Office"
+#Then message is displayed "CashTills have been detected for this Cash Office"
 When enters cash till reference
 Then The System displays the Unreconciled Cash Till details
 When clicks on Save Button
-Then error message is displayed "Please Select Adjustment Reason And Enter Correct Adjustment Amount And Try Again"
+Then message is displayed "Please Select Adjustment Reason And Enter Correct Adjustment Amount And Try Again"
 
 Examples:
 |cfN|
@@ -58,7 +58,7 @@ Scenario Outline: UAT_M5_11-06-Verify the Process of Unreconciled Report
 Given navigate to Revenue Collection>>Cash Office Daily Control
 When selects Cash Office Name <cfN>
 And clicks reconcile Cash Office
-#Then error message is displayed "CashTills have been detected for this Cash Office"
+#Then message is displayed "CashTills have been detected for this Cash Office"
 When clicks Generate Unreconciled Report button
 Then Report download should be generate <downloadpath> and <filename>
 
@@ -72,7 +72,7 @@ Scenario Outline: UAT_M5_11-07-Verify the Process of Cash Office Summary Report
 Given navigate to Revenue Collection>>Cash Office Daily Control
 When selects Cash Office Name <cfN>
 And clicks  Cash Office Summary Report button
-#Then error message is displayed "CashTills have been detected for this Cash Office"
+#Then message is displayed "CashTills have been detected for this Cash Office"
 Then Report download should be generate <downloadpath> and <filename>
 
 
@@ -87,7 +87,7 @@ When selects Cash Office Name <cfN>
 And clicks Open Cash Office
 And clicks reconcile Cash Office
 And clicks Generate Bank Lodgement Report button
-#Then error message is displayed "CashTills have been detected for this Cash Office"
+#Then message is displayed "CashTills have been detected for this Cash Office"
 Then Report download should be generate <downloadpath> and <filename>
 
 

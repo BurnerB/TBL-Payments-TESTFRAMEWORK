@@ -53,7 +53,7 @@
 		<!-- nav-right -->
 		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
 			<a href='#!'>
-			<span class='label blue darken-3 suite-start-time'>Jul 24, 2020 09:36:29 AM</span>
+			<span class='label blue darken-3 suite-start-time'>Jul 26, 2020 10:44:43 PM</span>
 			</a>
 		</ul>
 	</div>
@@ -80,7 +80,7 @@
 				<i class='material-icons'>local_offer</i> Category
 				</a>
 				<ul id='category-toggle' class='dropdown-content'>
-					<li><a href='#'>@SUC:13-11</a></li>
+					<li><a href='#'>@SUC:05-18</a></li>
 					<li class='divider'></li>
 					<li class='clear'><a href='#!' clear='true'>Clear Filters</a></li>
 				</ul>
@@ -151,7 +151,7 @@
                     <canvas id='grandchild-analysis' width='90' height='70'></canvas>
                 </div>
                 <div class='block text-small'>
-                    <span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>16</span> step(s) passed</span>
+                    <span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>3</span> step(s) passed</span>
                 </div>
                 <div class='block text-small'>
                     <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> scenario(s) failed, 
@@ -176,8 +176,8 @@
 			<ul id='test-collection' class='test-collection'>
 				<li class='test displayed active has-leaf pass' status='pass' bdd='true' test-id='1'>
 					<div class='test-heading'>
-						<span class='test-name'>[SUC:13-11] Print Refund Documents</span>
-						<span class='test-time'>Jul 24, 2020 09:36:29 AM</span>
+						<span class='test-name'>[SUC:05-18] Taxpayer Payment - Portal</span>
+						<span class='test-time'>Jul 26, 2020 10:44:43 PM</span>
 						<span class='test-status right pass'>pass</span>
 					</div>
 					<div class='test-content hide'>
@@ -187,84 +187,26 @@
 	<a class="btn-floating waves-effect waves-light skip blue" title="skip"><i class='material-icons'>redo</i></a>
 	<a class="btn-floating waves-effect waves-light clear grey" title="clear"><i class='material-icons'>clear</i></a>
 </div>
-<div class='scenario outline node' test-id='2' status='pass'>
+<div class='scenario node' test-id='2' status='pass'>
 	<div class='category-list'>
-		<span class='category label'>@SUC:13-11</span>
+		<span class='category label'>@SUC:05-18</span>
 	</div>
-	<span class='duration right label'>0h 0m 57s+218ms</span>
+	<span class='duration right label'>0h 0m 22s+0ms</span>
 	<div class="bdd-test">
-		<div class="scenario-name"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span> Scenario Outline: UAT_M7_14-01-Verify the Process of print Taxpayer documents</div>
-		<table class='runtime-table table-striped table'><tr><td>Taxpayer Classification Type</td><td>TIN</td><td>Name of Person Paying</td><td>amount</td><td>TaxType</td><td>Amount Allocated</td></tr><tr><td>Individual</td><td>P0024640</td><td>Geet Hireman</td><td>100</td><td>PAYE</td><td>1000</td></tr></table>
+		<div class="scenario-name"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span> Scenario: Portal Login</div>
 	</div>
 	<ul class='steps'>
-		<li test-id='3' class='node scenario pass' status='pass'>
-			<div class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>UAT_M7_14-01-Verify the Process of print Taxpayer documents</div>
-			<ul class='gc steps'>
-				<li test-id='6' class='gc given pass' status='pass'>
-					<h6 class="step-name" title="StepDefinitions.stepDefinitions.user_navigates_to_the_login_page()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Given User navigates to the login page</h6>
-					<div class="node-step"></div>
-				</li>
-				<li test-id='7' class='gc when pass' status='pass'>
-					<h6 class="step-name" title="StepDefinitions.stepDefinitions.enters_the_username_something_and_password_something_to_login(java.lang.String,java.lang.String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>When Enters the username "tripscrmuser3" and password "Passw0rd" to login</h6>
-					<div class="node-step"></div>
-				</li>
-				<li test-id='8' class='gc then pass' status='pass'>
-					<h6 class="step-name" title="StepDefinitions.stepDefinitions.user_should_be_logged_in()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then User should be logged in</h6>
-					<div class="node-step"></div>
-				</li>
-				<li test-id='9' class='gc given pass' status='pass'>
-					<h6 class="step-name" title="StepDefinitions.stepDefinitions.navigate_to_revenue_collectionreceive_payment()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Given navigate to  Revenue Collection>>Receive Payment</h6>
-					<div class="node-step"></div>
-				</li>
-				<li test-id='10' class='gc when pass' status='pass'>
-					<h6 class="step-name" title="StepDefinitions.stepDefinitions.click_on_find_button()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>When click on Find Button</h6>
-					<div class="node-step"></div>
-				</li>
-				<li test-id='11' class='gc then pass' status='pass'>
-					<h6 class="step-name" title="StepDefinitions.stepDefinitions.find_entity_pop_up_window_should_be_displayed()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then Find Entity pop up window should be displayed</h6>
-					<div class="node-step"></div>
-				</li>
-				<li test-id='12' class='gc when pass' status='pass'>
-					<h6 class="step-name" title="StepDefinitions.stepDefinitions.user_enters_and(java.lang.String,java.lang.String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>When User enters Individual and P0024640</h6>
-					<div class="node-step"></div>
-				</li>
-				<li test-id='13' class='gc and pass' status='pass'>
-					<h6 class="step-name" title="StepDefinitions.stepDefinitions.clicks_search_button()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And clicks search button</h6>
-					<div class="node-step"></div>
-				</li>
-				<li test-id='14' class='gc then pass' status='pass'>
-					<h6 class="step-name" title="StepDefinitions.stepDefinitions.payment_summary_window_displayed(java.lang.String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then Payment Summary window displayed P0024640</h6>
-					<div class="node-step"></div>
-				</li>
-				<li test-id='15' class='gc and pass' status='pass'>
-					<h6 class="step-name" title="StepDefinitions.stepDefinitions.clicks_add_button()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And clicks add button</h6>
-					<div class="node-step"></div>
-				</li>
-				<li test-id='16' class='gc then pass' status='pass'>
-					<h6 class="step-name" title="StepDefinitions.stepDefinitions.payment_details_should_be_displayed()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then Payment Details should be displayed</h6>
-					<div class="node-step"></div>
-				</li>
-				<li test-id='17' class='gc when pass' status='pass'>
-					<h6 class="step-name" title="StepDefinitions.stepDefinitions.user_fills_payment_amount_as(java.lang.String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>When user fills Payment Amount as 100</h6>
-					<div class="node-step"></div>
-				</li>
-				<li test-id='18' class='gc and pass' status='pass'>
-					<h6 class="step-name" title="StepDefinitions.stepDefinitions.from_payment_details_window_click_on_save_button()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And From Payment Details window click on Save Button</h6>
-					<div class="node-step"></div>
-				</li>
-				<li test-id='19' class='gc and pass' status='pass'>
-					<h6 class="step-name" title="StepDefinitions.stepDefinitions.clicks_yes_on_confirmation_prompt()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And clicks yes on confirmation prompt</h6>
-					<div class="node-step"></div>
-				</li>
-				<li test-id='20' class='gc given pass' status='pass'>
-					<h6 class="step-name" title="StepDefinitions.stepDefinitions.payment_summary_window_click_on_save_button()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Given Payment Summary window click on Save Button</h6>
-					<div class="node-step"></div>
-				</li>
-				<li test-id='21' class='gc then pass' status='pass'>
-					<h6 class="step-name" title="StepDefinitions.stepDefinitions.reciept_generated_successfully()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then Reciept generated successfully</h6>
-					<div class="node-step"></div>
-				</li>
-			</ul>
+		<li test-id='5' class='node given pass' status='pass'>
+			<div class="step-name" title="StepDefinitions.stepDefinitions.user_navigates_to_the_portal_login_page()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Given User navigates to the Portal login page</div>
+			<div class="node-step"></div>
+		</li>
+		<li test-id='6' class='node when pass' status='pass'>
+			<div class="step-name" title="StepDefinitions.stepDefinitions.user_clicks_login_as_taxpayer()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>When User clicks login as Taxpayer</div>
+			<div class="node-step"></div>
+		</li>
+		<li test-id='7' class='node and pass' status='pass'>
+			<div class="step-name" title="StepDefinitions.stepDefinitions.enters_the_portal_username_something_and_password_something_to_login(java.lang.String,java.lang.String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And Enters the Portal username "MrManMan" and password "Password@123" to login</div>
+			<div class="node-step"></div>
 		</li>
 	</ul>
 </div>
@@ -310,14 +252,14 @@
 			<ul id='category-collection' class='category-collection'>
 				<li class='category displayed active'>
 					<div class='category-heading'>
-						<span class='category-name'>@SUC:13-11</span>
+						<span class='category-name'>@SUC:05-18</span>
 						<span class='category-status right'>
-						<span class='label pass'>2</span>
+						<span class='label pass'>1</span>
 						</span>
 					</div>
 					<div class='category-content hide'>
 						<div class='category-status-counts'>
-							<span status="pass" class='label green accent-4 white-text'>Passed: 2</span>
+							<span status="pass" class='label green accent-4 white-text'>Passed: 1</span>
 							
 							
 						</div>
@@ -332,13 +274,8 @@
 								</thead>
 								<tbody>
 									<tr>
-										<td>Jul 24, 2020 09:36:29 AM</td>
-										<td class='linked' test-id='2'>UAT_M7_14-01-Verify the Process of print Taxpayer documents</td>
-										<td><span class='test-status pass'>pass</span></td>
-									</tr>
-									<tr>
-										<td>Jul 24, 2020 09:36:29 AM</td>
-										<td class='linked' test-id='3'>UAT_M7_14-01-Verify the Process of print Taxpayer documents</td>
+										<td>Jul 26, 2020 10:44:43 PM</td>
+										<td class='linked' test-id='2'>Portal Login</td>
 										<td><span class='test-status pass'>pass</span></td>
 									</tr>
 								</tbody>
@@ -375,25 +312,25 @@
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Steps
-					<div class='panel-lead'>16</div>
+					<div class='panel-lead'>3</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Start
-					<div class='panel-lead'>Jul 24, 2020 09:36:29 AM</div>
+					<div class='panel-lead'>Jul 26, 2020 10:44:43 PM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 			 		End
-			 		<div class='panel-lead'>Jul 24, 2020 09:37:27 AM</div>
+			 		<div class='panel-lead'>Jul 26, 2020 10:45:06 PM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Time Taken
-					<div class='panel-lead'>0h 0m 58s+158ms</div>
+					<div class='panel-lead'>0h 0m 23s+13ms</div>
 				</div>
 			</div>
 			<div class='col s6'>
@@ -409,8 +346,8 @@
 							<th>Passed %</th>
 						</tr>
 						<tr>
-							<td>@SUC:13-11</td>
-							<td>2</td>
+							<td>@SUC:05-18</td>
+							<td>1</td>
 							<td>0</td>
 							<td>0</td>
 							<td>
@@ -446,8 +383,8 @@
 				infoChild: 0,
 				debugChild: 0,
 				exceptionsChild: 0,
-				grandChildCount: 16,
-				passGrandChild: 16,
+				grandChildCount: 3,
+				passGrandChild: 3,
 				failGrandChild: 0,
 				fatalGrandChild: 0,
 				errorGrandChild: 0,
@@ -460,7 +397,7 @@
 		</script>
 		<script>
 			var timeline = {
-			        "[SUC:13-11] Print Refund Documents":57.218
+			        "[SUC:05-18] Taxpayer Payment - Portal":22
 			};
 		</script>
 	

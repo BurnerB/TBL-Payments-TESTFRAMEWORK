@@ -468,8 +468,8 @@ public class stepDefinitions extends BaseClass{
         reconcileButton.click();
         Thread.sleep(4000);
     }
-    @Then("^error message is displayed \"([^\"]*)\"$")
-    public void error_message_is_displayed_something(String strArg1) throws Throwable {
+    @Then("^message is displayed \"([^\"]*)\"$")
+    public void message_is_displayed_something(String strArg1) throws Throwable {
     	driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
     	
     	WebElement Message = driver.findElement(By.xpath("//span[contains(text(),'"+strArg1+"')]"));
@@ -1026,6 +1026,142 @@ driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
     	}else {
     		Assert.fail("No Success message displayed");
     	}
+    }
+    
+    /////----------------------------------------------------------------Reverse Payment---------------------------------------------------------------------------------------------------------///
+    
+    @Given("^navigate Revenue Collection>>Reverse Payment$")
+    public void navigate_revenue_collectionreverse_payment() throws Throwable {
+    	driver.findElement(By.xpath(Pro.getProperty("RevenueCollection_RevenueCollection_XPATH"))).click();
+        Thread.sleep(2000);
+        driver.findElement(By.xpath(Pro.getProperty("reversePayment_Xpath"))).click();
+        Thread.sleep(3000);
+    }
+    
+    @When("^enters (.+) on Find Payment page$")
+    public void enters_on_find_payment_page(String tin) throws Throwable {
+    	driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+        WebElement tinInput = driver.findElement(By.id("SearchForm:TIN"));
+        tinInput.sendKeys(tin);
+    }
+    
+    @And("^click search on find payment page$")
+    public void click_search_on_find_payment_page() throws Throwable {
+    	
+    	WebElement searchBtn = driver.findElement(By.id("SearchForm:j_idt42"));
+    	searchBtn.click();
+    }
+    
+    @Then("^Searched results should be displayed in a table$")
+    public void searched_results_should_be_displayed_in_a_table() throws Throwable {
+    	driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+        WebElement firstRow = driver.findElement(By.xpath("//*[@id=\"SearchForm:resultsDataTable_data\"]/tr[1]"));
+        Assert.assertTrue(firstRow.isDisplayed());
+    }
+    
+    @When("^user clicks Taxpayers Payment to be reversed$")
+    public void user_clicks_taxpayers_payment_to_be_reversed() throws Throwable {
+    	Thread.sleep(3000);
+    	driver.findElement(By.xpath("//*[@id='SearchForm:resultsDataTable_data']/tr[1]")).click();
+
+    }
+    @And("^clicks Continue button$")
+    public void clicks_continue_button() throws Throwable {    	
+    	WebElement continueBtn = driver.findElement(By.id("SearchForm:j_id22"));
+    	continueBtn.click();
+    }
+    
+    @When("^clicks on payment list and view$")
+    public void clicks_on_payment_list_and_view() throws Throwable {
+        Thread.sleep(3000);
+        WebElement paymentList = driver.findElement(By.xpath("//*[@id=\"PaymentSummary:PaymentListDataTable_data\"]/tr/td[2]"));
+        paymentList.click();
+        
+        WebElement viewBtn = driver.findElement(By.id("PaymentSummary:PaymentListDataTable:View"));
+        viewBtn.click();
+    }
+    
+    @And("^enters required comment (.+)$")
+    public void enters_required_comment(String comment) throws Throwable {
+    	Thread.sleep(5000);
+        WebElement paymentCommentInput = driver.findElement(By.id("PaymentDetails:paymentAccordion:Comments"));
+        paymentCommentInput.sendKeys(comment);
+    }
+    
+    @And("^clicks reverse button$")
+    public void clicks_reverse_button() throws Throwable {
+    	WebElement reverseButton = driver.findElement(By.id("PaymentDetails:Reverse"));
+    	reverseButton.click();
+    	Thread.sleep(5000);
+    }
+    
+    @When("^clicks confirm reversal button$")
+    public void clicks_confirm_reversal_button() throws Throwable {
+    	WebElement confirmReverseButton = driver.findElement(By.id("PaymentSummary:Reverse"));
+    	confirmReverseButton.click();
+    	Thread.sleep(5000);
+    }
+    @Then("^no records found$")
+    public void no_records_found() throws Throwable {
+    	String emptyDatatable = driver.findElement(By.xpath("//*[@id=\"SearchForm:resultsDataTable_data\"]/tr/td")).getText();
+        Assert.assertEquals(emptyDatatable, "No records found.");
+    }
+    
+    
+    ////---------------------------------------------------------------Bulk Upload - Payments--------------------------------------------------------------------------///
+    
+    @Given("^navigate Revenue Collection>>Bulk Payment$")
+    public void navigate_revenue_collectionbulk_payment() throws Throwable {
+    	driver.findElement(By.xpath(Pro.getProperty("RevenueCollection_RevenueCollection_XPATH"))).click();
+        Thread.sleep(2000);
+        driver.findElement(By.xpath(Pro.getProperty("BulkPayment_Xpath"))).click();
+        Thread.sleep(3000);
+    }
+    
+    @When("^user clicks on browse button$")
+    public void user_clicks_on_browse_button() throws Throwable {
+    	WebElement browseBtn=driver.findElement(By.xpath("//*[@id='BulkPayment:UploadFile']/span[1]"));
+    	Assert.assertTrue(browseBtn.isDisplayed());
+    }
+    
+    @And("^Selects the file to be uploaded (.+)$")
+    public void selects_the_file_to_be_uploaded(String path) throws Throwable {
+    	Thread.sleep(3000);
+    	driver.findElement(By.id("BulkPayment:UploadFile_input")).sendKeys(path);
+    }
+    
+    @And("^Then click Save Button on upload$")
+    public void then_click_save_button_on_upload() throws Throwable {
+    	WebElement saveUploadButton = driver.findElement(By.id("BulkPayment:save"));
+    	saveUploadButton.click();
+    	Thread.sleep(5000);
+    }
+    
+    ///---------------------------------------------------Taxpayer Payment - Portal------------------------------------------------//
+    @Given("^User navigates to the Portal login page$")
+    public void user_navigates_to_the_portal_login_page() throws Throwable {
+    	driver = BaseClass.getDriver();
+    	driver.get(Pro.getProperty("PortalURL"));
+    }
+    
+    @And("^Enters the Portal username \"([^\"]*)\" and password \"([^\"]*)\" to login$")
+    public void enters_the_portal_username_something_and_password_something_to_login(String strArg1, String strArg2) throws Throwable {
+    	Thread.sleep(5000);
+        WebElement usernameInput = driver.findElement(By.xpath("//*[@id=\"id_userName\"]"));
+        usernameInput.sendKeys(strArg1);
+        
+        WebElement passwordInput = driver.findElement(By.xpath("//*[@id=\"id_password\"]"));
+        passwordInput.sendKeys(strArg2);
+              
+        WebElement loginBtn = driver.findElement(By.id("btnSubmit"));
+        loginBtn.click();
+    }
+    
+    @When("^User clicks login as Taxpayer$")
+    public void user_clicks_login_as_taxpayer() throws Throwable {
+    	Thread.sleep(5000);
+        WebElement taxPayer = driver.findElement(By.xpath("/html/body/trips-app/div/app-portal-home/div/div/div[1]/div[3]/div[1]/p/a"));
+        taxPayer.click();
     }
 }
 
