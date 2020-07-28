@@ -2,7 +2,7 @@ Feature: [SUC:13-11] Print Refund Documents
  
  Background:
 Given User navigates to the login page
-When Enters the username "tripscrmuser3" and password "Passw0rd" to login
+When Enters the username "tripscrmuser12" and password "Passw0rd" to login
 Then User should be logged in
 
 @SUC:13-11

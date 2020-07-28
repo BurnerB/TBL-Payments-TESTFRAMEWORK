@@ -12,7 +12,7 @@ Then successfuly awaits approval
 
 Examples:
 |ref number|
-|CT00000721|
+|CT00001143|
 
 @SUC:05-03
 Scenario: Approve Cash Till
@@ -39,9 +39,9 @@ Then cashTill status should be <Status>
 
 Examples:
 |ref number|Status|
-|CT00000721|Open|
+|CT00001143|Open|
 
-@SUC:05-02
+@SUC:05-03
 Scenario Outline: UAT_M7_03-03-Verify the Process of Supervisor rejection
 Given User navigates to the login page
 When Enters the username "tripscrmuser3" and password "Passw0rd" to login
@@ -53,9 +53,9 @@ Then successfuly awaits approval
 
 Examples:
 |ref number|
-|CT00000721|
+|CT00001141|
 
-@SUC:05-02
+@SUC:05-03
 Scenario Outline: Reject Cash Till
 Given Open CRM URL Module
  And Close Popup Window
@@ -75,7 +75,7 @@ Examples:
 |    Notes            |Reason|
 |Invalid Documentation|Duplicate entity found|
 
-@SUC:05-02
+@SUC:05-03
 Scenario Outline: status set to suspended
 Given User navigates to the login page
 When Enters the username "tripscrmuser3" and password "Passw0rd" to login
@@ -86,4 +86,4 @@ Then cashTill status should be <Status>
 
 Examples:
 |ref number|Status|
-|CT00000721|Suspended|
+|CT00001141|Suspended|

@@ -27,7 +27,7 @@ Examples:
 |Q0013357	|Genuine miscalculation		  |
 
 
-#@SUC:05-16
+@SUC:05-16
 Scenario Outline: UAT_M7_16-03-Verify the Process of Payment Records Not Found
 Given navigate Revenue Collection>>Reverse Payment
 When enters <TIN> on Find Payment page
@@ -39,7 +39,7 @@ Examples:
 |TIN		|
 |B0013357	|
 
-#@SUC:05-16
+@SUC:05-16
 Scenario Outline: UAT_M7_16-04-Verify the Process of Validation Failed
 Given navigate Revenue Collection>>Reverse Payment
 When enters <TIN> on Find Payment page

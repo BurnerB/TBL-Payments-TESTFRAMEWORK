@@ -17,7 +17,7 @@ Examples:
 |path|
 |C:\Users\v-bakam\Downloads\Bulk Upload Template.csv|
 
-#@SUC:05-19
+@SUC:05-19
 Scenario Outline: UAT_M7_19-01-UAT_M7_19-01-Verify the Process of Payment Bulk Upload
 Given navigate Revenue Collection>>Bulk Payment
 When user clicks on browse button

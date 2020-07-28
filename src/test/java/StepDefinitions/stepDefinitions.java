@@ -92,14 +92,14 @@ public class stepDefinitions extends BaseClass{
     public void navigate_to_revenue_collectioncash_office_daily_control() throws Throwable {
         driver.findElement(By.xpath(Pro.getProperty("RevenueCollection_RevenueCollection_XPATH"))).click();
         driver.findElement(By.xpath(Pro.getProperty("RevenueCollection_CashOfficeDailyControl_XPATH"))).click();
-        Thread.sleep(2000);
+        Thread.sleep(5000);
     }
     
     @When("^the User clicks Cash Office Name$")
     public void the_user_clicks_cash_office_name() throws Throwable {
         driver.findElement(By.xpath(Pro.getProperty("cashOffice_NameDropdown_Xpath"))).click();
         Thread.sleep(2000);
-        driver.findElement(By.id("CashOfficeDailyControlform:CashOfficeName_2")).click();
+        driver.findElement(By.id("CashOfficeDailyControlform:CashOfficeName_8")).click();
         
         Thread.sleep(4000);
         
@@ -124,7 +124,16 @@ public class stepDefinitions extends BaseClass{
     	Thread.sleep(4000);
     	WebDriverWait wait=new WebDriverWait(driver, 30);
     	WebElement success = wait.until(ExpectedConditions.visibilityOfElementLocated(By.className("ui-messages-info-summary")));
-    	Assert.assertEquals(success.getText(), "Cash Office Opened Successfully");	
+    	Assert.assertEquals(success.getText(), "Cash Office Opened Successfully");
+    
+    }
+    
+    @Then("^System reconciles the Cash Office$")
+    public void system_reconciles_the_cash_office() throws Throwable {
+    	Thread.sleep(4000);
+    	WebDriverWait wait=new WebDriverWait(driver, 30);
+    	WebElement success = wait.until(ExpectedConditions.visibilityOfElementLocated(By.className("ui-messages-info-summary")));
+    	Assert.assertEquals(success.getText(), "Cash Office Reconciled Successfully");
     }
     	
 ///--------------------------UAT_M7_02-02-Verify the Process of Allocate Cash Till---------------------------------------------------------------------////
@@ -155,7 +164,7 @@ public class stepDefinitions extends BaseClass{
     	String ARN = Text.substring(Text.lastIndexOf(" ")+1);
     	sharedatastep.P_CRMARN=ARN;
     	System.out.print(sharedatastep.P_CRMARN);
-    	System.out.print("Reference Number is -" + sharedatastep.P_CRMARN);
+    	System.out.print("Reference Number is - " + sharedatastep.P_CRMARN);
     }
     
     @Given("^Open CRM URL Module$")
@@ -198,8 +207,8 @@ public class stepDefinitions extends BaseClass{
     public void enters_in_search_results() throws Throwable {
     	WebDriverWait wait=new WebDriverWait(driver, 20);
     	WebElement search = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("crmGrid_findCriteria")));
-//    	search.sendKeys(sharedatastep.P_CRMARN);
-    	search.sendKeys("CT00000721");
+    	search.sendKeys(sharedatastep.P_CRMARN);
+//    	search.sendKeys("CT00001161");
     	search.sendKeys(Keys.ENTER);
     	
     	Thread.sleep(2000);
@@ -265,16 +274,30 @@ public class stepDefinitions extends BaseClass{
              }
          Thread.sleep(2000);
     }
-    @When("^selects the ref number$")
-    public void selects_the_ref_number() throws Throwable {
+    
+    @When("^enters approved ref number$")
+    public void enters_approved_ref_number() throws Throwable {
+    	
+    	WebElement cashTillReferenceDropdown=driver.findElement(By.xpath("//*[@id=\"CashTillMaintenance:TillReference\"]/div[3]"));
+    	cashTillReferenceDropdown.click();
+    	Thread.sleep(2000);
+
+    	//click on the ref number of the specific cash till on the dropdown
+    	WebElement refNumber =driver.findElement(By.xpath("//li[@data-label='"+sharedatastep.P_CRMARN+"']"));
+
+//        WebElement refNumber =driver.findElement(By.xpath("//li[@data-label='CT00001171']"));
+    	Thread.sleep(2000);
+    	refNumber.click();
+    }
+    
+    @When("^selects ref number$")
+    public void selects_ref_number() throws Throwable {
         WebElement cashTillReferenceDropdown=driver.findElement(By.xpath("//*[@id=\"CashTillMaintenance:TillReference\"]/div[3]"));
         cashTillReferenceDropdown.click();
         Thread.sleep(2000);
         
         //click on the ref number of the specific cash till on the dropdown
-        WebElement refNumber =driver.findElement(By.xpath("//li[@data-label='CT00001148']"));
-        
-//        WebElement refNumber =driver.findElement(By.xpath("//option[@value='"+ sharedatastep.P_CRMARN +"']"));
+        WebElement refNumber =driver.findElement(By.xpath("CashTillMaintenance:TillReference_1"));
         Thread.sleep(2000);
         refNumber.click();
         
@@ -285,14 +308,13 @@ public class stepDefinitions extends BaseClass{
     	Thread.sleep(4000);
         WebElement floatAmount = driver.findElement(By.id("CashTillMaintenance:FloatAmount_input"));
         floatAmount.sendKeys(amount);
+        Thread.sleep(4000);
     }
     
     @And("^clicks Save$")
     public void clicks_save() throws Throwable {
-    	WebElement CashTillMaintenance_Save=driver.findElement(By.id("CashTillMaintenance:save"));
-    	CashTillMaintenance_Save.click();
-    	
     	Thread.sleep(4000);
+    	driver.findElement(By.id("CashTillMaintenance:save")).click();    	
     }
     
     @Then("^Cash Till is now open$")
@@ -331,8 +353,7 @@ public class stepDefinitions extends BaseClass{
     @And("^clicks Decline from the dropdown$")
     public void clicks_Decline_from_the_dropdown() throws Throwable {
     	driver.switchTo().frame("contentIFrame1");
-    	Thread.sleep(7000);
-    	driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+    	Thread.sleep(10000);
 
     	Actions action=new Actions(driver);
     	WebElement Outcome=driver.findElement(By.id(Pro.getProperty("Taxpayer_Accounting_Approval_Outcome_ID")));
@@ -371,7 +392,8 @@ public class stepDefinitions extends BaseClass{
     
     @Then("^cashTill status should be (.+)$")
     public void cashtill_status_should_be(String status) throws Throwable {
-    	WebElement cashTillStatus = driver.findElement(By.xpath("//*[@id=\"CashTillMaintenance:TillStatus_label\"]"));
+    	Thread.sleep(4000);
+    	WebElement cashTillStatus = driver.findElement(By.id("CashTillMaintenance:TillStatus_label"));
 
         Assert.assertEquals(status, cashTillStatus.getText());
     }
@@ -470,7 +492,7 @@ public class stepDefinitions extends BaseClass{
     }
     @Then("^message is displayed \"([^\"]*)\"$")
     public void message_is_displayed_something(String strArg1) throws Throwable {
-    	driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+//    	driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
     	WebDriverWait wait=new WebDriverWait(driver,10);
     	
     	WebElement Message = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[contains(text(),'"+strArg1+"')]")));
@@ -492,10 +514,10 @@ public class stepDefinitions extends BaseClass{
     
     @And("^clicks reconcile Cash Office$")
     public void clicks_reconcile_cash_office() throws Throwable {
-    	Thread.sleep(4000);
+    	Thread.sleep(6000);
     	WebElement reconcileButton = driver.findElement(By.id("CashOfficeDailyControlform:btnReconcileCashOffice"));
         reconcileButton.click();
-        Thread.sleep(4000);
+        Thread.sleep(7000);
     }
     
     @When("^enters cash till reference$")
@@ -609,7 +631,7 @@ public class stepDefinitions extends BaseClass{
     
     @Then("^Find Entity pop up window should be displayed$")
     public void find_entity_pop_up_window_should_be_displayed() throws Throwable {
-    	Thread.sleep(4000);
+    	Thread.sleep(7000);
     	//Switch to iframe to allow interaction with modal
         WebElement frame = driver.findElement(By.tagName("iframe"));
         driver.switchTo().frame(frame);
@@ -681,8 +703,9 @@ public class stepDefinitions extends BaseClass{
         String paymentSummaryLabel = driver.findElement(By.id("PaymentSummary:TaxpayerHeader")).getText();
         Assert.assertEquals(paymentSummaryLabel, "Taxpayer Account");
         
-        String TIN = driver.findElement(By.id("PaymentSummary:TIN")).getAttribute("value");
-        Assert.assertEquals(TIN, tin);
+//        WebElement TIN = driver.findElement(By.id("PaymentSummary:TIN"));
+//        Thread.sleep(2000);
+//        Assert.assertEquals(tin, TIN.getAttribute("value"));
         
     }
     
@@ -690,17 +713,21 @@ public class stepDefinitions extends BaseClass{
     public void from_payment_summary_window_enters(String nameofpersonpaying) throws Throwable {
         WebElement personPayingInput = driver.findElement(By.id("PaymentSummary:personPaying_id"));
         personPayingInput.sendKeys(nameofpersonpaying);
+        Thread.sleep(4000);
     }
     
     @And("^clicks add button$")
     public void clicks_add_button() throws Throwable {
         WebElement paymentSummaryAddBtn = driver.findElement(By.id("PaymentSummary:PaymentListDataTable:AddBtn"));
-        paymentSummaryAddBtn.click();
-        Thread.sleep(4000);
+        
+        Actions actions = new Actions(driver);
+    	actions.doubleClick(paymentSummaryAddBtn).perform();
+        Thread.sleep(9000);
     }
     
     @Then("^Payment Details should be displayed$")
     public void payment_details_should_be_displayed() throws Throwable {
+    	Thread.sleep(10000);
         String paymentDetailsHeader = driver.findElement(By.xpath("//*[@id=\"PaymentDetails:paymentAccordion\"]/ul/li")).getText();
         Assert.assertEquals(paymentDetailsHeader, "Payment Details");
         
@@ -733,7 +760,8 @@ public class stepDefinitions extends BaseClass{
     }
      
     @Then("^Account Payment Details pop up window should be displayed$")
-    public void account_payment_details_pop_up_window_should_be_displayed() throws Throwable {	
+    public void account_payment_details_pop_up_window_should_be_displayed() throws Throwable {
+    	Thread.sleep(7000);
     	WebElement paymentonAccountHeader = driver.findElement(By.xpath("//*[@id=\"PaymentDetails:paymentAccordion:PaymentSpread:OnAccount_dlg\"]/div[1]"));
         Assert.assertTrue(paymentonAccountHeader.isDisplayed());
     }
@@ -765,9 +793,9 @@ public class stepDefinitions extends BaseClass{
     @And("^clicks ok$")
     public void clicks_ok() throws Throwable {
 //    	//Switch to iframe to allow interaction with modal
-//        WebElement frame = driver.findElement(By.tagName("iframe"));
-//        driver.switchTo().frame(frame);
-//        Thread.sleep(2000);
+        WebElement frame = driver.findElement(By.tagName("iframe"));
+        driver.switchTo().frame(frame);
+        Thread.sleep(2000);
     	
     	
         WebElement okButton = driver.findElement(By.id("OnAccountPayment:Ok"));
@@ -826,7 +854,6 @@ public class stepDefinitions extends BaseClass{
     @Then("^account payment error message is displayed \"([^\"]*)\"$")
     public void account_payment_error_message_is_displayed_something(String strArg1) throws Throwable {
     	driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-    	
     	WebElement Message = driver.findElement(By.xpath("//span[contains(text(),'"+strArg1+"')]"));
     	if(Message.isDisplayed()) {
     		Assert.assertTrue("Error message displayed",true);
@@ -1213,10 +1240,27 @@ driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
     
     @And("^Clicks on Pay At The Bank button$")
     public void clicks_on_pay_at_the_bank_button() throws Throwable {
-        WebElement payBankBtn=driver.findElement(By.id("c"));
+        WebElement payBankBtn=driver.findElement(By.id("payBank"));
         payBankBtn.click();
-        
     }
+    
+    @Then("^Portal error is displayed \"([^\"]*)\"$")
+    public void portal_error_is_displayed_something(String strArg1) throws Throwable {
+    	WebElement Message = driver.findElement(By.xpath("/html/body/trips-app/div/p-messages/div"));
+    	if(Message.isDisplayed()) {
+    		Assert.assertTrue("Success message displayed",true);
+    	}else {
+    		Assert.fail("No Success message displayed");
+    	}
+    }
+    
+    @And("^enters designation (.+)$")
+    public void enters_designation(String designation) throws Throwable {
+    	WebElement designationInput = driver.findElement(By.id("PaymentSummary:designation_id"));
+    	designationInput.sendKeys(designation);
+    }
+    
+    
 }
 
 
