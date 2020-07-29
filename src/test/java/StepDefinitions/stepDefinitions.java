@@ -66,8 +66,8 @@ public class stepDefinitions extends BaseClass{
     @Given("^User navigates to the login page$")
     public void user_navigates_to_the_login_page() throws Throwable {
     	driver = BaseClass.getDriver();
-//    	driver.get("http://18.202.88.7:8001/trips-ui/faces/login/tripsLogin.xhtml");
-    	driver.get("https://backoffice.mra.mw:8443/trips-ui/faces/login/tripsLogin.xhtml");
+    	driver.get("http://18.202.88.7:8001/trips-ui/faces/login/tripsLogin.xhtml");
+//    	driver.get("https://backoffice.mra.mw:8443/trips-ui/faces/login/tripsLogin.xhtml");
     	
     }
     
@@ -81,7 +81,9 @@ public class stepDefinitions extends BaseClass{
     @Then("^User should be logged in$")
     public void user_should_be_logged_in() throws Throwable {
     	String URL = driver.getCurrentUrl();
+    	
     	Assert.assertEquals(URL, "http://18.202.88.7:8001/trips-ui/faces/login/Welcome.xhtml" );
+//    	Assert.assertEquals(URL, "https://backoffice.mra.mw:8443/trips-ui/faces/login/Welcome.xhtml" );
     }
     
     @Then("^User logs out successfully$")

@@ -14,4 +14,4 @@ Then System opens the Cash Office
 
 Examples:
 |cfN|
-|Balaka Office1|
+|KenyaQA|
