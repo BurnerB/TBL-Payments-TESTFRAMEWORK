@@ -16,7 +16,7 @@ Then The System saves the updated Receipt Document record
 #increment the reciept Number -To after every successful run
 Examples:
 |Cash Office	|Receipt Number - From|Receipt Number - To|Distribution Status|
-|Balaka Office1	|5					  |6      			  |In Stock|
+|Balaka Office1	|1					  |2      			  |In Stock|
 
 @SUC:05-09
 Scenario Outline: UAT_M7_09-03-Verify the Process Unusable Receipts

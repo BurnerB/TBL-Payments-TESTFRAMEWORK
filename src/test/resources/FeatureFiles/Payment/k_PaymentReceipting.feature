@@ -15,8 +15,6 @@ And clicks search button
 Then Payment Summary window displayed <TIN>
 When From Payment Summary window enters <Name of Person Paying>
 And enters designation <designation>
-And clicks add button
-And clicks add button
 When From Payment Summary window enters <Name of Person Paying>
 And enters designation <designation>
 And clicks add button

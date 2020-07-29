@@ -66,7 +66,9 @@ public class stepDefinitions extends BaseClass{
     @Given("^User navigates to the login page$")
     public void user_navigates_to_the_login_page() throws Throwable {
     	driver = BaseClass.getDriver();
-    	driver.get("http://18.202.88.7:8001/trips-ui/faces/login/tripsLogin.xhtml");
+//    	driver.get("http://18.202.88.7:8001/trips-ui/faces/login/tripsLogin.xhtml");
+    	driver.get("https://backoffice.mra.mw:8443/trips-ui/faces/login/tripsLogin.xhtml");
+    	
     }
     
     @When("^Enters the username \"([^\"]*)\" and password \"([^\"]*)\" to login$")
@@ -92,7 +94,7 @@ public class stepDefinitions extends BaseClass{
     public void navigate_to_revenue_collectioncash_office_daily_control() throws Throwable {
         driver.findElement(By.xpath(Pro.getProperty("RevenueCollection_RevenueCollection_XPATH"))).click();
         driver.findElement(By.xpath(Pro.getProperty("RevenueCollection_CashOfficeDailyControl_XPATH"))).click();
-        Thread.sleep(5000);
+        Thread.sleep(9000);
     }
     
     @When("^the User clicks Cash Office Name$")
@@ -222,7 +224,7 @@ public class stepDefinitions extends BaseClass{
     	actions.doubleClick(elementLocator).perform();
     	
     	driver.switchTo().defaultContent();
-    	Thread.sleep(9000);
+    	Thread.sleep(4000);
     }
     
     @And("^clicks Approve from the dropdown$")
