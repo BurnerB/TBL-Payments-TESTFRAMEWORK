@@ -2,7 +2,7 @@ Feature: [SUC:05-15] Open a Cash Office
  
  Background:
 Given User navigates to the login page
-When Enters the username "tripsuser" and password "Passw0rd" to login
+When Enters the username "usera" and password "Passw0rd" to login
 Then User should be logged in 
 
 @SUC:05-15
@@ -14,4 +14,4 @@ Then System opens the Cash Office
 
 Examples:
 |cfN|
-|KenyaQA|
+|Kenya Q/A|

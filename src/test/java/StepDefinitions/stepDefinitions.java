@@ -66,8 +66,11 @@ public class stepDefinitions extends BaseClass{
     @Given("^User navigates to the login page$")
     public void user_navigates_to_the_login_page() throws Throwable {
     	driver = BaseClass.getDriver();
-    	driver.get("http://18.202.88.7:8001/trips-ui/faces/login/tripsLogin.xhtml");
-//    	driver.get("https://backoffice.mra.mw:8443/trips-ui/faces/login/tripsLogin.xhtml");
+//    	intergtation link for backoffice
+//    	driver.get("http://18.202.88.7:8001/trips-ui/faces/login/tripsLogin.xhtml");
+
+        //    	SIT link for backoffice
+    	driver.get("https://backoffice.mra.mw:8443/trips-ui/faces/login/tripsLogin.xhtml");
     	
     }
     
@@ -82,8 +85,8 @@ public class stepDefinitions extends BaseClass{
     public void user_should_be_logged_in() throws Throwable {
     	String URL = driver.getCurrentUrl();
     	
-    	Assert.assertEquals(URL, "http://18.202.88.7:8001/trips-ui/faces/login/Welcome.xhtml" );
-//    	Assert.assertEquals(URL, "https://backoffice.mra.mw:8443/trips-ui/faces/login/Welcome.xhtml" );
+//    	Assert.assertEquals(URL, "http://18.202.88.7:8001/trips-ui/faces/login/Welcome.xhtml" );
+    	Assert.assertEquals(URL, "https://backoffice.mra.mw:8443/trips-ui/faces/login/Welcome.xhtml" );
     }
     
     @Then("^User logs out successfully$")
@@ -387,10 +390,11 @@ public class stepDefinitions extends BaseClass{
     public void enter_Outcome_Reason_for_Taxpayer_accounting() throws Throwable {
     	WebElement specificframe=driver.findElement(By.id("WebResource_RevenueCollectionRejectionDataWebResource"));
     	driver.switchTo().frame(specificframe);
-    	WebElement dropDown = driver.findElement(By.xpath("//*[@id=\"viewoption\"]"));	
+    	WebElement dropDown = driver.findElement(By.xpath("//*[@id=\"viewoption\"]"));
+
     	dropDown.click();
     	
-    	driver.findElement(By.xpath("//option[@value='3']")).click();
+    	driver.findElement(By.xpath("//option[@value='2']")).click();
 
     }
     
