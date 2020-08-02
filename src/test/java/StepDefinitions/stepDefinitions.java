@@ -214,8 +214,8 @@ public class stepDefinitions extends BaseClass{
     public void enters_in_search_results() throws Throwable {
     	WebDriverWait wait=new WebDriverWait(driver, 20);
     	WebElement search = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("crmGrid_findCriteria")));
-    	search.sendKeys(sharedatastep.P_CRMARN);
-//    	search.sendKeys("CT00001161");
+       	search.sendKeys(sharedatastep.P_CRMARN);
+//    	search.sendKeys("CT00001741");
     	search.sendKeys(Keys.ENTER);
     	
     	Thread.sleep(2000);
@@ -269,7 +269,7 @@ public class stepDefinitions extends BaseClass{
     	driver.switchTo().frame("contentIFrame1");
     	WebDriverWait wait = new WebDriverWait(driver,30);
     	Thread.sleep(3000);
-    	String text = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"Status_label\"]"))).getText();
+    	String text = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='Status_label']"))).getText();
         if(text.contains(Status))
        	{
 
@@ -292,7 +292,7 @@ public class stepDefinitions extends BaseClass{
     	//click on the ref number of the specific cash till on the dropdown
     	WebElement refNumber =driver.findElement(By.xpath("//li[@data-label='"+sharedatastep.P_CRMARN+"']"));
 
-//        WebElement refNumber =driver.findElement(By.xpath("//li[@data-label='CT00001171']"));
+//        WebElement refNumber =driver.findElement(By.xpath("//li[@data-label='CT00001801']"));
     	Thread.sleep(2000);
     	refNumber.click();
     }
@@ -318,8 +318,8 @@ public class stepDefinitions extends BaseClass{
         Thread.sleep(4000);
     }
     
-    @And("^clicks Save$")
-    public void clicks_save() throws Throwable {
+    @And("^clicks Save on cash till mainenance$")
+    public void clicks_Save_on_cash_till_mainenance() throws Throwable {
     	Thread.sleep(4000);
     	driver.findElement(By.id("CashTillMaintenance:save")).click();    	
     }
@@ -453,6 +453,7 @@ public class stepDefinitions extends BaseClass{
     @And("^enters payment collection (.+)$")
     public void enters_payment_collection(String payment) throws Throwable {
         WebElement paymentCollectionInput = driver.findElement(By.id("CashTillMaintenance:PaymentCollected_input"));
+//        paymentCollectionInput.clear();
         paymentCollectionInput.sendKeys(payment);
     }
     
@@ -479,7 +480,7 @@ public class stepDefinitions extends BaseClass{
     public void unreconciled_error_message_displayed() throws Throwable {
     	driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
     	
-    	WebElement Message = driver.findElement(By.xpath("//span[contains(text(),'Cash Till does not reconcile')]"));
+    	WebElement Message = driver.findElement(By.xpath("//span[contains(text(),'Reconciliation failed')]"));
     	if(Message.isDisplayed()) {
     		Assert.assertTrue("Error message displayed",true);
     	}else {
@@ -538,7 +539,7 @@ public class stepDefinitions extends BaseClass{
     
     @Then("^The System displays the Unreconciled Cash Till details$")
     public void the_system_displays_the_unreconciled_cash_till_details() throws Throwable {
-    	Thread.sleep(2000);
+    	Thread.sleep(5000);
         WebElement cashTillStatus = driver.findElement(By.id("CashOfficeDailyControlform:tillStatus"));
         Assert.assertEquals(cashTillStatus.getAttribute("value"), "UNRECONCILED");
     }
@@ -579,7 +580,6 @@ public class stepDefinitions extends BaseClass{
     	Thread.sleep(2000);
         WebElement resolutionSaveButton = driver.findElement(By.id("CashOfficeDailyControlform:save"));
         resolutionSaveButton.click();
-        Thread.sleep(4000);
     }
     
     @When("^clicks Generate Unreconciled Report button$")

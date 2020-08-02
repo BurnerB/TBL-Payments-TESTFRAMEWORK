@@ -2,7 +2,7 @@ Feature: [SUC:05-19] Bulk Upload - Payments
  
  Background:
 Given User navigates to the login page
-When Enters the username "tripscrmuser3" and password "Passw0rd" to login
+When Enters the username "usera" and password "Passw0rd" to login
 Then User should be logged in
 
 @SUC:05-19

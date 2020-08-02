@@ -8,7 +8,7 @@ Then User should be logged in
 Given navigate to Revenue Collection>>Cash Till Maintenance
 When enters approved ref number
 And enters float amount <amount>
-And clicks Save
+  And clicks Save on cash till mainenance
 Then Cash Till is now open
 
 Examples:

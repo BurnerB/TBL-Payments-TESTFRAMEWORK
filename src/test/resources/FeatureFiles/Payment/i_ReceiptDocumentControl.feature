@@ -29,7 +29,7 @@ Then The System saves the updated Receipt Document record
 #increment the reciept Number -To after every successful run
 Examples:
 |Cash Office	|Receipt Number - From|Receipt Number - To|Distribution Status|
-|BALCO101	|3					  |4      			  |Lost|
+|BALCO101	|1					  |2      			  |Lost|
 
 
 @SUC:05-09
