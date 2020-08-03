@@ -2,7 +2,7 @@ Feature: [SUC:05-16] Reverse Payment
  
  Background:
 Given User navigates to the login page
-When Enters the username "usera" and password "Passw0rd" to login
+When Enters the username "tripsuser" and password "Passw0rd" to login
 Then User should be logged in
 
 @SUC:05-16
@@ -24,7 +24,7 @@ Then message is displayed "Payment has been successfully reversed"
 
 Examples:
 |TIN		|comment|
-|P0017167	|Genuine miscalculation		  |
+|20000129	|Genuine miscalculation		  |
 
 
 @SUC:05-16
@@ -55,4 +55,4 @@ Then message is displayed "Validation Error: Value is required"
 
 Examples:
 |TIN		|
-|P0017167	|
+|20000129	|

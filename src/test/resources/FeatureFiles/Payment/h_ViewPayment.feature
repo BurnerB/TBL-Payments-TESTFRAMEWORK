@@ -2,10 +2,11 @@ Feature: [SUC:05-17] View Payment
  
  Background:
 Given User navigates to the login page
-When Enters the username "userb" and password "Passw0rd" to login
+When Enters the username "tripsuser" and password "Passw0rd" to login
 Then User should be logged in
 
-@SUC:05-17
+#@SUC:05-11
+ @SUC:tial
 Scenario Outline: UAT_M7_17-01-UAT_M7_17-02-Verify the Process of Payment Records Not Found
 Given navigate to  Revenue Collection>>View Payment
 When From Find Payment window enters <TIN> and <Payment Method>
@@ -14,4 +15,4 @@ Then System displays message Records Not Found
 
 Examples:
 |TIN	 |Payment Method|
-|P0024640|Cash|
+|20000129|Cash|

@@ -23,11 +23,11 @@ public class Hooks extends BaseClass {
 		    this.scenario = scenario;
 		}
 		
-		@After(order=1)
-		public void AfterSelenium()
-		{
-			driver.close();
-		}
+//		@After(order=1)
+//		public void AfterSelenium()
+//		{
+//			driver.close();
+//		}
 	
 		@After(order=2) 
 		public void AftersaveScreenshot(Scenario scenario) {

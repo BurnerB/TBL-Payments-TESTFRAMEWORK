@@ -107,7 +107,7 @@
 										
 										
 										
-										<a class="dropdown-item" href="#"><span class="tf" status="skip"><i class="fa fa-dot-circle-o text-blue"></i>Skip</span></a>
+										
 										<div class="dropdown-divider"></div>
 										<a class="dropdown-item" href="#"><span class="tf" status="clear"><i class="fa fa-dot-circle-o text-warn"></i>Clear</span></a>
 									</div>
@@ -120,7 +120,7 @@
 								        </span>
 							        </a>
 							        <div class="dropdown-menu pt-0 mt-2 animate fadeIn">
-						    	        <a class="dropdown-item" href="#"><span class="cf">@SUC:05-09</span></a>
+						    	        <a class="dropdown-item" href="#"><span class="cf">@SUC:05-13</span></a>
 						    	        <div class="dropdown-divider"></div>
 						    	        <a class="dropdown-item" href="#"><span class="tf" status="clear"><i class="fa fa-dot-circle-o text-warn"></i>Clear</span></a>
 						    	      </div>
@@ -141,19 +141,19 @@
 											<div class="st fail test l0" 
 												tags=""
 												devices="">
-												<span class="tt">08.01.2020 22:05:58</span>&nbsp;
+												<span class="tt">08.03.2020 21:48:29</span>&nbsp;
 												<span class="ts">fail</span>&nbsp;&nbsp;
-												<span class="tn">[[SUC:05-09] Receipt Document Control] started</span>
+												<span class="tn">[[SUC:05-13] Revenue Collection Reports] started</span>
 												
 											</div>
-											<div class="st fail test l1" 
-												tags="@SUC:05-09"
+											<div class="st pass test l1" 
+												tags="@SUC:05-13"
 												devices="">
-												<span class="tt">08.01.2020 22:05:58</span>&nbsp;
-												<span class="ts">fail</span>&nbsp;&nbsp;
-												<span class="tn">|---[UAT_M7_09-01-UAT_M7_09-02-Verify the Process of Receipt Document Control] started</span>
+												<span class="tt">08.03.2020 21:48:29</span>&nbsp;
+												<span class="ts">pass</span>&nbsp;&nbsp;
+												<span class="tn">|---[UAT_M7_13-01-To verify the process of printing Cashiering Report] started</span>
 												<span class="category-list">
-													<span class="category badge"><i class="fa fa-tag"></i> @SUC:05-09</span>
+													<span class="category badge"><i class="fa fa-tag"></i> @SUC:05-13</span>
 												</span>
 												<span class="author-list">
 												</span>
@@ -161,14 +161,14 @@
 												</span>
 												
 											</div>
-											<div class="st fail test l2" 
-												tags="@SUC:05-09"
+											<div class="st pass test l2" 
+												tags="@SUC:05-13"
 												devices="">
-												<span class="tt">08.01.2020 22:05:58</span>&nbsp;
-												<span class="ts">fail</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[UAT_M7_09-01-UAT_M7_09-02-Verify the Process of Receipt Document Control] started</span>
+												<span class="tt">08.03.2020 21:48:29</span>&nbsp;
+												<span class="ts">pass</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[UAT_M7_13-01-To verify the process of printing Cashiering Report] started</span>
 												<span class="category-list">
-													<span class="category badge"><i class="fa fa-tag"></i> @SUC:05-09</span>
+													<span class="category badge"><i class="fa fa-tag"></i> @SUC:05-13</span>
 												</span>
 												<span class="author-list">
 												</span>
@@ -179,142 +179,146 @@
 											<div class="st pass test l3" 
 												tags=""
 												devices="">
-												<span class="tt">08.01.2020 22:05:58</span>&nbsp;
+												<span class="tt">08.03.2020 21:48:29</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[Given User navigates to the login page] started</span>
 												
 												<div class="st pass">
-													<span class="tt">08.01.2020 22:06:24</span>&nbsp;
+													<span class="tt">08.03.2020 21:48:41</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[Given User navigates to the login page]</span>
 													
 													<span class="td"></span>
 												</div>
 											</div>
-											<div class="st fail test l3" 
+											<div class="st pass test l3" 
 												tags=""
 												devices="">
-												<span class="tt">08.01.2020 22:06:24</span>&nbsp;
-												<span class="ts">fail</span>&nbsp;&nbsp;
+												<span class="tt">08.03.2020 21:48:41</span>&nbsp;
+												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[When Enters the username "tripsuser" and password "Passw0rd" to login] started</span>
 												
-												<div class="st fail">
-													<span class="tt">08.01.2020 22:06:24</span>&nbsp;
-													<span class="ts">fail</span>&nbsp;&nbsp; 
+												<div class="st pass">
+													<span class="tt">08.03.2020 21:48:49</span>&nbsp;
+													<span class="ts">pass</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[When Enters the username "tripsuser" and password "Passw0rd" to login]</span>
 													
-													<span class="td">threw an exception<br><textarea disabled class="code-block">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"#loginForm\:username"}
-  (Session info: chrome=84.0.4147.105)
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'DESKTOP-VUGFEQL', ip: '172.16.16.20', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '14.0.1'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 84.0.4147.105, chrome: {chromedriverVersion: 83.0.4103.39 (ccbf011cb2d2b..., userDataDir: C:\Users\v-bakam\AppData\Lo...}, goog:chromeOptions: {debuggerAddress: localhost:53124}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
-Session ID: 81385e5d56e951ff1ea1a36e33871c3f
-*** Element info: {Using=id, value=loginForm:username}
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:372)
-	at org.openqa.selenium.By$ById.findElement(By.java:188)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-	at StepDefinitions.stepDefinitions.enters_the_username_something_and_password_something_to_login(stepDefinitions.java:79)
-	at ✽.Enters the username "tripsuser" and password "Passw0rd" to login(file:///C:/Users/v-bakam/eclipse-workspace/BazePayments/src/test/resources/FeatureFiles/Payment/i_ReceiptDocumentControl.feature:5)
-</textarea></span>
+													<span class="td"></span>
 												</div>
 											</div>
-											<div class="st skip test l3" 
+											<div class="st pass test l3" 
 												tags=""
 												devices="">
-												<span class="tt">08.01.2020 22:06:24</span>&nbsp;
-												<span class="ts">skip</span>&nbsp;&nbsp;
+												<span class="tt">08.03.2020 21:48:49</span>&nbsp;
+												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[Then User should be logged in] started</span>
 												
-												<div class="st skip">
-													<span class="tt">08.01.2020 22:06:24</span>&nbsp;
-													<span class="ts">skip</span>&nbsp;&nbsp; 
+												<div class="st pass">
+													<span class="tt">08.03.2020 21:48:49</span>&nbsp;
+													<span class="ts">pass</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[Then User should be logged in]</span>
 													
-													<span class="td">Step skipped</span>
+													<span class="td"></span>
 												</div>
 											</div>
-											<div class="st skip test l3" 
+											<div class="st pass test l3" 
 												tags=""
 												devices="">
-												<span class="tt">08.01.2020 22:06:24</span>&nbsp;
-												<span class="ts">skip</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[Given navigate to  Revenue Collection>>Receipt Document Control] started</span>
+												<span class="tt">08.03.2020 21:48:49</span>&nbsp;
+												<span class="ts">pass</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[Given navigate to  Reporting>>Reports] started</span>
 												
-												<div class="st skip">
-													<span class="tt">08.01.2020 22:06:24</span>&nbsp;
-													<span class="ts">skip</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[Given navigate to  Revenue Collection>>Receipt Document Control]</span>
+												<div class="st pass">
+													<span class="tt">08.03.2020 21:48:55</span>&nbsp;
+													<span class="ts">pass</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[Given navigate to  Reporting>>Reports]</span>
 													
-													<span class="td">Step skipped</span>
+													<span class="td"></span>
 												</div>
 											</div>
-											<div class="st skip test l3" 
+											<div class="st pass test l3" 
 												tags=""
 												devices="">
-												<span class="tt">08.01.2020 22:06:24</span>&nbsp;
-												<span class="ts">skip</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[When enters Receipt Document Control Balaka Office1 and 1 and 2 and In Stock] started</span>
+												<span class="tt">08.03.2020 21:48:55</span>&nbsp;
+												<span class="ts">pass</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[When clicks Cashiering Report] started</span>
 												
-												<div class="st skip">
-													<span class="tt">08.01.2020 22:06:24</span>&nbsp;
-													<span class="ts">skip</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[When enters Receipt Document Control Balaka Office1 and 1 and 2 and In Stock]</span>
+												<div class="st pass">
+													<span class="tt">08.03.2020 21:49:00</span>&nbsp;
+													<span class="ts">pass</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[When clicks Cashiering Report]</span>
 													
-													<span class="td">Step skipped</span>
+													<span class="td"></span>
 												</div>
 											</div>
-											<div class="st skip test l3" 
+											<div class="st pass test l3" 
 												tags=""
 												devices="">
-												<span class="tt">08.01.2020 22:06:24</span>&nbsp;
-												<span class="ts">skip</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[And clicks on Receipt Document Control Save Button] started</span>
+												<span class="tt">08.03.2020 21:49:00</span>&nbsp;
+												<span class="ts">pass</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[Then Report screen should be displayed Cashiering Report] started</span>
 												
-												<div class="st skip">
-													<span class="tt">08.01.2020 22:06:24</span>&nbsp;
-													<span class="ts">skip</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[And clicks on Receipt Document Control Save Button]</span>
+												<div class="st pass">
+													<span class="tt">08.03.2020 21:49:00</span>&nbsp;
+													<span class="ts">pass</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[Then Report screen should be displayed Cashiering Report]</span>
 													
-													<span class="td">Step skipped</span>
+													<span class="td"></span>
 												</div>
 											</div>
-											<div class="st skip test l3" 
+											<div class="st pass test l3" 
 												tags=""
 												devices="">
-												<span class="tt">08.01.2020 22:06:24</span>&nbsp;
-												<span class="ts">skip</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[Then The System saves the updated Receipt Document record] started</span>
+												<span class="tt">08.03.2020 21:49:00</span>&nbsp;
+												<span class="ts">pass</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[When enters cash till reference as "%"] started</span>
 												
-												<div class="st skip">
-													<span class="tt">08.01.2020 22:06:24</span>&nbsp;
-													<span class="ts">skip</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[Then The System saves the updated Receipt Document record]</span>
+												<div class="st pass">
+													<span class="tt">08.03.2020 21:49:00</span>&nbsp;
+													<span class="ts">pass</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[When enters cash till reference as "%"]</span>
 													
-													<span class="td">Step skipped</span>
+													<span class="td"></span>
+												</div>
+											</div>
+											<div class="st pass test l3" 
+												tags=""
+												devices="">
+												<span class="tt">08.03.2020 21:49:00</span>&nbsp;
+												<span class="ts">pass</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[And clicks run report button] started</span>
+												
+												<div class="st pass">
+													<span class="tt">08.03.2020 21:49:07</span>&nbsp;
+													<span class="ts">pass</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[And clicks run report button]</span>
+													
+													<span class="td"></span>
+												</div>
+											</div>
+											<div class="st pass test l3" 
+												tags=""
+												devices="">
+												<span class="tt">08.03.2020 21:49:07</span>&nbsp;
+												<span class="ts">pass</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[Then Report download should be generate C:\Users\v-bakam\Downloads and Cashiering Report.pdf] started</span>
+												
+												<div class="st pass">
+													<span class="tt">08.03.2020 21:49:11</span>&nbsp;
+													<span class="ts">pass</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[Then Report download should be generate C:\Users\v-bakam\Downloads and Cashiering Report.pdf]</span>
+													
+													<span class="td"></span>
 												</div>
 											</div>
 											<div class="st fail test l1" 
-												tags="@SUC:05-09"
+												tags="@SUC:05-13"
 												devices="">
-												<span class="tt">08.01.2020 22:06:25</span>&nbsp;
+												<span class="tt">08.03.2020 21:49:11</span>&nbsp;
 												<span class="ts">fail</span>&nbsp;&nbsp;
-												<span class="tn">|---[UAT_M7_09-03-Verify the Process Unusable Receipts] started</span>
+												<span class="tn">|---[UAT_M7_13-02-To verify the process of printing Daily Payment Report] started</span>
 												<span class="category-list">
-													<span class="category badge"><i class="fa fa-tag"></i> @SUC:05-09</span>
+													<span class="category badge"><i class="fa fa-tag"></i> @SUC:05-13</span>
 												</span>
 												<span class="author-list">
 												</span>
@@ -323,13 +327,13 @@ Session ID: 81385e5d56e951ff1ea1a36e33871c3f
 												
 											</div>
 											<div class="st fail test l2" 
-												tags="@SUC:05-09"
+												tags="@SUC:05-13"
 												devices="">
-												<span class="tt">08.01.2020 22:06:25</span>&nbsp;
+												<span class="tt">08.03.2020 21:49:11</span>&nbsp;
 												<span class="ts">fail</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[UAT_M7_09-03-Verify the Process Unusable Receipts] started</span>
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[UAT_M7_13-02-To verify the process of printing Daily Payment Report] started</span>
 												<span class="category-list">
-													<span class="category badge"><i class="fa fa-tag"></i> @SUC:05-09</span>
+													<span class="category badge"><i class="fa fa-tag"></i> @SUC:05-13</span>
 												</span>
 												<span class="author-list">
 												</span>
@@ -340,14 +344,119 @@ Session ID: 81385e5d56e951ff1ea1a36e33871c3f
 											<div class="st pass test l3" 
 												tags=""
 												devices="">
-												<span class="tt">08.01.2020 22:06:25</span>&nbsp;
+												<span class="tt">08.03.2020 21:49:11</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[Given User navigates to the login page] started</span>
 												
 												<div class="st pass">
-													<span class="tt">08.01.2020 22:06:51</span>&nbsp;
+													<span class="tt">08.03.2020 21:49:25</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[Given User navigates to the login page]</span>
+													
+													<span class="td"></span>
+												</div>
+											</div>
+											<div class="st pass test l3" 
+												tags=""
+												devices="">
+												<span class="tt">08.03.2020 21:49:25</span>&nbsp;
+												<span class="ts">pass</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[When Enters the username "tripsuser" and password "Passw0rd" to login] started</span>
+												
+												<div class="st pass">
+													<span class="tt">08.03.2020 21:49:32</span>&nbsp;
+													<span class="ts">pass</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[When Enters the username "tripsuser" and password "Passw0rd" to login]</span>
+													
+													<span class="td"></span>
+												</div>
+											</div>
+											<div class="st pass test l3" 
+												tags=""
+												devices="">
+												<span class="tt">08.03.2020 21:49:32</span>&nbsp;
+												<span class="ts">pass</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[Then User should be logged in] started</span>
+												
+												<div class="st pass">
+													<span class="tt">08.03.2020 21:49:32</span>&nbsp;
+													<span class="ts">pass</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[Then User should be logged in]</span>
+													
+													<span class="td"></span>
+												</div>
+											</div>
+											<div class="st pass test l3" 
+												tags=""
+												devices="">
+												<span class="tt">08.03.2020 21:49:32</span>&nbsp;
+												<span class="ts">pass</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[Given navigate to  Reporting>>Reports] started</span>
+												
+												<div class="st pass">
+													<span class="tt">08.03.2020 21:49:37</span>&nbsp;
+													<span class="ts">pass</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[Given navigate to  Reporting>>Reports]</span>
+													
+													<span class="td"></span>
+												</div>
+											</div>
+											<div class="st pass test l3" 
+												tags=""
+												devices="">
+												<span class="tt">08.03.2020 21:49:37</span>&nbsp;
+												<span class="ts">pass</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[When clicks Daily Payment Report] started</span>
+												
+												<div class="st pass">
+													<span class="tt">08.03.2020 21:49:42</span>&nbsp;
+													<span class="ts">pass</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[When clicks Daily Payment Report]</span>
+													
+													<span class="td"></span>
+												</div>
+											</div>
+											<div class="st pass test l3" 
+												tags=""
+												devices="">
+												<span class="tt">08.03.2020 21:49:42</span>&nbsp;
+												<span class="ts">pass</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[Then Report screen should be displayed Daily Payment Report] started</span>
+												
+												<div class="st pass">
+													<span class="tt">08.03.2020 21:49:43</span>&nbsp;
+													<span class="ts">pass</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[Then Report screen should be displayed Daily Payment Report]</span>
+													
+													<span class="td"></span>
+												</div>
+											</div>
+											<div class="st pass test l3" 
+												tags=""
+												devices="">
+												<span class="tt">08.03.2020 21:49:43</span>&nbsp;
+												<span class="ts">pass</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[When enters Daily Payment report parameters] started</span>
+												
+												<div class="st pass">
+													<span class="tt">08.03.2020 21:49:50</span>&nbsp;
+													<span class="ts">pass</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[When enters Daily Payment report parameters]</span>
+													
+													<span class="td"></span>
+												</div>
+											</div>
+											<div class="st pass test l3" 
+												tags=""
+												devices="">
+												<span class="tt">08.03.2020 21:49:50</span>&nbsp;
+												<span class="ts">pass</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[And clicks run report button] started</span>
+												
+												<div class="st pass">
+													<span class="tt">08.03.2020 21:49:58</span>&nbsp;
+													<span class="ts">pass</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[And clicks run report button]</span>
 													
 													<span class="td"></span>
 												</div>
@@ -355,127 +464,32 @@ Session ID: 81385e5d56e951ff1ea1a36e33871c3f
 											<div class="st fail test l3" 
 												tags=""
 												devices="">
-												<span class="tt">08.01.2020 22:06:51</span>&nbsp;
+												<span class="tt">08.03.2020 21:49:58</span>&nbsp;
 												<span class="ts">fail</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[When Enters the username "tripsuser" and password "Passw0rd" to login] started</span>
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[Then Report download should be generate C:\Users\v-bakam\Downloads and Daily Payment Report.pdf] started</span>
 												
 												<div class="st fail">
-													<span class="tt">08.01.2020 22:06:51</span>&nbsp;
+													<span class="tt">08.03.2020 21:50:02</span>&nbsp;
 													<span class="ts">fail</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[When Enters the username "tripsuser" and password "Passw0rd" to login]</span>
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[Then Report download should be generate C:\Users\v-bakam\Downloads and Daily Payment Report.pdf]</span>
 													
-													<span class="td">threw an exception<br><textarea disabled class="code-block">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"#loginForm\:username"}
-  (Session info: chrome=84.0.4147.105)
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'DESKTOP-VUGFEQL', ip: '172.16.16.20', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '14.0.1'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 84.0.4147.105, chrome: {chromedriverVersion: 83.0.4103.39 (ccbf011cb2d2b..., userDataDir: C:\Users\v-bakam\AppData\Lo...}, goog:chromeOptions: {debuggerAddress: localhost:53153}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
-Session ID: b088d36a43e42374ca0945557b150aed
-*** Element info: {Using=id, value=loginForm:username}
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:372)
-	at org.openqa.selenium.By$ById.findElement(By.java:188)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-	at StepDefinitions.stepDefinitions.enters_the_username_something_and_password_something_to_login(stepDefinitions.java:79)
-	at ✽.Enters the username "tripsuser" and password "Passw0rd" to login(file:///C:/Users/v-bakam/eclipse-workspace/BazePayments/src/test/resources/FeatureFiles/Payment/i_ReceiptDocumentControl.feature:5)
+													<span class="td">threw an exception<br><textarea disabled class="code-block">java.lang.AssertionError
+	at org.junit.Assert.fail(Assert.java:86)
+	at org.junit.Assert.assertTrue(Assert.java:41)
+	at org.junit.Assert.assertTrue(Assert.java:52)
+	at StepDefinitions.stepDefinitions.report_download_should_be_generate_and(stepDefinitions.java:612)
+	at ✽.Report download should be generate C:\Users\v-bakam\Downloads and Daily Payment Report.pdf(file:///C:/Users/v-bakam/eclipse-workspace/BazePayments/src/test/resources/FeatureFiles/Payment/j_RevenueCollectionReports.feature:28)
 </textarea></span>
 												</div>
 											</div>
-											<div class="st skip test l3" 
-												tags=""
+											<div class="st pass test l1" 
+												tags="@SUC:05-13"
 												devices="">
-												<span class="tt">08.01.2020 22:06:51</span>&nbsp;
-												<span class="ts">skip</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[Then User should be logged in] started</span>
-												
-												<div class="st skip">
-													<span class="tt">08.01.2020 22:06:51</span>&nbsp;
-													<span class="ts">skip</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[Then User should be logged in]</span>
-													
-													<span class="td">Step skipped</span>
-												</div>
-											</div>
-											<div class="st skip test l3" 
-												tags=""
-												devices="">
-												<span class="tt">08.01.2020 22:06:51</span>&nbsp;
-												<span class="ts">skip</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[Given navigate to  Revenue Collection>>Receipt Document Control] started</span>
-												
-												<div class="st skip">
-													<span class="tt">08.01.2020 22:06:51</span>&nbsp;
-													<span class="ts">skip</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[Given navigate to  Revenue Collection>>Receipt Document Control]</span>
-													
-													<span class="td">Step skipped</span>
-												</div>
-											</div>
-											<div class="st skip test l3" 
-												tags=""
-												devices="">
-												<span class="tt">08.01.2020 22:06:51</span>&nbsp;
-												<span class="ts">skip</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[When enters Receipt Document Control BALCO101 and 1 and 2 and Lost] started</span>
-												
-												<div class="st skip">
-													<span class="tt">08.01.2020 22:06:51</span>&nbsp;
-													<span class="ts">skip</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[When enters Receipt Document Control BALCO101 and 1 and 2 and Lost]</span>
-													
-													<span class="td">Step skipped</span>
-												</div>
-											</div>
-											<div class="st skip test l3" 
-												tags=""
-												devices="">
-												<span class="tt">08.01.2020 22:06:51</span>&nbsp;
-												<span class="ts">skip</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[And clicks on Receipt Document Control Save Button] started</span>
-												
-												<div class="st skip">
-													<span class="tt">08.01.2020 22:06:51</span>&nbsp;
-													<span class="ts">skip</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[And clicks on Receipt Document Control Save Button]</span>
-													
-													<span class="td">Step skipped</span>
-												</div>
-											</div>
-											<div class="st skip test l3" 
-												tags=""
-												devices="">
-												<span class="tt">08.01.2020 22:06:51</span>&nbsp;
-												<span class="ts">skip</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[Then The System saves the updated Receipt Document record] started</span>
-												
-												<div class="st skip">
-													<span class="tt">08.01.2020 22:06:51</span>&nbsp;
-													<span class="ts">skip</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[Then The System saves the updated Receipt Document record]</span>
-													
-													<span class="td">Step skipped</span>
-												</div>
-											</div>
-											<div class="st fail test l1" 
-												tags="@SUC:05-09"
-												devices="">
-												<span class="tt">08.01.2020 22:06:52</span>&nbsp;
-												<span class="ts">fail</span>&nbsp;&nbsp;
-												<span class="tn">|---[UAT_M7_09-04-Verify the Process of Validation Failure] started</span>
+												<span class="tt">08.03.2020 21:50:02</span>&nbsp;
+												<span class="ts">pass</span>&nbsp;&nbsp;
+												<span class="tn">|---[UAT_M7_13-03-To verify the process of printing Bank Lodgement Slip] started</span>
 												<span class="category-list">
-													<span class="category badge"><i class="fa fa-tag"></i> @SUC:05-09</span>
+													<span class="category badge"><i class="fa fa-tag"></i> @SUC:05-13</span>
 												</span>
 												<span class="author-list">
 												</span>
@@ -483,14 +497,14 @@ Session ID: b088d36a43e42374ca0945557b150aed
 												</span>
 												
 											</div>
-											<div class="st fail test l2" 
-												tags="@SUC:05-09"
+											<div class="st pass test l2" 
+												tags="@SUC:05-13"
 												devices="">
-												<span class="tt">08.01.2020 22:06:52</span>&nbsp;
-												<span class="ts">fail</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[UAT_M7_09-04-Verify the Process of Validation Failure] started</span>
+												<span class="tt">08.03.2020 21:50:02</span>&nbsp;
+												<span class="ts">pass</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[UAT_M7_13-03-To verify the process of printing Bank Lodgement Slip] started</span>
 												<span class="category-list">
-													<span class="category badge"><i class="fa fa-tag"></i> @SUC:05-09</span>
+													<span class="category badge"><i class="fa fa-tag"></i> @SUC:05-13</span>
 												</span>
 												<span class="author-list">
 												</span>
@@ -501,142 +515,146 @@ Session ID: b088d36a43e42374ca0945557b150aed
 											<div class="st pass test l3" 
 												tags=""
 												devices="">
-												<span class="tt">08.01.2020 22:06:52</span>&nbsp;
+												<span class="tt">08.03.2020 21:50:02</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[Given User navigates to the login page] started</span>
 												
 												<div class="st pass">
-													<span class="tt">08.01.2020 22:07:18</span>&nbsp;
+													<span class="tt">08.03.2020 21:50:14</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[Given User navigates to the login page]</span>
 													
 													<span class="td"></span>
 												</div>
 											</div>
-											<div class="st fail test l3" 
+											<div class="st pass test l3" 
 												tags=""
 												devices="">
-												<span class="tt">08.01.2020 22:07:18</span>&nbsp;
-												<span class="ts">fail</span>&nbsp;&nbsp;
+												<span class="tt">08.03.2020 21:50:14</span>&nbsp;
+												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[When Enters the username "tripsuser" and password "Passw0rd" to login] started</span>
 												
-												<div class="st fail">
-													<span class="tt">08.01.2020 22:07:18</span>&nbsp;
-													<span class="ts">fail</span>&nbsp;&nbsp; 
+												<div class="st pass">
+													<span class="tt">08.03.2020 21:50:29</span>&nbsp;
+													<span class="ts">pass</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[When Enters the username "tripsuser" and password "Passw0rd" to login]</span>
 													
-													<span class="td">threw an exception<br><textarea disabled class="code-block">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"#loginForm\:username"}
-  (Session info: chrome=84.0.4147.105)
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'DESKTOP-VUGFEQL', ip: '172.16.16.20', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '14.0.1'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 84.0.4147.105, chrome: {chromedriverVersion: 83.0.4103.39 (ccbf011cb2d2b..., userDataDir: C:\Users\v-bakam\AppData\Lo...}, goog:chromeOptions: {debuggerAddress: localhost:53173}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
-Session ID: 165fa27d5704cba88144fbb4747fce4c
-*** Element info: {Using=id, value=loginForm:username}
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:372)
-	at org.openqa.selenium.By$ById.findElement(By.java:188)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-	at StepDefinitions.stepDefinitions.enters_the_username_something_and_password_something_to_login(stepDefinitions.java:79)
-	at ✽.Enters the username "tripsuser" and password "Passw0rd" to login(file:///C:/Users/v-bakam/eclipse-workspace/BazePayments/src/test/resources/FeatureFiles/Payment/i_ReceiptDocumentControl.feature:5)
-</textarea></span>
+													<span class="td"></span>
 												</div>
 											</div>
-											<div class="st skip test l3" 
+											<div class="st pass test l3" 
 												tags=""
 												devices="">
-												<span class="tt">08.01.2020 22:07:18</span>&nbsp;
-												<span class="ts">skip</span>&nbsp;&nbsp;
+												<span class="tt">08.03.2020 21:50:29</span>&nbsp;
+												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[Then User should be logged in] started</span>
 												
-												<div class="st skip">
-													<span class="tt">08.01.2020 22:07:18</span>&nbsp;
-													<span class="ts">skip</span>&nbsp;&nbsp; 
+												<div class="st pass">
+													<span class="tt">08.03.2020 21:50:29</span>&nbsp;
+													<span class="ts">pass</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[Then User should be logged in]</span>
 													
-													<span class="td">Step skipped</span>
+													<span class="td"></span>
 												</div>
 											</div>
-											<div class="st skip test l3" 
+											<div class="st pass test l3" 
 												tags=""
 												devices="">
-												<span class="tt">08.01.2020 22:07:18</span>&nbsp;
-												<span class="ts">skip</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[Given navigate to  Revenue Collection>>Receipt Document Control] started</span>
+												<span class="tt">08.03.2020 21:50:29</span>&nbsp;
+												<span class="ts">pass</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[Given navigate to Revenue Collection>>Cash Office Daily Control] started</span>
 												
-												<div class="st skip">
-													<span class="tt">08.01.2020 22:07:18</span>&nbsp;
-													<span class="ts">skip</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[Given navigate to  Revenue Collection>>Receipt Document Control]</span>
+												<div class="st pass">
+													<span class="tt">08.03.2020 21:50:38</span>&nbsp;
+													<span class="ts">pass</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[Given navigate to Revenue Collection>>Cash Office Daily Control]</span>
 													
-													<span class="td">Step skipped</span>
+													<span class="td"></span>
 												</div>
 											</div>
-											<div class="st skip test l3" 
+											<div class="st pass test l3" 
 												tags=""
 												devices="">
-												<span class="tt">08.01.2020 22:07:18</span>&nbsp;
-												<span class="ts">skip</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[When enters Receipt Document Control BALCO101 and In Stock leaving other blank] started</span>
+												<span class="tt">08.03.2020 21:50:38</span>&nbsp;
+												<span class="ts">pass</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[When selects Cash Office Name Balaka Office1] started</span>
 												
-												<div class="st skip">
-													<span class="tt">08.01.2020 22:07:18</span>&nbsp;
-													<span class="ts">skip</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[When enters Receipt Document Control BALCO101 and In Stock leaving other blank]</span>
+												<div class="st pass">
+													<span class="tt">08.03.2020 21:50:44</span>&nbsp;
+													<span class="ts">pass</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[When selects Cash Office Name Balaka Office1]</span>
 													
-													<span class="td">Step skipped</span>
+													<span class="td"></span>
 												</div>
 											</div>
-											<div class="st skip test l3" 
+											<div class="st pass test l3" 
 												tags=""
 												devices="">
-												<span class="tt">08.01.2020 22:07:18</span>&nbsp;
-												<span class="ts">skip</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[And clicks on Receipt Document Control Save Button] started</span>
+												<span class="tt">08.03.2020 21:50:44</span>&nbsp;
+												<span class="ts">pass</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[And clicks Open Cash Office] started</span>
 												
-												<div class="st skip">
-													<span class="tt">08.01.2020 22:07:18</span>&nbsp;
-													<span class="ts">skip</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[And clicks on Receipt Document Control Save Button]</span>
+												<div class="st pass">
+													<span class="tt">08.03.2020 21:50:50</span>&nbsp;
+													<span class="ts">pass</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[And clicks Open Cash Office]</span>
 													
-													<span class="td">Step skipped</span>
+													<span class="td"></span>
 												</div>
 											</div>
-											<div class="st skip test l3" 
+											<div class="st pass test l3" 
 												tags=""
 												devices="">
-												<span class="tt">08.01.2020 22:07:18</span>&nbsp;
-												<span class="ts">skip</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[Then message is displayed "Validation Error: Value is required"] started</span>
+												<span class="tt">08.03.2020 21:50:50</span>&nbsp;
+												<span class="ts">pass</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[And clicks reconcile Cash Office] started</span>
 												
-												<div class="st skip">
-													<span class="tt">08.01.2020 22:07:18</span>&nbsp;
-													<span class="ts">skip</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[Then message is displayed "Validation Error: Value is required"]</span>
+												<div class="st pass">
+													<span class="tt">08.03.2020 21:51:03</span>&nbsp;
+													<span class="ts">pass</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[And clicks reconcile Cash Office]</span>
 													
-													<span class="td">Step skipped</span>
+													<span class="td"></span>
 												</div>
 											</div>
-											<div class="st fail test l1" 
-												tags="@SUC:05-09"
+											<div class="st pass test l3" 
+												tags=""
 												devices="">
-												<span class="tt">08.01.2020 22:07:18</span>&nbsp;
-												<span class="ts">fail</span>&nbsp;&nbsp;
-												<span class="tn">|---[UAT_M7_09-05-Verify the Process of Issue Receipts To Cashier] started</span>
+												<span class="tt">08.03.2020 21:51:03</span>&nbsp;
+												<span class="ts">pass</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[And clicks Generate Bank Lodgement Report button] started</span>
+												
+												<div class="st pass">
+													<span class="tt">08.03.2020 21:51:10</span>&nbsp;
+													<span class="ts">pass</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[And clicks Generate Bank Lodgement Report button]</span>
+													
+													<span class="td"></span>
+												</div>
+											</div>
+											<div class="st pass test l3" 
+												tags=""
+												devices="">
+												<span class="tt">08.03.2020 21:51:10</span>&nbsp;
+												<span class="ts">pass</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[Then Report download should be generate C:\Users\v-bakam\Downloads and BankLodgementSlip.pdf] started</span>
+												
+												<div class="st pass">
+													<span class="tt">08.03.2020 21:51:14</span>&nbsp;
+													<span class="ts">pass</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[Then Report download should be generate C:\Users\v-bakam\Downloads and BankLodgementSlip.pdf]</span>
+													
+													<span class="td"></span>
+												</div>
+											</div>
+											<div class="st pass test l1" 
+												tags="@SUC:05-13"
+												devices="">
+												<span class="tt">08.03.2020 21:51:14</span>&nbsp;
+												<span class="ts">pass</span>&nbsp;&nbsp;
+												<span class="tn">|---[UAT_M7_13-04-To verify the process of printing Unreconciled Till Report] started</span>
 												<span class="category-list">
-													<span class="category badge"><i class="fa fa-tag"></i> @SUC:05-09</span>
+													<span class="category badge"><i class="fa fa-tag"></i> @SUC:05-13</span>
 												</span>
 												<span class="author-list">
 												</span>
@@ -644,14 +662,14 @@ Session ID: 165fa27d5704cba88144fbb4747fce4c
 												</span>
 												
 											</div>
-											<div class="st fail test l2" 
-												tags="@SUC:05-09"
+											<div class="st pass test l2" 
+												tags="@SUC:05-13"
 												devices="">
-												<span class="tt">08.01.2020 22:07:18</span>&nbsp;
-												<span class="ts">fail</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[UAT_M7_09-05-Verify the Process of Issue Receipts To Cashier] started</span>
+												<span class="tt">08.03.2020 21:51:14</span>&nbsp;
+												<span class="ts">pass</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[UAT_M7_13-04-To verify the process of printing Unreconciled Till Report] started</span>
 												<span class="category-list">
-													<span class="category badge"><i class="fa fa-tag"></i> @SUC:05-09</span>
+													<span class="category badge"><i class="fa fa-tag"></i> @SUC:05-13</span>
 												</span>
 												<span class="author-list">
 												</span>
@@ -662,157 +680,146 @@ Session ID: 165fa27d5704cba88144fbb4747fce4c
 											<div class="st pass test l3" 
 												tags=""
 												devices="">
-												<span class="tt">08.01.2020 22:07:18</span>&nbsp;
+												<span class="tt">08.03.2020 21:51:14</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[Given User navigates to the login page] started</span>
 												
 												<div class="st pass">
-													<span class="tt">08.01.2020 22:07:45</span>&nbsp;
+													<span class="tt">08.03.2020 21:51:26</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[Given User navigates to the login page]</span>
 													
 													<span class="td"></span>
 												</div>
 											</div>
-											<div class="st fail test l3" 
+											<div class="st pass test l3" 
 												tags=""
 												devices="">
-												<span class="tt">08.01.2020 22:07:45</span>&nbsp;
-												<span class="ts">fail</span>&nbsp;&nbsp;
+												<span class="tt">08.03.2020 21:51:26</span>&nbsp;
+												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[When Enters the username "tripsuser" and password "Passw0rd" to login] started</span>
 												
-												<div class="st fail">
-													<span class="tt">08.01.2020 22:07:45</span>&nbsp;
-													<span class="ts">fail</span>&nbsp;&nbsp; 
+												<div class="st pass">
+													<span class="tt">08.03.2020 21:51:34</span>&nbsp;
+													<span class="ts">pass</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[When Enters the username "tripsuser" and password "Passw0rd" to login]</span>
 													
-													<span class="td">threw an exception<br><textarea disabled class="code-block">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"#loginForm\:username"}
-  (Session info: chrome=84.0.4147.105)
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'DESKTOP-VUGFEQL', ip: '172.16.16.20', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '14.0.1'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 84.0.4147.105, chrome: {chromedriverVersion: 83.0.4103.39 (ccbf011cb2d2b..., userDataDir: C:\Users\v-bakam\AppData\Lo...}, goog:chromeOptions: {debuggerAddress: localhost:53195}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
-Session ID: 8bdeb876f4aba837c60d539880f90093
-*** Element info: {Using=id, value=loginForm:username}
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:372)
-	at org.openqa.selenium.By$ById.findElement(By.java:188)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-	at StepDefinitions.stepDefinitions.enters_the_username_something_and_password_something_to_login(stepDefinitions.java:79)
-	at ✽.Enters the username "tripsuser" and password "Passw0rd" to login(file:///C:/Users/v-bakam/eclipse-workspace/BazePayments/src/test/resources/FeatureFiles/Payment/i_ReceiptDocumentControl.feature:5)
-</textarea></span>
+													<span class="td"></span>
 												</div>
 											</div>
-											<div class="st skip test l3" 
+											<div class="st pass test l3" 
 												tags=""
 												devices="">
-												<span class="tt">08.01.2020 22:07:45</span>&nbsp;
-												<span class="ts">skip</span>&nbsp;&nbsp;
+												<span class="tt">08.03.2020 21:51:34</span>&nbsp;
+												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[Then User should be logged in] started</span>
 												
-												<div class="st skip">
-													<span class="tt">08.01.2020 22:07:45</span>&nbsp;
-													<span class="ts">skip</span>&nbsp;&nbsp; 
+												<div class="st pass">
+													<span class="tt">08.03.2020 21:51:34</span>&nbsp;
+													<span class="ts">pass</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[Then User should be logged in]</span>
 													
-													<span class="td">Step skipped</span>
+													<span class="td"></span>
 												</div>
 											</div>
-											<div class="st skip test l3" 
+											<div class="st pass test l3" 
 												tags=""
 												devices="">
-												<span class="tt">08.01.2020 22:07:45</span>&nbsp;
-												<span class="ts">skip</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[Given navigate to  Revenue Collection>>Receipt Document Control] started</span>
+												<span class="tt">08.03.2020 21:51:34</span>&nbsp;
+												<span class="ts">pass</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[Given navigate to Revenue Collection>>Cash Office Daily Control] started</span>
 												
-												<div class="st skip">
-													<span class="tt">08.01.2020 22:07:45</span>&nbsp;
-													<span class="ts">skip</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[Given navigate to  Revenue Collection>>Receipt Document Control]</span>
+												<div class="st pass">
+													<span class="tt">08.03.2020 21:51:43</span>&nbsp;
+													<span class="ts">pass</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[Given navigate to Revenue Collection>>Cash Office Daily Control]</span>
 													
-													<span class="td">Step skipped</span>
+													<span class="td"></span>
 												</div>
 											</div>
-											<div class="st skip test l3" 
+											<div class="st pass test l3" 
 												tags=""
 												devices="">
-												<span class="tt">08.01.2020 22:07:45</span>&nbsp;
-												<span class="ts">skip</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[When enters Receipt Document Control Balaka Office1 and 0 and 2 and Issued] started</span>
+												<span class="tt">08.03.2020 21:51:43</span>&nbsp;
+												<span class="ts">pass</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[When selects Cash Office Name Balaka Office1] started</span>
 												
-												<div class="st skip">
-													<span class="tt">08.01.2020 22:07:45</span>&nbsp;
-													<span class="ts">skip</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[When enters Receipt Document Control Balaka Office1 and 0 and 2 and Issued]</span>
+												<div class="st pass">
+													<span class="tt">08.03.2020 21:51:49</span>&nbsp;
+													<span class="ts">pass</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[When selects Cash Office Name Balaka Office1]</span>
 													
-													<span class="td">Step skipped</span>
+													<span class="td"></span>
 												</div>
 											</div>
-											<div class="st skip test l3" 
+											<div class="st pass test l3" 
 												tags=""
 												devices="">
-												<span class="tt">08.01.2020 22:07:45</span>&nbsp;
-												<span class="ts">skip</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[And clicks on Receipt Document Control Save Button] started</span>
+												<span class="tt">08.03.2020 21:51:49</span>&nbsp;
+												<span class="ts">pass</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[And clicks Open Cash Office] started</span>
 												
-												<div class="st skip">
-													<span class="tt">08.01.2020 22:07:45</span>&nbsp;
-													<span class="ts">skip</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[And clicks on Receipt Document Control Save Button]</span>
+												<div class="st pass">
+													<span class="tt">08.03.2020 21:51:55</span>&nbsp;
+													<span class="ts">pass</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[And clicks Open Cash Office]</span>
 													
-													<span class="td">Step skipped</span>
+													<span class="td"></span>
 												</div>
 											</div>
-											<div class="st skip test l3" 
+											<div class="st pass test l3" 
 												tags=""
 												devices="">
-												<span class="tt">08.01.2020 22:07:45</span>&nbsp;
-												<span class="ts">skip</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[And checks Issued To Cashier] started</span>
+												<span class="tt">08.03.2020 21:51:55</span>&nbsp;
+												<span class="ts">pass</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[And clicks reconcile Cash Office] started</span>
 												
-												<div class="st skip">
-													<span class="tt">08.01.2020 22:07:45</span>&nbsp;
-													<span class="ts">skip</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[And checks Issued To Cashier]</span>
+												<div class="st pass">
+													<span class="tt">08.03.2020 21:52:08</span>&nbsp;
+													<span class="ts">pass</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[And clicks reconcile Cash Office]</span>
 													
-													<span class="td">Step skipped</span>
+													<span class="td"></span>
 												</div>
 											</div>
-											<div class="st skip test l3" 
+											<div class="st pass test l3" 
 												tags=""
 												devices="">
-												<span class="tt">08.01.2020 22:07:45</span>&nbsp;
-												<span class="ts">skip</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[Then The System saves the updated Receipt Document record] started</span>
+												<span class="tt">08.03.2020 21:52:08</span>&nbsp;
+												<span class="ts">pass</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[And clicks Generate Bank Lodgement Report button] started</span>
 												
-												<div class="st skip">
-													<span class="tt">08.01.2020 22:07:45</span>&nbsp;
-													<span class="ts">skip</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[Then The System saves the updated Receipt Document record]</span>
+												<div class="st pass">
+													<span class="tt">08.03.2020 21:52:15</span>&nbsp;
+													<span class="ts">pass</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[And clicks Generate Bank Lodgement Report button]</span>
 													
-													<span class="td">Step skipped</span>
+													<span class="td"></span>
 												</div>
 											</div>
-											<div class="st fail test l1" 
-												tags="@SUC:05-09"
+											<div class="st pass test l3" 
+												tags=""
 												devices="">
-												<span class="tt">08.01.2020 22:07:45</span>&nbsp;
-												<span class="ts">fail</span>&nbsp;&nbsp;
-												<span class="tn">|---[UAT_M7_09-06-Verify the Process of Issue Receipts To Cashier] started</span>
+												<span class="tt">08.03.2020 21:52:15</span>&nbsp;
+												<span class="ts">pass</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[Then Report download should be generate C:\Users\v-bakam\Downloads and BankLodgementSlip.pdf] started</span>
+												
+												<div class="st pass">
+													<span class="tt">08.03.2020 21:52:19</span>&nbsp;
+													<span class="ts">pass</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[Then Report download should be generate C:\Users\v-bakam\Downloads and BankLodgementSlip.pdf]</span>
+													
+													<span class="td"></span>
+												</div>
+											</div>
+											<div class="st pass test l1" 
+												tags="@SUC:05-13"
+												devices="">
+												<span class="tt">08.03.2020 21:52:19</span>&nbsp;
+												<span class="ts">pass</span>&nbsp;&nbsp;
+												<span class="tn">|---[UAT_M7_13-06-To verify the process of printing Receipt Document Summary] started</span>
 												<span class="category-list">
-													<span class="category badge"><i class="fa fa-tag"></i> @SUC:05-09</span>
+													<span class="category badge"><i class="fa fa-tag"></i> @SUC:05-13</span>
 												</span>
 												<span class="author-list">
 												</span>
@@ -820,14 +827,14 @@ Session ID: 8bdeb876f4aba837c60d539880f90093
 												</span>
 												
 											</div>
-											<div class="st fail test l2" 
-												tags="@SUC:05-09"
+											<div class="st pass test l2" 
+												tags="@SUC:05-13"
 												devices="">
-												<span class="tt">08.01.2020 22:07:45</span>&nbsp;
-												<span class="ts">fail</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[UAT_M7_09-06-Verify the Process of Issue Receipts To Cashier] started</span>
+												<span class="tt">08.03.2020 21:52:19</span>&nbsp;
+												<span class="ts">pass</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[UAT_M7_13-06-To verify the process of printing Receipt Document Summary] started</span>
 												<span class="category-list">
-													<span class="category badge"><i class="fa fa-tag"></i> @SUC:05-09</span>
+													<span class="category badge"><i class="fa fa-tag"></i> @SUC:05-13</span>
 												</span>
 												<span class="author-list">
 												</span>
@@ -838,157 +845,146 @@ Session ID: 8bdeb876f4aba837c60d539880f90093
 											<div class="st pass test l3" 
 												tags=""
 												devices="">
-												<span class="tt">08.01.2020 22:07:45</span>&nbsp;
+												<span class="tt">08.03.2020 21:52:19</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[Given User navigates to the login page] started</span>
 												
 												<div class="st pass">
-													<span class="tt">08.01.2020 22:08:12</span>&nbsp;
+													<span class="tt">08.03.2020 21:52:37</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[Given User navigates to the login page]</span>
 													
 													<span class="td"></span>
 												</div>
 											</div>
-											<div class="st fail test l3" 
+											<div class="st pass test l3" 
 												tags=""
 												devices="">
-												<span class="tt">08.01.2020 22:08:12</span>&nbsp;
-												<span class="ts">fail</span>&nbsp;&nbsp;
+												<span class="tt">08.03.2020 21:52:37</span>&nbsp;
+												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[When Enters the username "tripsuser" and password "Passw0rd" to login] started</span>
 												
-												<div class="st fail">
-													<span class="tt">08.01.2020 22:08:12</span>&nbsp;
-													<span class="ts">fail</span>&nbsp;&nbsp; 
+												<div class="st pass">
+													<span class="tt">08.03.2020 21:52:44</span>&nbsp;
+													<span class="ts">pass</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[When Enters the username "tripsuser" and password "Passw0rd" to login]</span>
 													
-													<span class="td">threw an exception<br><textarea disabled class="code-block">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"#loginForm\:username"}
-  (Session info: chrome=84.0.4147.105)
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'DESKTOP-VUGFEQL', ip: '172.16.16.20', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '14.0.1'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 84.0.4147.105, chrome: {chromedriverVersion: 83.0.4103.39 (ccbf011cb2d2b..., userDataDir: C:\Users\v-bakam\AppData\Lo...}, goog:chromeOptions: {debuggerAddress: localhost:53218}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
-Session ID: b5d8a16986a335ce34148f2a24fb7627
-*** Element info: {Using=id, value=loginForm:username}
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:372)
-	at org.openqa.selenium.By$ById.findElement(By.java:188)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-	at StepDefinitions.stepDefinitions.enters_the_username_something_and_password_something_to_login(stepDefinitions.java:79)
-	at ✽.Enters the username "tripsuser" and password "Passw0rd" to login(file:///C:/Users/v-bakam/eclipse-workspace/BazePayments/src/test/resources/FeatureFiles/Payment/i_ReceiptDocumentControl.feature:5)
-</textarea></span>
+													<span class="td"></span>
 												</div>
 											</div>
-											<div class="st skip test l3" 
+											<div class="st pass test l3" 
 												tags=""
 												devices="">
-												<span class="tt">08.01.2020 22:08:12</span>&nbsp;
-												<span class="ts">skip</span>&nbsp;&nbsp;
+												<span class="tt">08.03.2020 21:52:44</span>&nbsp;
+												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[Then User should be logged in] started</span>
 												
-												<div class="st skip">
-													<span class="tt">08.01.2020 22:08:12</span>&nbsp;
-													<span class="ts">skip</span>&nbsp;&nbsp; 
+												<div class="st pass">
+													<span class="tt">08.03.2020 21:52:44</span>&nbsp;
+													<span class="ts">pass</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[Then User should be logged in]</span>
 													
-													<span class="td">Step skipped</span>
+													<span class="td"></span>
 												</div>
 											</div>
-											<div class="st skip test l3" 
+											<div class="st pass test l3" 
 												tags=""
 												devices="">
-												<span class="tt">08.01.2020 22:08:12</span>&nbsp;
-												<span class="ts">skip</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[Given navigate to  Revenue Collection>>Receipt Document Control] started</span>
+												<span class="tt">08.03.2020 21:52:44</span>&nbsp;
+												<span class="ts">pass</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[Given navigate to  Reporting>>Reports] started</span>
 												
-												<div class="st skip">
-													<span class="tt">08.01.2020 22:08:12</span>&nbsp;
-													<span class="ts">skip</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[Given navigate to  Revenue Collection>>Receipt Document Control]</span>
+												<div class="st pass">
+													<span class="tt">08.03.2020 21:52:50</span>&nbsp;
+													<span class="ts">pass</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[Given navigate to  Reporting>>Reports]</span>
 													
-													<span class="td">Step skipped</span>
+													<span class="td"></span>
 												</div>
 											</div>
-											<div class="st skip test l3" 
+											<div class="st pass test l3" 
 												tags=""
 												devices="">
-												<span class="tt">08.01.2020 22:08:12</span>&nbsp;
-												<span class="ts">skip</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[When enters Receipt Document Control Balaka Office1 and 0 and 2 and Issued] started</span>
+												<span class="tt">08.03.2020 21:52:50</span>&nbsp;
+												<span class="ts">pass</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[When clicks Receipt Document Summary] started</span>
 												
-												<div class="st skip">
-													<span class="tt">08.01.2020 22:08:12</span>&nbsp;
-													<span class="ts">skip</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[When enters Receipt Document Control Balaka Office1 and 0 and 2 and Issued]</span>
+												<div class="st pass">
+													<span class="tt">08.03.2020 21:52:55</span>&nbsp;
+													<span class="ts">pass</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[When clicks Receipt Document Summary]</span>
 													
-													<span class="td">Step skipped</span>
+													<span class="td"></span>
 												</div>
 											</div>
-											<div class="st skip test l3" 
+											<div class="st pass test l3" 
 												tags=""
 												devices="">
-												<span class="tt">08.01.2020 22:08:12</span>&nbsp;
-												<span class="ts">skip</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[And clicks on Receipt Document Control Save Button] started</span>
+												<span class="tt">08.03.2020 21:52:55</span>&nbsp;
+												<span class="ts">pass</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[Then Report screen should be displayed Receipt Document Summary] started</span>
 												
-												<div class="st skip">
-													<span class="tt">08.01.2020 22:08:12</span>&nbsp;
-													<span class="ts">skip</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[And clicks on Receipt Document Control Save Button]</span>
+												<div class="st pass">
+													<span class="tt">08.03.2020 21:52:55</span>&nbsp;
+													<span class="ts">pass</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[Then Report screen should be displayed Receipt Document Summary]</span>
 													
-													<span class="td">Step skipped</span>
+													<span class="td"></span>
 												</div>
 											</div>
-											<div class="st skip test l3" 
+											<div class="st pass test l3" 
 												tags=""
 												devices="">
-												<span class="tt">08.01.2020 22:08:12</span>&nbsp;
-												<span class="ts">skip</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[And checks Issued To Cash Officer] started</span>
+												<span class="tt">08.03.2020 21:52:55</span>&nbsp;
+												<span class="ts">pass</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[When enters Receipt Document Summary report parameters] started</span>
 												
-												<div class="st skip">
-													<span class="tt">08.01.2020 22:08:12</span>&nbsp;
-													<span class="ts">skip</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[And checks Issued To Cash Officer]</span>
+												<div class="st pass">
+													<span class="tt">08.03.2020 21:53:02</span>&nbsp;
+													<span class="ts">pass</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[When enters Receipt Document Summary report parameters]</span>
 													
-													<span class="td">Step skipped</span>
+													<span class="td"></span>
 												</div>
 											</div>
-											<div class="st skip test l3" 
+											<div class="st pass test l3" 
 												tags=""
 												devices="">
-												<span class="tt">08.01.2020 22:08:12</span>&nbsp;
-												<span class="ts">skip</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[Then The System saves the updated Receipt Document record] started</span>
+												<span class="tt">08.03.2020 21:53:02</span>&nbsp;
+												<span class="ts">pass</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[And clicks run report button] started</span>
 												
-												<div class="st skip">
-													<span class="tt">08.01.2020 22:08:12</span>&nbsp;
-													<span class="ts">skip</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[Then The System saves the updated Receipt Document record]</span>
+												<div class="st pass">
+													<span class="tt">08.03.2020 21:53:08</span>&nbsp;
+													<span class="ts">pass</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[And clicks run report button]</span>
 													
-													<span class="td">Step skipped</span>
+													<span class="td"></span>
 												</div>
 											</div>
-											<div class="st fail test l1" 
-												tags="@SUC:05-09"
+											<div class="st pass test l3" 
+												tags=""
 												devices="">
-												<span class="tt">08.01.2020 22:08:12</span>&nbsp;
-												<span class="ts">fail</span>&nbsp;&nbsp;
-												<span class="tn">|---[UAT_M7_09-07-Verify the Process of Cash Office Receipt] started</span>
+												<span class="tt">08.03.2020 21:53:08</span>&nbsp;
+												<span class="ts">pass</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[Then Report download should be generate C:\Users\v-bakam\Downloads and Receipt Document Summary.pdf] started</span>
+												
+												<div class="st pass">
+													<span class="tt">08.03.2020 21:53:12</span>&nbsp;
+													<span class="ts">pass</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[Then Report download should be generate C:\Users\v-bakam\Downloads and Receipt Document Summary.pdf]</span>
+													
+													<span class="td"></span>
+												</div>
+											</div>
+											<div class="st pass test l1" 
+												tags="@SUC:05-13"
+												devices="">
+												<span class="tt">08.03.2020 21:53:13</span>&nbsp;
+												<span class="ts">pass</span>&nbsp;&nbsp;
+												<span class="tn">|---[UAT_M7_13-07-Print Report Validation Error] started</span>
 												<span class="category-list">
-													<span class="category badge"><i class="fa fa-tag"></i> @SUC:05-09</span>
+													<span class="category badge"><i class="fa fa-tag"></i> @SUC:05-13</span>
 												</span>
 												<span class="author-list">
 												</span>
@@ -996,14 +992,14 @@ Session ID: b5d8a16986a335ce34148f2a24fb7627
 												</span>
 												
 											</div>
-											<div class="st fail test l2" 
-												tags="@SUC:05-09"
+											<div class="st pass test l2" 
+												tags="@SUC:05-13"
 												devices="">
-												<span class="tt">08.01.2020 22:08:12</span>&nbsp;
-												<span class="ts">fail</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[UAT_M7_09-07-Verify the Process of Cash Office Receipt] started</span>
+												<span class="tt">08.03.2020 21:53:13</span>&nbsp;
+												<span class="ts">pass</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[UAT_M7_13-07-Print Report Validation Error] started</span>
 												<span class="category-list">
-													<span class="category badge"><i class="fa fa-tag"></i> @SUC:05-09</span>
+													<span class="category badge"><i class="fa fa-tag"></i> @SUC:05-13</span>
 												</span>
 												<span class="author-list">
 												</span>
@@ -1014,132 +1010,331 @@ Session ID: b5d8a16986a335ce34148f2a24fb7627
 											<div class="st pass test l3" 
 												tags=""
 												devices="">
-												<span class="tt">08.01.2020 22:08:12</span>&nbsp;
+												<span class="tt">08.03.2020 21:53:13</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[Given User navigates to the login page] started</span>
 												
 												<div class="st pass">
-													<span class="tt">08.01.2020 22:08:38</span>&nbsp;
+													<span class="tt">08.03.2020 21:53:25</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[Given User navigates to the login page]</span>
 													
 													<span class="td"></span>
 												</div>
 											</div>
-											<div class="st fail test l3" 
+											<div class="st pass test l3" 
 												tags=""
 												devices="">
-												<span class="tt">08.01.2020 22:08:38</span>&nbsp;
-												<span class="ts">fail</span>&nbsp;&nbsp;
+												<span class="tt">08.03.2020 21:53:25</span>&nbsp;
+												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[When Enters the username "tripsuser" and password "Passw0rd" to login] started</span>
 												
-												<div class="st fail">
-													<span class="tt">08.01.2020 22:08:38</span>&nbsp;
-													<span class="ts">fail</span>&nbsp;&nbsp; 
+												<div class="st pass">
+													<span class="tt">08.03.2020 21:53:33</span>&nbsp;
+													<span class="ts">pass</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[When Enters the username "tripsuser" and password "Passw0rd" to login]</span>
 													
-													<span class="td">threw an exception<br><textarea disabled class="code-block">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"#loginForm\:username"}
-  (Session info: chrome=84.0.4147.105)
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'DESKTOP-VUGFEQL', ip: '172.16.16.20', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '14.0.1'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 84.0.4147.105, chrome: {chromedriverVersion: 83.0.4103.39 (ccbf011cb2d2b..., userDataDir: C:\Users\v-bakam\AppData\Lo...}, goog:chromeOptions: {debuggerAddress: localhost:53239}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
-Session ID: 1b27475ec0d617acbfeb5bbde328ec2b
-*** Element info: {Using=id, value=loginForm:username}
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:372)
-	at org.openqa.selenium.By$ById.findElement(By.java:188)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-	at StepDefinitions.stepDefinitions.enters_the_username_something_and_password_something_to_login(stepDefinitions.java:79)
-	at ✽.Enters the username "tripsuser" and password "Passw0rd" to login(file:///C:/Users/v-bakam/eclipse-workspace/BazePayments/src/test/resources/FeatureFiles/Payment/i_ReceiptDocumentControl.feature:5)
-</textarea></span>
+													<span class="td"></span>
 												</div>
 											</div>
-											<div class="st skip test l3" 
+											<div class="st pass test l3" 
 												tags=""
 												devices="">
-												<span class="tt">08.01.2020 22:08:38</span>&nbsp;
-												<span class="ts">skip</span>&nbsp;&nbsp;
+												<span class="tt">08.03.2020 21:53:33</span>&nbsp;
+												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[Then User should be logged in] started</span>
 												
-												<div class="st skip">
-													<span class="tt">08.01.2020 22:08:38</span>&nbsp;
-													<span class="ts">skip</span>&nbsp;&nbsp; 
+												<div class="st pass">
+													<span class="tt">08.03.2020 21:53:33</span>&nbsp;
+													<span class="ts">pass</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[Then User should be logged in]</span>
 													
-													<span class="td">Step skipped</span>
+													<span class="td"></span>
 												</div>
 											</div>
-											<div class="st skip test l3" 
+											<div class="st pass test l3" 
 												tags=""
 												devices="">
-												<span class="tt">08.01.2020 22:08:38</span>&nbsp;
-												<span class="ts">skip</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[Given navigate to  Revenue Collection>>Receipt Document Control] started</span>
+												<span class="tt">08.03.2020 21:53:33</span>&nbsp;
+												<span class="ts">pass</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[Given navigate to  Reporting>>Reports] started</span>
 												
-												<div class="st skip">
-													<span class="tt">08.01.2020 22:08:38</span>&nbsp;
-													<span class="ts">skip</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[Given navigate to  Revenue Collection>>Receipt Document Control]</span>
+												<div class="st pass">
+													<span class="tt">08.03.2020 21:53:38</span>&nbsp;
+													<span class="ts">pass</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[Given navigate to  Reporting>>Reports]</span>
 													
-													<span class="td">Step skipped</span>
+													<span class="td"></span>
 												</div>
 											</div>
-											<div class="st skip test l3" 
+											<div class="st pass test l3" 
 												tags=""
 												devices="">
-												<span class="tt">08.01.2020 22:08:38</span>&nbsp;
-												<span class="ts">skip</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[When enters Receipt Document Control Balaka Office1 and 0 and 2 and In Stock] started</span>
+												<span class="tt">08.03.2020 21:53:38</span>&nbsp;
+												<span class="ts">pass</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[When clicks Receipt Document Summary] started</span>
 												
-												<div class="st skip">
-													<span class="tt">08.01.2020 22:08:38</span>&nbsp;
-													<span class="ts">skip</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[When enters Receipt Document Control Balaka Office1 and 0 and 2 and In Stock]</span>
+												<div class="st pass">
+													<span class="tt">08.03.2020 21:53:43</span>&nbsp;
+													<span class="ts">pass</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[When clicks Receipt Document Summary]</span>
 													
-													<span class="td">Step skipped</span>
+													<span class="td"></span>
 												</div>
 											</div>
-											<div class="st skip test l3" 
+											<div class="st pass test l3" 
 												tags=""
 												devices="">
-												<span class="tt">08.01.2020 22:08:38</span>&nbsp;
-												<span class="ts">skip</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[And clicks on Receipt Document Control Save Button] started</span>
+												<span class="tt">08.03.2020 21:53:43</span>&nbsp;
+												<span class="ts">pass</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[Then Report screen should be displayed Receipt Document Summary] started</span>
 												
-												<div class="st skip">
-													<span class="tt">08.01.2020 22:08:38</span>&nbsp;
-													<span class="ts">skip</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[And clicks on Receipt Document Control Save Button]</span>
+												<div class="st pass">
+													<span class="tt">08.03.2020 21:53:43</span>&nbsp;
+													<span class="ts">pass</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[Then Report screen should be displayed Receipt Document Summary]</span>
 													
-													<span class="td">Step skipped</span>
+													<span class="td"></span>
 												</div>
 											</div>
-											<div class="st skip test l3" 
+											<div class="st pass test l3" 
 												tags=""
 												devices="">
-												<span class="tt">08.01.2020 22:08:38</span>&nbsp;
-												<span class="ts">skip</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[Then The System saves the updated Receipt Document record] started</span>
+												<span class="tt">08.03.2020 21:53:43</span>&nbsp;
+												<span class="ts">pass</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[And clicks run report button] started</span>
 												
-												<div class="st skip">
-													<span class="tt">08.01.2020 22:08:38</span>&nbsp;
-													<span class="ts">skip</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[Then The System saves the updated Receipt Document record]</span>
+												<div class="st pass">
+													<span class="tt">08.03.2020 21:53:50</span>&nbsp;
+													<span class="ts">pass</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[And clicks run report button]</span>
 													
-													<span class="td">Step skipped</span>
+													<span class="td"></span>
+												</div>
+											</div>
+											<div class="st pass test l3" 
+												tags=""
+												devices="">
+												<span class="tt">08.03.2020 21:53:50</span>&nbsp;
+												<span class="ts">pass</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[Then message is displayed "Receipt Status: Validation Error: Value is required"] started</span>
+												
+												<div class="st pass">
+													<span class="tt">08.03.2020 21:53:50</span>&nbsp;
+													<span class="ts">pass</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[Then message is displayed "Receipt Status: Validation Error: Value is required"]</span>
+													
+													<span class="td"></span>
+												</div>
+											</div>
+											<div class="st pass test l3" 
+												tags=""
+												devices="">
+												<span class="tt">08.03.2020 21:53:50</span>&nbsp;
+												<span class="ts">pass</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[When enters Receipt Document Summary report parameters] started</span>
+												
+												<div class="st pass">
+													<span class="tt">08.03.2020 21:53:57</span>&nbsp;
+													<span class="ts">pass</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[When enters Receipt Document Summary report parameters]</span>
+													
+													<span class="td"></span>
+												</div>
+											</div>
+											<div class="st pass test l3" 
+												tags=""
+												devices="">
+												<span class="tt">08.03.2020 21:53:57</span>&nbsp;
+												<span class="ts">pass</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[And clicks run report button] started</span>
+												
+												<div class="st pass">
+													<span class="tt">08.03.2020 21:54:03</span>&nbsp;
+													<span class="ts">pass</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[And clicks run report button]</span>
+													
+													<span class="td"></span>
+												</div>
+											</div>
+											<div class="st pass test l3" 
+												tags=""
+												devices="">
+												<span class="tt">08.03.2020 21:54:03</span>&nbsp;
+												<span class="ts">pass</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[Then Report download should be generate C:\Users\v-bakam\Downloads and Receipt Document Summary.pdf] started</span>
+												
+												<div class="st pass">
+													<span class="tt">08.03.2020 21:54:07</span>&nbsp;
+													<span class="ts">pass</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[Then Report download should be generate C:\Users\v-bakam\Downloads and Receipt Document Summary.pdf]</span>
+													
+													<span class="td"></span>
+												</div>
+											</div>
+											<div class="st pass test l1" 
+												tags="@SUC:05-13"
+												devices="">
+												<span class="tt">08.03.2020 21:54:07</span>&nbsp;
+												<span class="ts">pass</span>&nbsp;&nbsp;
+												<span class="tn">|---[UAT_M7_13-08-Abandon Report] started</span>
+												<span class="category-list">
+													<span class="category badge"><i class="fa fa-tag"></i> @SUC:05-13</span>
+												</span>
+												<span class="author-list">
+												</span>
+												<span class="device-list">
+												</span>
+												
+											</div>
+											<div class="st pass test l2" 
+												tags="@SUC:05-13"
+												devices="">
+												<span class="tt">08.03.2020 21:54:07</span>&nbsp;
+												<span class="ts">pass</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[UAT_M7_13-08-Abandon Report] started</span>
+												<span class="category-list">
+													<span class="category badge"><i class="fa fa-tag"></i> @SUC:05-13</span>
+												</span>
+												<span class="author-list">
+												</span>
+												<span class="device-list">
+												</span>
+												
+											</div>
+											<div class="st pass test l3" 
+												tags=""
+												devices="">
+												<span class="tt">08.03.2020 21:54:07</span>&nbsp;
+												<span class="ts">pass</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[Given User navigates to the login page] started</span>
+												
+												<div class="st pass">
+													<span class="tt">08.03.2020 21:54:18</span>&nbsp;
+													<span class="ts">pass</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[Given User navigates to the login page]</span>
+													
+													<span class="td"></span>
+												</div>
+											</div>
+											<div class="st pass test l3" 
+												tags=""
+												devices="">
+												<span class="tt">08.03.2020 21:54:18</span>&nbsp;
+												<span class="ts">pass</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[When Enters the username "tripsuser" and password "Passw0rd" to login] started</span>
+												
+												<div class="st pass">
+													<span class="tt">08.03.2020 21:54:28</span>&nbsp;
+													<span class="ts">pass</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[When Enters the username "tripsuser" and password "Passw0rd" to login]</span>
+													
+													<span class="td"></span>
+												</div>
+											</div>
+											<div class="st pass test l3" 
+												tags=""
+												devices="">
+												<span class="tt">08.03.2020 21:54:28</span>&nbsp;
+												<span class="ts">pass</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[Then User should be logged in] started</span>
+												
+												<div class="st pass">
+													<span class="tt">08.03.2020 21:54:28</span>&nbsp;
+													<span class="ts">pass</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[Then User should be logged in]</span>
+													
+													<span class="td"></span>
+												</div>
+											</div>
+											<div class="st pass test l3" 
+												tags=""
+												devices="">
+												<span class="tt">08.03.2020 21:54:28</span>&nbsp;
+												<span class="ts">pass</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[Given navigate to  Reporting>>Reports] started</span>
+												
+												<div class="st pass">
+													<span class="tt">08.03.2020 21:54:34</span>&nbsp;
+													<span class="ts">pass</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[Given navigate to  Reporting>>Reports]</span>
+													
+													<span class="td"></span>
+												</div>
+											</div>
+											<div class="st pass test l3" 
+												tags=""
+												devices="">
+												<span class="tt">08.03.2020 21:54:34</span>&nbsp;
+												<span class="ts">pass</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[When clicks Cashiering Report] started</span>
+												
+												<div class="st pass">
+													<span class="tt">08.03.2020 21:54:39</span>&nbsp;
+													<span class="ts">pass</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[When clicks Cashiering Report]</span>
+													
+													<span class="td"></span>
+												</div>
+											</div>
+											<div class="st pass test l3" 
+												tags=""
+												devices="">
+												<span class="tt">08.03.2020 21:54:39</span>&nbsp;
+												<span class="ts">pass</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[Then Report screen should be displayed Cashiering Report] started</span>
+												
+												<div class="st pass">
+													<span class="tt">08.03.2020 21:54:39</span>&nbsp;
+													<span class="ts">pass</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[Then Report screen should be displayed Cashiering Report]</span>
+													
+													<span class="td"></span>
+												</div>
+											</div>
+											<div class="st pass test l3" 
+												tags=""
+												devices="">
+												<span class="tt">08.03.2020 21:54:39</span>&nbsp;
+												<span class="ts">pass</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[When enters cash till reference as "%"] started</span>
+												
+												<div class="st pass">
+													<span class="tt">08.03.2020 21:54:39</span>&nbsp;
+													<span class="ts">pass</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[When enters cash till reference as "%"]</span>
+													
+													<span class="td"></span>
+												</div>
+											</div>
+											<div class="st pass test l3" 
+												tags=""
+												devices="">
+												<span class="tt">08.03.2020 21:54:39</span>&nbsp;
+												<span class="ts">pass</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[And clicks cancel button] started</span>
+												
+												<div class="st pass">
+													<span class="tt">08.03.2020 21:54:44</span>&nbsp;
+													<span class="ts">pass</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[And clicks cancel button]</span>
+													
+													<span class="td"></span>
+												</div>
+											</div>
+											<div class="st pass test l3" 
+												tags=""
+												devices="">
+												<span class="tt">08.03.2020 21:54:44</span>&nbsp;
+												<span class="ts">pass</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[Then navigated back to Reports screen] started</span>
+												
+												<div class="st pass">
+													<span class="tt">08.03.2020 21:54:44</span>&nbsp;
+													<span class="ts">pass</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[Then navigated back to Reports screen]</span>
+													
+													<span class="td"></span>
 												</div>
 											</div>
 											</div>

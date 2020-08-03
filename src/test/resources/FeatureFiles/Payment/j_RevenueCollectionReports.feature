@@ -60,16 +60,17 @@ Examples:
 |cfN|	downloadpath	|filename|
 |Balaka Office1|	C:\Users\v-bakam\Downloads	|BankLodgementSlip.pdf|
 
-@SUC:05-13
+@SUC:05-13-
 Scenario Outline: UAT_M7_13-05-To verify the process of printing Cash Office Enquiry (Cash Office Summary Report)
 Given navigate to Revenue Collection>>Cash Office Daily Control
 When selects Cash Office Name <cfN>
+ And Opens the Cash Office
 And clicks  Cash Office Summary Report button
 Then Report download should be generate <downloadpath> and <filename>
 
 Examples:
 |cfN|	downloadpath	|filename|
-|CO2|	C:\Users\v-bakam\Downloads	|CashOfficeSummary.pdf|
+|Balaka Office1|	C:\Users\v-bakam\Downloads	|CashOfficeSummary.pdf|
 
 @SUC:05-13
 Scenario Outline: UAT_M7_13-06-To verify the process of printing Receipt Document Summary

@@ -67,11 +67,10 @@ public class stepDefinitions extends BaseClass{
     public void user_navigates_to_the_login_page() throws Throwable {
     	driver = BaseClass.getDriver();
 //    	intergtation link for backoffice
-//    	driver.get("http://18.202.88.7:8001/trips-ui/faces/login/tripsLogin.xhtml");
+    	driver.get("http://18.202.88.7:8001/trips-ui/faces/login/tripsLogin.xhtml");
 
         //    	SIT link for backoffice
-    	driver.get("https://backoffice.mra.mw:8443/trips-ui/faces/login/tripsLogin.xhtml");
-    	
+//    	driver.get("https://backoffice.mra.mw:8443/trips-ui/faces/login/tripsLogin.xhtml");
     }
     
     @When("^Enters the username \"([^\"]*)\" and password \"([^\"]*)\" to login$")
@@ -85,8 +84,8 @@ public class stepDefinitions extends BaseClass{
     public void user_should_be_logged_in() throws Throwable {
     	String URL = driver.getCurrentUrl();
     	
-//    	Assert.assertEquals(URL, "http://18.202.88.7:8001/trips-ui/faces/login/Welcome.xhtml" );
-    	Assert.assertEquals(URL, "https://backoffice.mra.mw:8443/trips-ui/faces/login/Welcome.xhtml" );
+    	Assert.assertEquals(URL, "http://18.202.88.7:8001/trips-ui/faces/login/Welcome.xhtml" );
+//    	Assert.assertEquals(URL, "https://backoffice.mra.mw:8443/trips-ui/faces/login/Welcome.xhtml" );
     }
     
     @Then("^User logs out successfully$")
@@ -528,6 +527,14 @@ public class stepDefinitions extends BaseClass{
         reconcileButton.click();
         Thread.sleep(7000);
     }
+
+    @And("^Opens the Cash Office$")
+    public void opens_the_cash_office() throws Throwable {
+        Thread.sleep(4000);
+        WebElement reconcileButton = driver.findElement(By.id("CashOfficeDailyControlform:btnOpenCashOffice"));
+        reconcileButton.click();
+        Thread.sleep(7000);
+    }
     
     @When("^enters cash till reference$")
     public void enters_cash_till_reference() throws Throwable {
@@ -706,8 +713,8 @@ public class stepDefinitions extends BaseClass{
     
     @Then("^Payment Summary window displayed (.+)$")
     public void payment_summary_window_displayed(String tin) throws Throwable {
-    	driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-    	Thread.sleep(4000);
+    	driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+    	Thread.sleep(8000);
         String paymentSummaryLabel = driver.findElement(By.id("PaymentSummary:TaxpayerHeader")).getText();
         Assert.assertEquals(paymentSummaryLabel, "Taxpayer Account");
         
@@ -771,6 +778,13 @@ public class stepDefinitions extends BaseClass{
     public void account_payment_details_pop_up_window_should_be_displayed() throws Throwable {
     	Thread.sleep(7000);
     	WebElement paymentonAccountHeader = driver.findElement(By.xpath("//*[@id=\"PaymentDetails:paymentAccordion:PaymentSpread:OnAccount_dlg\"]/div[1]"));
+        Assert.assertTrue(paymentonAccountHeader.isDisplayed());
+    }
+
+    @Then("^Find document Details pop up window should be displayed$")
+    public void find_document_details_pop_up_window_should_be_displayed() throws Throwable {
+        Thread.sleep(7000);
+        WebElement paymentonAccountHeader = driver.findElement(By.xpath("//*[@id=\"PaymentDetails:paymentAccordion:PaymentSpread:DocumentAllocation_dlg\"]/div[1]"));
         Assert.assertTrue(paymentonAccountHeader.isDisplayed());
     }
     
@@ -858,6 +872,13 @@ public class stepDefinitions extends BaseClass{
         WebElement confirmationYesButton = driver.findElement(By.id("PaymentDetails:j_idt46"));
         confirmationYesButton.click();
     }
+
+    @And("^Payment list click on Save Button$")
+    public void payment_list_click_on_save_button() throws Throwable {
+        Thread.sleep(4000);
+        WebElement saveBtn=driver.findElement(By.id("PaymentSummary:Save"));
+        saveBtn.click();
+    }
     
     @Then("^account payment error message is displayed \"([^\"]*)\"$")
     public void account_payment_error_message_is_displayed_something(String strArg1) throws Throwable {
@@ -881,12 +902,13 @@ public class stepDefinitions extends BaseClass{
     }
     
     @When("^enters Receipt Document Control (.+) and (.+) and (.+) and (.+)$")
-    public void enters_receipt_document_control_and_and_and(String cashoffice, String receiptnumberfrom, String receiptnumberto, String distributionstatus) throws Throwable {
+    public void enters_receipt_document_control_and_and_and(String cashofficeno, String receiptnumberfrom, String receiptnumberto, String distributionstatus) throws Throwable {
         WebElement cashOfficedropDown = driver.findElement(By.xpath("//*[@id=\"ReceiptDocumentControl:CashOfficeDD\"]/div[3]"));
         cashOfficedropDown.click();
-        Thread.sleep(4000);
-        System.out.print(cashoffice);
-        driver.findElement(By.id("ReceiptDocumentControl:CashOfficeDD_2")).click();
+        Thread.sleep(2000);
+//        driver.findElement(By.id("ReceiptDocumentControl:CashOfficeDD_1")).click();
+        driver.findElement(By.xpath("//*[@id='ReceiptDocumentControl:CashOfficeDD_"+cashofficeno+"']")).click();
+//        driver.findElement(By.xpath("//li[text()='Balaka Office1']")).click();
         
         WebElement recieptNumberFromInput = driver.findElement(By.id("ReceiptDocumentControl:ReceiptNumFrom"));
         recieptNumberFromInput.sendKeys(receiptnumberfrom);
@@ -900,6 +922,28 @@ public class stepDefinitions extends BaseClass{
         driver.findElement(By.xpath("//li[@data-label='"+distributionstatus+"']")).click();
         
     }
+
+    @And("^enters cashOffice (.+)$")
+    public void enters_cashoffice(String cashoffice2) throws Throwable {
+        Thread.sleep(2000);
+        WebElement cashOfficedropDown = driver.findElement(By.xpath("//*[@id='ReceiptDocumentControl:cashOffice']/div[3]"));
+        cashOfficedropDown.click();
+        Thread.sleep(2000);
+
+       driver.findElement(By.id("ReceiptDocumentControl:cashOffice_1")).click();
+//        driver.findElement(By.xpath("//li[@data-label='"+cashoffice2+"']")).click();
+    }
+    @And("^enters cashOfficer (.+)$")
+    public void enters_cashofficer(String cashofficer) throws Throwable {
+        Thread.sleep(2000);
+        WebElement cashOfficerdropDown = driver.findElement(By.xpath("//*[@id=\"ReceiptDocumentControl:officer\"]/div[3]"));
+        cashOfficerdropDown.click();
+        Thread.sleep(2000);
+
+        driver.findElement(By.id("ReceiptDocumentControl:officer_1")).click();
+//        driver.findElement(By.xpath("//li[@data-label='"+cashoffice2+"']")).click();
+    }
+
     
     @And("^clicks on Receipt Document Control Save Button$")
     public void clicks_on_receipt_document_control_save_button() throws Throwable {
@@ -920,13 +964,14 @@ public class stepDefinitions extends BaseClass{
     }
     
     @When("^enters Receipt Document Control (.+) and (.+) leaving other blank$")
-    public void enters_receipt_document_control_and_leaving_other_blank(String cashoffice, String distributionstatus) throws Throwable {
+    public void enters_receipt_document_control_and_leaving_other_blank(String cashofficeno, String distributionstatus) throws Throwable {
     	driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
     	WebElement cashOfficedropDown = driver.findElement(By.xpath("//*[@id=\"ReceiptDocumentControl:CashOfficeDD\"]/div[3]"));
         cashOfficedropDown.click();
         Thread.sleep(4000);
-        System.out.print(cashoffice);
-        driver.findElement(By.id("ReceiptDocumentControl:CashOfficeDD_2")).click();
+
+        driver.findElement(By.xpath("//*[@id='ReceiptDocumentControl:CashOfficeDD_"+cashofficeno+"']")).click();
+//        driver.findElement(By.id("ReceiptDocumentControl:CashOfficeDD_1")).click();
         
         WebElement distributionStatusDropdown = driver.findElement(By.xpath("//*[@id=\"ReceiptDocumentControl:distributionStatus\"]/div[3]"));
         distributionStatusDropdown.click();
@@ -936,14 +981,15 @@ public class stepDefinitions extends BaseClass{
     
     @And("^checks Issued To Cashier$")
     public void checks_issued_to_cashier() throws Throwable {
-        WebElement cashierOfficeCheckBox = driver.findElement(By.xpath("//*[@id=\"ReceiptDocumentControl:issuedTo\"]/tbody/tr/td[1]/div/div[2]"));
+	    Thread.sleep(4000);
+        WebElement cashierOfficeCheckBox = driver.findElement(By.xpath("//*[@id='ReceiptDocumentControl:issuedTo']/tbody/tr/td[1]/div/div[2]"));
         cashierOfficeCheckBox.click();
     }
     
     @And("^checks Issued To Cash Officer$")
     public void checks_issued_to_cash_officer() throws Throwable {
-    	
-    	WebElement cashierOfficerCheckBox = driver.findElement(By.xpath("//*[@id=\"ReceiptDocumentControl:issuedTo\"]/tbody/tr/td[2]/div/div[2]"));
+        Thread.sleep(4000);
+    	WebElement cashierOfficerCheckBox = driver.findElement(By.xpath("//*[@id='ReceiptDocumentControl:issuedTo']/tbody/tr/td[2]/div/div[2]"));
     	cashierOfficerCheckBox.click();
     }
     
@@ -1026,6 +1072,8 @@ public class stepDefinitions extends BaseClass{
         
         Thread.sleep(5000);
     }
+
+
     
     @And("^clicks cancel button$")
     public void clicks_cancel_button() throws Throwable {
@@ -1267,6 +1315,13 @@ driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
     	WebElement designationInput = driver.findElement(By.id("PaymentSummary:designation_id"));
     	designationInput.sendKeys(designation);
     }
+    @When("^clicks on Document Allocation Button$")
+    public void clicks_on_document_allocation_button() throws Throwable {
+        WebElement docAllocationBtn = driver.findElement(By.id("PaymentDetails:paymentAccordion:PaymentSpread:DocumentAllocation"));
+        docAllocationBtn.click();
+        Thread.sleep(4000);
+    }
+
     
     
 }

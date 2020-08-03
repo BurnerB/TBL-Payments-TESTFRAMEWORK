@@ -2,9 +2,9 @@ Feature: [SUC:05-03] Open Suspended Cash Till
 
 @SUC:05-03
 Scenario: UAT_M7_03-01-UAT_M7_03-02-Verify the Process of Suspend Cash Till
-Given User navigates to the login page
-When Enters the username "userb" and password "Passw0rd" to login
-Then User should be logged in 
+ Given User navigates to the login page
+ When Enters the username "tripscrmuser12" and password "Passw0rd" to login
+ Then User should be logged in
 Given navigate to Revenue Collection>>Cash Till Maintenance
  When enters approved ref number
 And clicks on Open Cash Till button
@@ -28,7 +28,7 @@ Then Application Account Adjustment status should be "Approved"
 @SUC:05-03
 Scenario Outline: status set to open
 Given User navigates to the login page
-When Enters the username "userb" and password "Passw0rd" to login
+When Enters the username "tripscrmuser12" and password "Passw0rd" to login
 Then User should be logged in 
 Given navigate to Revenue Collection>>Cash Till Maintenance
  When enters approved ref number
@@ -41,7 +41,7 @@ Examples:
 @SUC:05-03
 Scenario: UAT_M7_03-03-Verify the Process of Supervisor rejection
  Given User navigates to the login page
- When Enters the username "userb" and password "Passw0rd" to login
+ When Enters the username "tripscrmuser12" and password "Passw0rd" to login
  Then User should be logged in
  Given navigate to Revenue Collection>>Cash Till Maintenance
  When enters approved ref number
@@ -74,7 +74,7 @@ Examples:
 @SUC:05-03
 Scenario Outline: status set to suspended
 Given User navigates to the login page
-When Enters the username "userb" and password "Passw0rd" to login
+When Enters the username "tripscrmuser12" and password "Passw0rd" to login
 Then User should be logged in 
 Given navigate to Revenue Collection>>Cash Till Maintenance
  When enters approved ref number

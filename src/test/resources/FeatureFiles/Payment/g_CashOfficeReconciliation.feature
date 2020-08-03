@@ -2,10 +2,11 @@ Feature: [SUC:05-11] Cash Office Reconciliation
 
  Background:
 Given User navigates to the login page
-When Enters the username "usera" and password "Passw0rd" to login
+When Enters the username "tripsuser" and password "Passw0rd" to login
 Then User should be logged in 
 
-@SUC:05-11
+#@SUC:05-11
+ @SUC:tial
 Scenario Outline: UAT_M5_11-01-UAT_M5_11-02-Verify the Process of Cash Office Reconciliation
 Given navigate to Revenue Collection>>Cash Office Daily Control
 When selects Cash Office Name <cfN>
@@ -13,9 +14,10 @@ And clicks reconcile Cash Office
 
 Examples:
 |cfN|
-|TestOffice|
+|Balaka Office1|
 
-@SUC:05-11
+#@SUC:05-11
+ @SUC:tial
 Scenario Outline: UAT_M5_11-03-Verify the Process of Invalid Tills
 Given navigate to Revenue Collection>>Cash Office Daily Control
 When selects Cash Office Name <cfN>
@@ -26,9 +28,10 @@ Then message is displayed "Cash Office Name: Validation Error: Value is required
 
 Examples:
 |cfN|
-|TestOffice|
+|Balaka Office1|
 
-@SUC:05-11
+#@SUC:05-11
+ @SUC:tial-
 Scenario Outline: UAT_M5_11-05-Verify the Process of Invalid Data
 Given navigate to Revenue Collection>>Cash Office Daily Control
 When selects Cash Office Name <cfN>
@@ -36,13 +39,14 @@ And clicks reconcile Cash Office
 When enters cash till reference
 Then The System displays the Unreconciled Cash Till details
 When clicks on Save Button
-Then message is displayed "Please Enter Correct Adjustment Amount And Try Again"
+Then message is displayed "Please Select Adjustment Reason And Enter Correct Adjustment Amount"
 
 Examples:
 |cfN|
-|Kenya Q/A|
+|BALCO101|
 
- @SUC:05-11
+#@SUC:05-11
+ @SUC:tial
  Scenario Outline: UAT_M5_11-06-Verify the Process of Unreconciled Report
   Given navigate to Revenue Collection>>Cash Office Daily Control
   When selects Cash Office Name <cfN>
@@ -56,7 +60,8 @@ Examples:
    |cfN|	downloadpath	|filename|
    |Kenya Q/A|	C:\Users\v-bakam\Downloads	|UnreconciledTillReport.pdf|
 
-@SUC:05-11
+#@SUC:05-11
+ @SUC:tial
 Scenario Outline: UAT_M5_11-04-Verify the Process of Unreconciled Tills
 Given navigate to Revenue Collection>>Cash Office Daily Control
 When selects Cash Office Name <cfN>
@@ -73,7 +78,8 @@ Examples:
 
 
 
-@SUC:05-11
+#@SUC:05-11
+ @SUC:tial
 Scenario Outline: UAT_M5_11-07-Verify the Process of Cash Office Summary Report
 Given navigate to Revenue Collection>>Cash Office Daily Control
 When selects Cash Office Name <cfN>
@@ -86,7 +92,8 @@ Examples:
 |cfN|	downloadpath	|filename|
 |Kenya Q/A|	C:\Users\v-bakam\Downloads	|CashOfficeSummary.pdf|
 
-@SUC:05-11
+#@SUC:05-11
+ @SUC:tial
 Scenario Outline: UAT_M5_11-08-Verify the Process of Bank Lodgement Report
 Given navigate to Revenue Collection>>Cash Office Daily Control
 When selects Cash Office Name <cfN>
@@ -101,7 +108,8 @@ Examples:
 |cfN|	downloadpath	|filename|
 |Kenya Q/A|	C:\Users\v-bakam\Downloads	|BankLodgementSlip.pdf|
 
-@SUC:05-11
+#@SUC:05-11
+ @SUC:tial
 Scenario Outline: UAT_M5_15-01-UAT_M5_15-02-Verify the Process of Open a Cash Office
  Given navigate to Revenue Collection>>Cash Office Daily Control
  When selects Cash Office Name <cfN>

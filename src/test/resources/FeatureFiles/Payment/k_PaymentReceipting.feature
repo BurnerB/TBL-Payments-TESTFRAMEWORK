@@ -2,10 +2,10 @@ Feature: [SUC:05-06] Payment Receipting
  
  Background:
 Given User navigates to the login page
-When Enters the username "userb" and password "Passw0rd" to login
+When Enters the username "tripscrmuser12" and password "Passw0rd" to login
 Then User should be logged in
 
-@SUC:05-06
+ @SUC:05-06
 Scenario Outline: UAT_M7_06-01-UAT_M7_06-02-Verify the Process of Payment Receipting
 Given navigate to  Revenue Collection>>Receive Payment
 When click on Find Button
@@ -34,7 +34,7 @@ Then Payment Summary window displayed <TIN>
 
 Examples:
 |Taxpayer Classification Type|TIN		|Name of Person Paying|amount|TaxType|Amount Allocated|designation|
-|Individual					 |P0024640	|Geet Hireman		  |1000|PAYE	|	25		|supervisor|
+|Individual					 |20000129	|DR Barack Obama		  |1000|Non Resident Tax(NRT)	|	25		|supervisor|
 
 @SUC:05-06
 Scenario Outline: UAT_M7_06-03-Verify the Process of Taxpayer Not Registered.
@@ -46,11 +46,12 @@ Then Payment Details should be displayed
 When user fills Payment Amount as <amount>
 Given From Payment Details window click on Save Button
 And clicks proceed on the popup
-#And Payment Summary window click on Save Button
+And Payment list click on Save Button
+Then message is displayed "PaymentReceipt.pdf"
 
 Examples:
-|First Name	|Last Name|National ID No|Address	     |TaxType|amount|
-|Geet		|Hireman  |21465328      |Lilongwe Malawi|PAYE	|	25		|
+|First Name	|Last Name|National ID No|Address	     |amount|
+|Barack		|Obama  |21465328      |Lilongwe Malawi|	25		|
 
 
 @SUC:05-06
@@ -60,8 +61,8 @@ When click on Find Button
 Then Find Entity pop up window should be displayed
 When User enters <Taxpayer Classification Type> and <TIN>
 And clicks search button
-Then Payment Summary window displayed <TIN>
-When From Payment Summary window enters <Name of Person Paying>
+ Then Payment Summary window displayed <TIN>
+ When From Payment Summary window enters <Name of Person Paying>
 And clicks add button
 Then Payment Details should be displayed
 When user fills Payment Amount as <amount>
@@ -73,8 +74,8 @@ And clicks ok
 Then message is displayed "Validation Error: Value is required."
 
 Examples:
-|Taxpayer Classification Type|TIN		|Name of Person Paying|amount|TaxType|Amount Allocated|
-|Individual					 |P0024640	|Geet Hireman		  |1000|PAYE	|	1000		|
+|Taxpayer Classification Type|TIN		|Name of Person Paying|amount|
+|Individual					 |20000129	|DR Barack Obama	  |1000|
 
 
 @SUC:05-06
@@ -101,7 +102,7 @@ Then Payment Summary window displayed <TIN>
 
 Examples:
 |Taxpayer Classification Type|TIN		|Name of Person Paying|amount|TaxType|Amount Allocated|
-|Individual					 |P0024640	|Geet Hireman		  |1000|PAYE	|	25		|
+|Individual					 |20000129	|DR Barack Obama		  |1000|Non Resident Tax(NRT)	|	25		|
 
 
 @SUC:05-06
@@ -126,10 +127,23 @@ Then message is displayed "Amount Allocated cannot be greater"
 
 Examples:
 |Taxpayer Classification Type|TIN		|Name of Person Paying|amount|TaxType|Amount Allocated|
-|Individual					 |P0024640	|Geet Hireman		  |1000|PAYE	|	1000,000		|
+|Individual					 |20000129	|DR Barack Obama		  |1000|Non Resident Tax(NRT)	|	100000		|
 
-#Scenario Outline: UAT_M7_06-07-Verify the Process of Document Allocation Payment.
-#Given navigate to  Revenue Collection>>Receive Payment
-#When click on Find Button
-#Then Find Entity pop up window should be displayed
-#When User enters <Taxpayer Classification Type> and <TIN>
+ @SUC:05-06
+Scenario Outline: UAT_M7_06-07-Verify the Process of Document Allocation Payment.
+Given navigate to  Revenue Collection>>Receive Payment
+When click on Find Button
+Then Find Entity pop up window should be displayed
+When User enters <Taxpayer Classification Type> and <TIN>
+ When From Payment Summary window enters <Name of Person Paying>
+ And clicks add button
+  Then Payment Details should be displayed
+  When user fills Payment Amount as <amount>
+  And clicks Next button
+  Then Payment Allocation Summary tab should be displayed
+  When clicks on Document Allocation Button
+  Then Find document Details pop up window should be displayed
+
+ Examples:
+  |Taxpayer Classification Type|TIN		|Name of Person Paying|amount|TaxType|Amount Allocated|
+  |Individual					 |20000129	|DR Barack Obama		  |1000|Non Resident Tax(NRT)	|	100000		|

@@ -2,7 +2,7 @@ Feature: [SUC:13-11] Print Refund Documents
  
  Background:
 Given User navigates to the login page
-When Enters the username "userb" and password "Passw0rd" to login
+When Enters the username "tripscrmuser12" and password "Passw0rd" to login
 Then User should be logged in
 
 @SUC:13-11
@@ -23,7 +23,7 @@ Then Reciept generated successfully
 
 Examples:
 |Taxpayer Classification Type|TIN		|Name of Person Paying|amount|TaxType|Amount Allocated|
-|Individual					 |P0017167	|Geet Hireman		  |100|PAYE	|	1000		|
+|Individual					 |20000129	|Geet Hireman		  |100|PAYE	|	1000		|
 
 @SUC:13-11
 Scenario Outline: UAT_M7_14-02-Verify the Process of print Taxpayer documents
@@ -43,7 +43,7 @@ Then Reciept generated successfully
 
 Examples:
 |Taxpayer Classification Type|TIN		|Name of Person Paying|amount|TaxType|Amount Allocated|
-|Individual					 |P0017167	|Geet Hireman		  |100|PAYE	|	1000		|
+|Individual					 |20000129	|Geet Hireman		  |100|PAYE	|	1000		|
 
 @SUC:13-11
 Scenario Outline: UAT_M7_14-03-Verify the Process of print Taxpayer documents
@@ -63,4 +63,4 @@ Then Reciept generated successfully
 
 Examples:
 |Taxpayer Classification Type|TIN		|Name of Person Paying|amount|TaxType|Amount Allocated|
-|Individual					 |P0017167	|Geet Hireman		  |100|PAYE	|	1000		|
+|Individual					 |20000129	|Geet Hireman		  |100|PAYE	|	1000		|
