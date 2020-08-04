@@ -5,6 +5,7 @@ Given User navigates to the login page
 When Enters the username "tripscrmuser12" and password "Passw0rd" to login
 Then User should be logged in
 
+
  @SUC:05-06
 Scenario Outline: UAT_M7_06-01-UAT_M7_06-02-Verify the Process of Payment Receipting
 Given navigate to  Revenue Collection>>Receive Payment
