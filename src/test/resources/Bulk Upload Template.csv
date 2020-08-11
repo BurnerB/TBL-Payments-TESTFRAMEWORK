@@ -1,0 +1,7 @@
+TIN,Amount,Tax Type,First Name,Last Name,NID Number,Gender,Address,Phone Number
+P0015016,100000,CGT,,,,,,
+C0018985,30000,VAT,,,,,,
+C0018976,63000,PIT,,,,,,
+C0019322,730000,PAYE,,,,,,
+,45.68,,Test FN,Test LN,64646,M,"30, find me, if you can",123456
+,1500.67,,Test FN1,Test LN1,64646,F,20 my road my town,45454

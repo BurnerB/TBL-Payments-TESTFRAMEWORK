@@ -2,7 +2,7 @@ Feature: [SUC:05-06] Payment Receipting
  
  Background:
 Given User navigates to the login page
-When Enters the username "tripscrmuser12" and password "Passw0rd" to login
+When Enters the username "retsupervisor1" and password "Passw0rd" to login
 Then User should be logged in
 
 

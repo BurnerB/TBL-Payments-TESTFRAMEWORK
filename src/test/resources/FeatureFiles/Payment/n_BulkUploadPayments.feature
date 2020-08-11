@@ -2,7 +2,7 @@ Feature: [SUC:05-19] Bulk Upload - Payments
  
  Background:
 Given User navigates to the login page
-When Enters the username "tripsuser" and password "Passw0rd" to login
+When Enters the username "usera" and password "Passw0rd" to login
 Then User should be logged in
 
 @SUC:05-19
@@ -15,7 +15,7 @@ And Then click Save Button on upload
 
 Examples:
 |path|
-|C:\Users\v-bakam\Downloads\Bulk Upload Template.csv|
+|src/test/resources/Bulk Upload Template.csv|
 
 @SUC:05-19
 Scenario Outline: UAT_M7_19-03-Verify the Process of Payment Bulk Upload
@@ -27,4 +27,4 @@ And Then click Save Button on upload
 
 Examples:
 |path|
-|C:\Users\v-bakam\Downloads\test.png|
+|src/test/resources/test.png|

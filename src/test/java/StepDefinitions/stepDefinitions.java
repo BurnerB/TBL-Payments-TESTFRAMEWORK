@@ -84,8 +84,8 @@ public class stepDefinitions extends BaseClass{
     public void user_should_be_logged_in() throws Throwable {
     	String URL = driver.getCurrentUrl();
     	
-    	Assert.assertEquals(URL, "http://18.202.88.7:8001/trips-ui/faces/login/Welcome.xhtml" );
-//    	Assert.assertEquals(URL, "https://backoffice.mra.mw:8443/trips-ui/faces/login/Welcome.xhtml" );
+//    	Assert.assertEquals(URL, "http://18.202.88.7:8001/trips-ui/faces/login/Welcome.xhtml" );
+    	Assert.assertEquals(URL, "https://backoffice.mra.mw:8443/trips-ui/faces/login/Welcome.xhtml" );
     }
     
     @Then("^User logs out successfully$")
