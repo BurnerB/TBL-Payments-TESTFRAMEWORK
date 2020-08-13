@@ -2,7 +2,7 @@ Feature: [SUC:05-06] Payment Receipting
  
  Background:
 Given User navigates to the login page
-When Enters the username "retsupervisor1" and password "Passw0rd" to login
+When Enters the username "cashofficer4" and password "Passw0rd" to login
 Then User should be logged in
 
 
@@ -29,13 +29,14 @@ When On Account Payment Details enters <TaxType> and <Amount Allocated>
 And clicks ok
 Then Payment Allocation Summary tab should be displayed
 Given From Payment Details window click on Save Button
+  And clicks yes on payment confirmation popup
 Then Payment Summary window displayed <TIN>
-#Given Payment Summary window click on Save Button
-#Then Reciept generated successfully
+Given Payment Summary window click on Save Button
+Then Reciept generated successfully
 
 Examples:
 |Taxpayer Classification Type|TIN		|Name of Person Paying|amount|TaxType|Amount Allocated|designation|
-|Individual					 |20000129	|DR Barack Obama		  |1000|Non Resident Tax(NRT)	|	25		|supervisor|
+|Individual					 |P0017167	|DR Barack Obama		  |1000|Capital Gain Tax(CGT)	|	25		|supervisor|
 
 @SUC:05-06
 Scenario Outline: UAT_M7_06-03-Verify the Process of Taxpayer Not Registered.
@@ -71,12 +72,12 @@ And clicks Next button
 Then Payment Allocation Summary tab should be displayed
 When clicks on On Account Button
 Then Account Payment Details pop up window should be displayed
-And clicks ok
+And clicks ok on empty fields
 Then message is displayed "Validation Error: Value is required."
 
 Examples:
 |Taxpayer Classification Type|TIN		|Name of Person Paying|amount|
-|Individual					 |20000129	|DR Barack Obama	  |1000|
+|Individual					 |P0017167	|DR Barack Obama	  |1000|
 
 
 @SUC:05-06
@@ -99,14 +100,17 @@ When On Account Payment Details enters <TaxType> and <Amount Allocated>
 And clicks ok
 Then Payment Allocation Summary tab should be displayed
 Given From Payment Details window click on Save Button
-Then Payment Summary window displayed <TIN>
+ And clicks yes on payment confirmation popup
+ Then Payment Summary window displayed <TIN>
+ Given Payment Summary window click on Save Button
+ Then Reciept generated successfully
 
 Examples:
 |Taxpayer Classification Type|TIN		|Name of Person Paying|amount|TaxType|Amount Allocated|
-|Individual					 |20000129	|DR Barack Obama		  |1000|Non Resident Tax(NRT)	|	25		|
+|Individual					 |P0017167	|DR Barack Obama		  |1000|Non Resident Tax(NRT)	|	25		|
 
 
-@SUC:05-06
+@SUC:05-06-
 Scenario Outline: UAT_M7_06-06-Verify the Process of Cash Till Limit Breach
 Given navigate to  Revenue Collection>>Receive Payment
 When click on Find Button
@@ -128,7 +132,7 @@ Then message is displayed "Amount Allocated cannot be greater"
 
 Examples:
 |Taxpayer Classification Type|TIN		|Name of Person Paying|amount|TaxType|Amount Allocated|
-|Individual					 |20000129	|DR Barack Obama		  |1000|Non Resident Tax(NRT)	|	100000		|
+|Individual					 |P0017167	|DR Barack Obama		  |1000|Non Resident Tax(NRT)	|	100000		|
 
  @SUC:05-06
 Scenario Outline: UAT_M7_06-07-Verify the Process of Document Allocation Payment.
@@ -147,4 +151,4 @@ When User enters <Taxpayer Classification Type> and <TIN>
 
  Examples:
   |Taxpayer Classification Type|TIN		|Name of Person Paying|amount|TaxType|Amount Allocated|
-  |Individual					 |20000129	|DR Barack Obama		  |1000|Non Resident Tax(NRT)	|	100000		|
+  |Individual					 |P0017167	|DR Barack Obama		  |1000|Non Resident Tax(NRT)	|	100000		|

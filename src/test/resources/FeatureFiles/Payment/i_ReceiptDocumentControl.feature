@@ -57,7 +57,7 @@ Then The System saves the updated Receipt Document record
 #increment the reciept Number -To after every successful run
 Examples:
 |Cash OfficeNo	|Receipt Number - From|Receipt Number - To|Distribution Status|Cash Office2|
-|2	|2					  |3      			  |Issued|c|
+|1	|2					  |3      			  |Issued|c|
 
  @SUC:05-09
 Scenario Outline: UAT_M7_09-06-Verify the Process of Issue Receipts To Cash officer
@@ -71,7 +71,7 @@ Then The System saves the updated Receipt Document record
 #increment the reciept Number -To after every successful run
 Examples:
 |Cash OfficeNo	|Receipt Number - From|Receipt Number - To|Distribution Status|Cash Officer|
-|2	|2					  |3      			  |Issued|userb|
+|1	|2					  |3      			  |Issued|userb|
 
 
 @SUC:05-09

@@ -2,7 +2,7 @@ Feature: [SUC:05-13] Revenue Collection Reports
  
  Background:
 Given User navigates to the login page
-When Enters the username "usera" and password "Passw0rd" to login
+When Enters the username "tripsuser" and password "Passw0rd" to login
 Then User should be logged in
 
 @SUC:05-13
@@ -32,7 +32,7 @@ Examples:
 |Daily Payment Report|	C:\Users\v-bakam\Downloads	|Daily Payment Report.pdf|
 
 
-@SUC:05-13
+@SUC:05-13-
 Scenario Outline: UAT_M7_13-03-To verify the process of printing Bank Lodgement Slip
 Given navigate to Revenue Collection>>Cash Office Daily Control
 When selects Cash Office Name <cfN>
@@ -44,9 +44,9 @@ Then Report download should be generate <downloadpath> and <filename>
 
 Examples:
 |cfN|	downloadpath	|filename|
-|Balaka Office1|	C:\Users\v-bakam\Downloads	|BankLodgementSlip.pdf|
+|Balaka Office2|	C:\Users\v-bakam\Downloads	|BankLodgementSlip.pdf|
 
-@SUC:05-13
+@SUC:05-13-
 Scenario Outline: UAT_M7_13-04-To verify the process of printing Unreconciled Till Report
 Given navigate to Revenue Collection>>Cash Office Daily Control
 When selects Cash Office Name <cfN>
@@ -58,7 +58,7 @@ Then Report download should be generate <downloadpath> and <filename>
 
 Examples:
 |cfN|	downloadpath	|filename|
-|Balaka Office1|	C:\Users\v-bakam\Downloads	|BankLodgementSlip.pdf|
+|Balaka Office2|	C:\Users\v-bakam\Downloads	|BankLodgementSlip.pdf|
 
 @SUC:05-13-
 Scenario Outline: UAT_M7_13-05-To verify the process of printing Cash Office Enquiry (Cash Office Summary Report)
@@ -70,7 +70,7 @@ Then Report download should be generate <downloadpath> and <filename>
 
 Examples:
 |cfN|	downloadpath	|filename|
-|Balaka Office1|	C:\Users\v-bakam\Downloads	|CashOfficeSummary.pdf|
+|Balaka Office2|	C:\Users\v-bakam\Downloads	|CashOfficeSummary.pdf|
 
 @SUC:05-13
 Scenario Outline: UAT_M7_13-06-To verify the process of printing Receipt Document Summary

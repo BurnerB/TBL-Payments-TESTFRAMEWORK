@@ -67,10 +67,10 @@ public class stepDefinitions extends BaseClass{
     public void user_navigates_to_the_login_page() throws Throwable {
     	driver = BaseClass.getDriver();
 //    	intergtation link for backoffice
-    	driver.get("http://18.202.88.7:8001/trips-ui/faces/login/tripsLogin.xhtml");
+//    	driver.get("http://18.202.88.7:8001/trips-ui/faces/login/tripsLogin.xhtml");
 
         //    	SIT link for backoffice
-//    	driver.get("https://backoffice.mra.mw:8443/trips-ui/faces/login/tripsLogin.xhtml");
+    	driver.get("https://backoffice.mra.mw:8443/trips-ui/faces/login/tripsLogin.xhtml");
     }
     
     @When("^Enters the username \"([^\"]*)\" and password \"([^\"]*)\" to login$")
@@ -723,6 +723,13 @@ public class stepDefinitions extends BaseClass{
 //        Assert.assertEquals(tin, TIN.getAttribute("value"));
         
     }
+
+    @And("^clicks yes on payment confirmation popup$")
+    public void clicks_yes_on_payment_confirmation_popup() throws Throwable {
+        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+        Thread.sleep(4000);
+        driver.findElement(By.id("PaymentDetails:j_idt46")).click();
+    }
     
     @When("^From Payment Summary window enters (.+)$")
     public void from_payment_summary_window_enters(String nameofpersonpaying) throws Throwable {
@@ -787,7 +794,7 @@ public class stepDefinitions extends BaseClass{
         WebElement paymentonAccountHeader = driver.findElement(By.xpath("//*[@id=\"PaymentDetails:paymentAccordion:PaymentSpread:DocumentAllocation_dlg\"]/div[1]"));
         Assert.assertTrue(paymentonAccountHeader.isDisplayed());
     }
-    
+
     @When("^On Account Payment Details enters (.+) and (.+)$")
     public void on_account_payment_details_enters_and(String taxtype, String amountallocated) throws Throwable {
     	//Switch to iframe to allow interaction with modal
@@ -800,7 +807,7 @@ public class stepDefinitions extends BaseClass{
         taxTypedropDown.click();
         Thread.sleep(2000);
         driver.findElement(By.xpath("//li[@data-label='"+taxtype+"']")).click();
-        
+        Thread.sleep(7000);
         //Enter returnType
 //        WebElement returnTypeDropdown = driver.findElement(By.xpath("//*[@id=\"OnAccountPayment:ReturnType\"]/div[3]"));
 //        returnTypeDropdown.click();
@@ -814,12 +821,19 @@ public class stepDefinitions extends BaseClass{
     
     @And("^clicks ok$")
     public void clicks_ok() throws Throwable {
+
+        WebElement okButton = driver.findElement(By.id("OnAccountPayment:Ok"));
+        okButton.click();
+        Thread.sleep(4000);
+    }
+
+    @And("^clicks ok on empty fields$")
+    public void clicks_ok_on_empty_fields() throws Throwable {
 //    	//Switch to iframe to allow interaction with modal
         WebElement frame = driver.findElement(By.tagName("iframe"));
         driver.switchTo().frame(frame);
         Thread.sleep(2000);
-    	
-    	
+
         WebElement okButton = driver.findElement(By.id("OnAccountPayment:Ok"));
         okButton.click();
         Thread.sleep(4000);
