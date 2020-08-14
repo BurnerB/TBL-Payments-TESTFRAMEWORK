@@ -2,10 +2,10 @@ Feature: [SUC:05-16] Reverse Payment
  
  Background:
 Given User navigates to the login page
-When Enters the username "usera" and password "Passw0rd" to login
+When Enters the username "tripsuser" and password "Passw0rd" to login
 Then User should be logged in
 
-@SUC:05-16
+@SUC:05-16-
 Scenario Outline: UAT_M7_16-01-UAT_M7_16-02-Verify the Process of Reverse Payment
 Given navigate Revenue Collection>>Reverse Payment
 When enters <TIN> on Find Payment page
@@ -24,7 +24,7 @@ Then message is displayed "Payment has been successfully reversed"
 
 Examples:
 |TIN		|comment|
-|20000129	|Genuine miscalculation		  |
+|%	|Genuine miscalculation		  |
 
 
 @SUC:05-16
@@ -55,4 +55,4 @@ Then message is displayed "Validation Error: Value is required"
 
 Examples:
 |TIN		|
-|20000129	|
+|%	|

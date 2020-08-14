@@ -44,7 +44,7 @@ Then Report download should be generate <downloadpath> and <filename>
 
 Examples:
 |cfN|	downloadpath	|filename|
-|Balaka Office2|	C:\Users\v-bakam\Downloads	|BankLodgementSlip.pdf|
+|Balaka Office3|	C:\Users\v-bakam\Downloads	|BankLodgementSlip.pdf|
 
 @SUC:05-13-
 Scenario Outline: UAT_M7_13-04-To verify the process of printing Unreconciled Till Report
@@ -58,7 +58,7 @@ Then Report download should be generate <downloadpath> and <filename>
 
 Examples:
 |cfN|	downloadpath	|filename|
-|Balaka Office2|	C:\Users\v-bakam\Downloads	|BankLodgementSlip.pdf|
+|Balaka Office3|	C:\Users\v-bakam\Downloads	|BankLodgementSlip.pdf|
 
 @SUC:05-13-
 Scenario Outline: UAT_M7_13-05-To verify the process of printing Cash Office Enquiry (Cash Office Summary Report)
@@ -70,7 +70,7 @@ Then Report download should be generate <downloadpath> and <filename>
 
 Examples:
 |cfN|	downloadpath	|filename|
-|Balaka Office2|	C:\Users\v-bakam\Downloads	|CashOfficeSummary.pdf|
+|Balaka Office3|	C:\Users\v-bakam\Downloads	|CashOfficeSummary.pdf|
 
 @SUC:05-13
 Scenario Outline: UAT_M7_13-06-To verify the process of printing Receipt Document Summary

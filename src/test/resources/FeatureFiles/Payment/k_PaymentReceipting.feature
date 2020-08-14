@@ -110,7 +110,7 @@ Examples:
 |Individual					 |P0017167	|DR Barack Obama		  |1000|Non Resident Tax(NRT)	|	25		|
 
 
-@SUC:05-06-
+@SUC:05-06
 Scenario Outline: UAT_M7_06-06-Verify the Process of Cash Till Limit Breach
 Given navigate to  Revenue Collection>>Receive Payment
 When click on Find Button
@@ -140,6 +140,8 @@ Given navigate to  Revenue Collection>>Receive Payment
 When click on Find Button
 Then Find Entity pop up window should be displayed
 When User enters <Taxpayer Classification Type> and <TIN>
+  And clicks search button
+  Then Payment Summary window displayed <TIN>
  When From Payment Summary window enters <Name of Person Paying>
  And clicks add button
   Then Payment Details should be displayed

@@ -16,7 +16,7 @@ Then The System saves the updated Receipt Document record
 #increment the reciept Number -To after every successful run
 Examples:
 |Cash OfficeNo	|Receipt Number From|Receipt Number To|Distribution Status|
-|1|0					  |1     			  |In Stock|
+|2|0					  |1     			  |In Stock|
 
 @SUC:05-09
 Scenario Outline: UAT_M7_09-03-Verify the Process Unusable Receipts
@@ -29,7 +29,7 @@ Then The System saves the updated Receipt Document record
 #increment the reciept Number -To after every successful run
 Examples:
 |Cash OfficeNo	|Receipt Number - From|Receipt Number - To|Distribution Status|
-|1|0					  |1      			  |Lost|
+|2|0					  |1      			  |Lost|
 
 
 @SUC:05-09
@@ -57,7 +57,7 @@ Then The System saves the updated Receipt Document record
 #increment the reciept Number -To after every successful run
 Examples:
 |Cash OfficeNo	|Receipt Number - From|Receipt Number - To|Distribution Status|Cash Office2|
-|1	|2					  |3      			  |Issued|c|
+|2	|2					  |3      			  |Issued|c|
 
  @SUC:05-09
 Scenario Outline: UAT_M7_09-06-Verify the Process of Issue Receipts To Cash officer
@@ -71,7 +71,7 @@ Then The System saves the updated Receipt Document record
 #increment the reciept Number -To after every successful run
 Examples:
 |Cash OfficeNo	|Receipt Number - From|Receipt Number - To|Distribution Status|Cash Officer|
-|1	|2					  |3      			  |Issued|userb|
+|2	|2					  |3      			  |Issued|userb|
 
 
 @SUC:05-09
@@ -85,6 +85,6 @@ Then The System saves the updated Receipt Document record
 #increment the reciept Number -To after every successful run
 Examples:
 |Cash OfficeNo	|Receipt Number - From|Receipt Number - To|Distribution Status|
-|1	|3					  |4     			  |In Stock|
+|2	|3					  |4     			  |In Stock|
 
 

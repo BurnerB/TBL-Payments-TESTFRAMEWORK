@@ -1,9 +1,9 @@
 Feature: [SUC:05-03] Open Suspended Cash Till
 
-@SUC:05-03
+# @trial1
 Scenario: UAT_M7_03-01-UAT_M7_03-02-Verify the Process of Suspend Cash Till
  Given User navigates to the login page
- When Enters the username "retsupervisor1" and password "Passw0rd" to login
+ When Enters the username "atynkhoma" and password "Passw0rd" to login
  Then User should be logged in
 Given navigate to Revenue Collection>>Cash Till Maintenance
  When enters approved ref number
@@ -11,7 +11,7 @@ And clicks on Open Cash Till button
 Then successfuly awaits approval
 
 
-@SUC:05-03
+# @trial1
 Scenario: Approve Cash Till
 Given Open CRM URL Module
  And Close Popup Window
@@ -19,17 +19,17 @@ Given Open CRM URL Module
  And click on Revenue Collection application
 Then switch to frame
 When enters reference number in search results
-Then switch to frame 
+Then switch to frame
 When Click selected Reference Number
 And clicks Approve from the dropdown
 And click save on Payments
 Then Application Account Adjustment status should be "Approved"
 
-@SUC:05-03
+# @trial1
 Scenario Outline: status set to open
 Given User navigates to the login page
-When Enters the username "retsupervisor1" and password "Passw0rd" to login
-Then User should be logged in 
+When Enters the username "atynkhoma" and password "Passw0rd" to login
+Then User should be logged in
 Given navigate to Revenue Collection>>Cash Till Maintenance
  When enters approved ref number
 Then cashTill status should be <Status>
@@ -38,10 +38,10 @@ Examples:
 |Status|
 |Open|
 
-@SUC:05-03
+# @trial1
 Scenario: UAT_M7_03-03-Verify the Process of Supervisor rejection
  Given User navigates to the login page
- When Enters the username "retsupervisor1" and password "Passw0rd" to login
+ When Enters the username "atynkhoma" and password "Passw0rd" to login
  Then User should be logged in
  Given navigate to Revenue Collection>>Cash Till Maintenance
  When enters approved ref number
@@ -51,7 +51,7 @@ Scenario: UAT_M7_03-03-Verify the Process of Supervisor rejection
  Then successfuly awaits approval
 
 
-@SUC:05-03
+# @trial1
 Scenario Outline: Reject Cash Till
 Given Open CRM URL Module
  And Close Popup Window
@@ -71,10 +71,10 @@ Examples:
 |    Notes            |
 |Invalid Documentation|
 
-@SUC:05-03
+# @trial1
 Scenario Outline: status set to suspended
 Given User navigates to the login page
-When Enters the username "retsupervisor1" and password "Passw0rd" to login
+When Enters the username "atynkhoma" and password "Passw0rd" to login
 Then User should be logged in 
 Given navigate to Revenue Collection>>Cash Till Maintenance
  When enters approved ref number

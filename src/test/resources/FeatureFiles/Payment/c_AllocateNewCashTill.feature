@@ -1,15 +1,15 @@
 Feature: [SUC:05-02] Allocate New Cash Till
 
- @SUC:05-02
+ @trial1
 Scenario: UAT_M7_02-01-UAT_M7_02-02-Verify the Process of Allocate Cash Till
 Given User navigates to the login page
-When Enters the username "retsupervisor1" and password "Passw0rd" to login
+When Enters the username "userb" and password "Passw0rd" to login
 Then User should be logged in 
 Given navigate to Revenue Collection>>Cash Till Maintenance
 When clicks on Request Cash Till button
 Then success message displayed
 
-@SUC:05-02
+ @trial1
 Scenario: Approve Cash Till
 Given Open CRM URL Module
  And Close Popup Window
@@ -23,10 +23,10 @@ And clicks Approve from the dropdown
 And click save on Payments
 Then Application Account Adjustment status should be "Approved"
 
-@SUC:05-02
+ @trial1
 Scenario Outline: Cash Till Status Open
 Given User navigates to the login page
-When Enters the username "retsupervisor1" and password "Passw0rd" to login
+When Enters the username "userb" and password "Passw0rd" to login
 Then User should be logged in 
 Given navigate to Revenue Collection>>Cash Till Maintenance
 When enters approved ref number
@@ -48,16 +48,16 @@ Examples:
 |100|0|Closed|
 
 
-@SUC:05-02
+ @trial1
 Scenario: UAT_M7_02-03-Verify the Process Supervisor Rejection
 Given User navigates to the login page
-When Enters the username "retsupervisor1" and password "Passw0rd" to login
+When Enters the username "userb" and password "Passw0rd" to login
 Then User should be logged in 
 Given navigate to Revenue Collection>>Cash Till Maintenance
 When clicks on Request Cash Till button
 Then success message displayed
 
-@SUC:05-02
+ @trial1
 Scenario Outline: Reject Cash Till
 Given Open CRM URL Module
  And Close Popup Window
@@ -77,16 +77,16 @@ Examples:
 |    Notes            |
 |Invalid Documentation|
 
-@SUC:05-02
+ @trial1
 Scenario: UAT_M7_02-04-Verify the Process Float Not Added
 Given User navigates to the login page
-When Enters the username "retsupervisor1" and password "Passw0rd" to login
+When Enters the username "userb" and password "Passw0rd" to login
 Then User should be logged in 
 Given navigate to Revenue Collection>>Cash Till Maintenance
 When clicks on Request Cash Till button
 Then success message displayed
 
-@SUC:05-02
+ @trial1
 Scenario: Approve Cash Till
 Given Open CRM URL Module
  And Close Popup Window
@@ -100,10 +100,10 @@ And clicks Approve from the dropdown
 And click save on Payments
 Then Application Account Adjustment status should be "Approved"
 
-@SUC:05-02
+ @trial1
 Scenario Outline: Cash Till Status Open Error
 Given User navigates to the login page
-When Enters the username "retsupervisor1" and password "Passw0rd" to login
+When Enters the username "userb" and password "Passw0rd" to login
 Then User should be logged in 
 Given navigate to Revenue Collection>>Cash Till Maintenance
 When enters approved ref number
