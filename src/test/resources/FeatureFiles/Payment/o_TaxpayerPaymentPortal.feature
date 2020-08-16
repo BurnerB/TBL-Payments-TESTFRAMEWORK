@@ -7,6 +7,7 @@ When User clicks login as Taxpayer
 And Enters the Portal username "Barackobama" and password "Codei@maseno2020" to login
 
 @SUC:05-18
+#  @trial2
 Scenario Outline: UAT_M7_18-01-UAT_M7_18-02-Verify the Process of Pay In Bank
 Given navigate to My Tax>>make payment
 Then Outstanding Payments List Screen should be displayed
@@ -18,9 +19,10 @@ And Clicks on Pay At The Bank button
 
 Examples:
 |amount|
-|100|
+|10|
 
 @SUC:05-18
+#  @trial2
 Scenario Outline: UAT_M7_18-03-Verify the Process of Pay In Bank
 Given navigate to My Tax>>make payment
 Then Outstanding Payments List Screen should be displayed
@@ -36,6 +38,7 @@ Examples:
 |0|
 
 @SUC:05-18
+#  @trial2
 Scenario Outline: UAT_M7_18-04-Verify the Process of Amend Payment Due
 Given navigate to My Tax>>make payment
 Then Outstanding Payments List Screen should be displayed
@@ -47,4 +50,4 @@ And Clicks on Pay At The Bank button
 
 Examples:
 |amount|
-|100|
+|10|

@@ -6,7 +6,8 @@ When Enters the username "cashofficer4" and password "Passw0rd" to login
 Then User should be logged in
 
 
- @SUC:05-06
+ #@SUC:05-06
+ @trial2
 Scenario Outline: UAT_M7_06-01-UAT_M7_06-02-Verify the Process of Payment Receipting
 Given navigate to  Revenue Collection>>Receive Payment
 When click on Find Button
@@ -38,7 +39,8 @@ Examples:
 |Taxpayer Classification Type|TIN		|Name of Person Paying|amount|TaxType|Amount Allocated|designation|
 |Individual					 |P0017167	|DR Barack Obama		  |1000|Capital Gain Tax(CGT)	|	25		|supervisor|
 
-@SUC:05-06
+#@SUC:05-06
+ @trial2
 Scenario Outline: UAT_M7_06-03-Verify the Process of Taxpayer Not Registered.
 Given navigate to  Revenue Collection>>Receive Payment
 And check non registered taxpayer
@@ -56,7 +58,8 @@ Examples:
 |Barack		|Obama  |21465328      |Lilongwe Malawi|	25		|
 
 
-@SUC:05-06
+#@SUC:05-06
+ @trial2
 Scenario Outline: UAT_M7_06-04-Verify the Process of Validation Failed
 Given navigate to  Revenue Collection>>Receive Payment
 When click on Find Button
@@ -80,7 +83,8 @@ Examples:
 |Individual					 |P0017167	|DR Barack Obama	  |1000|
 
 
-@SUC:05-06
+#@SUC:05-06
+ @trial2
 Scenario Outline: UAT_M7_06-05-Verify the Process of Document Not Required (On Account)
 Given navigate to  Revenue Collection>>Receive Payment
 When click on Find Button
@@ -110,7 +114,8 @@ Examples:
 |Individual					 |P0017167	|DR Barack Obama		  |1000|Non Resident Tax(NRT)	|	25		|
 
 
-@SUC:05-06
+#@SUC:05-06
+ @trial2
 Scenario Outline: UAT_M7_06-06-Verify the Process of Cash Till Limit Breach
 Given navigate to  Revenue Collection>>Receive Payment
 When click on Find Button
@@ -134,7 +139,8 @@ Examples:
 |Taxpayer Classification Type|TIN		|Name of Person Paying|amount|TaxType|Amount Allocated|
 |Individual					 |P0017167	|DR Barack Obama		  |1000|Non Resident Tax(NRT)	|	100000		|
 
- @SUC:05-06
+ #@SUC:05-06
+ @trial2
 Scenario Outline: UAT_M7_06-07-Verify the Process of Document Allocation Payment.
 Given navigate to  Revenue Collection>>Receive Payment
 When click on Find Button

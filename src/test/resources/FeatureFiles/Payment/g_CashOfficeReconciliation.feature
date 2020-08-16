@@ -1,24 +1,25 @@
 Feature: [SUC:05-11] Cash Office Reconciliation
 
- Background:
-Given User navigates to the login page
-When Enters the username "atynkhoma" and password "Passw0rd" to login
-Then User should be logged in 
-
 #@SUC:05-11
-# @trial1
+@trial1
 Scenario Outline: UAT_M5_11-01-UAT_M5_11-02-Verify the Process of Cash Office Reconciliation
+ Given User navigates to the login page
+ When Enters the username "tripsuser" and password "Passw0rd" to login
+ Then User should be logged in
 Given navigate to Revenue Collection>>Cash Office Daily Control
 When selects Cash Office Name <cfN>
 And clicks reconcile Cash Office
 
 Examples:
 |cfN|
-|Balaka Office1|
+|Balaka Office3|
 
 #@SUC:05-11
-# @trial1
+@trial1
 Scenario Outline: UAT_M5_11-03-Verify the Process of Invalid Tills
+ Given User navigates to the login page
+ When Enters the username "tripsuser" and password "Passw0rd" to login
+ Then User should be logged in
 Given navigate to Revenue Collection>>Cash Office Daily Control
 When selects Cash Office Name <cfN>
 And clicks Open Cash Office
@@ -28,26 +29,32 @@ Then message is displayed "Cash Office Name: Validation Error: Value is required
 
 Examples:
 |cfN|
-|Balaka Office1|
+|Balaka Office3|
 
 #@SUC:05-11
-# @trial1
+@trial1
 Scenario Outline: UAT_M5_11-05-Verify the Process of Invalid Data
+ Given User navigates to the login page
+ When Enters the username "cashsupervisor13" and password "Passw0rd" to login
+ Then User should be logged in
 Given navigate to Revenue Collection>>Cash Office Daily Control
 When selects Cash Office Name <cfN>
 And clicks reconcile Cash Office
 When enters cash till reference
 Then The System displays the Unreconciled Cash Till details
 When clicks on Save Button
-Then message is displayed "Please Select Adjustment Reason And Enter Correct Adjustment Amount"
+Then message is displayed "Enter Correct Adjustment Amount"
 
 Examples:
 |cfN|
-|BALCO101|
+|Njanje|
 
 #@SUC:05-11
-# @trial1
+@trial1
  Scenario Outline: UAT_M5_11-06-Verify the Process of Unreconciled Report
+ Given User navigates to the login page
+ When Enters the username "cashsupervisor13" and password "Passw0rd" to login
+ Then User should be logged in
   Given navigate to Revenue Collection>>Cash Office Daily Control
   When selects Cash Office Name <cfN>
   And clicks reconcile Cash Office
@@ -58,11 +65,14 @@ Examples:
 
   Examples:
    |cfN|	downloadpath	|filename|
-   |Kenya Q/A|	C:\Users\v-bakam\Downloads	|UnreconciledTillReport.pdf|
+   |Njanje|	C:\Users\v-bakam\Downloads	|UnreconciledTillReport.pdf|
 
 #@SUC:05-11
-# @trial1
+@trial1
 Scenario Outline: UAT_M5_11-04-Verify the Process of Unreconciled Tills
+ Given User navigates to the login page
+ When Enters the username "cchisala" and password "Passw0rd" to login
+ Then User should be logged in
 Given navigate to Revenue Collection>>Cash Office Daily Control
 When selects Cash Office Name <cfN>
 And clicks reconcile Cash Office
@@ -79,8 +89,11 @@ Examples:
 
 
 #@SUC:05-11
-# @trial1
+@trial1
 Scenario Outline: UAT_M5_11-07-Verify the Process of Cash Office Summary Report
+ Given User navigates to the login page
+ When Enters the username "cchisala" and password "Passw0rd" to login
+ Then User should be logged in
 Given navigate to Revenue Collection>>Cash Office Daily Control
 When selects Cash Office Name <cfN>
 And clicks  Cash Office Summary Report button
@@ -93,8 +106,11 @@ Examples:
 |Kenya Q/A|	C:\Users\v-bakam\Downloads	|CashOfficeSummary.pdf|
 
 #@SUC:05-11
-# @trial1
+@trial1
 Scenario Outline: UAT_M5_11-08-Verify the Process of Bank Lodgement Report
+ Given User navigates to the login page
+ When Enters the username "cchisala" and password "Passw0rd" to login
+ Then User should be logged in
 Given navigate to Revenue Collection>>Cash Office Daily Control
 When selects Cash Office Name <cfN>
 And clicks Open Cash Office
@@ -109,8 +125,11 @@ Examples:
 |Kenya Q/A|	C:\Users\v-bakam\Downloads	|BankLodgementSlip.pdf|
 
 #@SUC:05-11
-# @trial1
+@trial1
 Scenario Outline: UAT_M5_15-01-UAT_M5_15-02-Verify the Process of Open a Cash Office
+ Given User navigates to the login page
+ When Enters the username "cchisala" and password "Passw0rd" to login
+ Then User should be logged in
  Given navigate to Revenue Collection>>Cash Office Daily Control
  When selects Cash Office Name <cfN>
  And clicks Open Cash Office

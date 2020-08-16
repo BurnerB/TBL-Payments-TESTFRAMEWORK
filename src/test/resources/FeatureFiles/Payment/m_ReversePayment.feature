@@ -5,7 +5,8 @@ Given User navigates to the login page
 When Enters the username "tripsuser" and password "Passw0rd" to login
 Then User should be logged in
 
-@SUC:05-16-
+#@SUC:05-16-
+ @trial2
 Scenario Outline: UAT_M7_16-01-UAT_M7_16-02-Verify the Process of Reverse Payment
 Given navigate Revenue Collection>>Reverse Payment
 When enters <TIN> on Find Payment page
@@ -24,10 +25,11 @@ Then message is displayed "Payment has been successfully reversed"
 
 Examples:
 |TIN		|comment|
-|%	|Genuine miscalculation		  |
+|MRA00000001	|Genuine miscalculation		  |
 
 
-@SUC:05-16
+#@SUC:05-16
+ @trial2
 Scenario Outline: UAT_M7_16-03-Verify the Process of Payment Records Not Found
 Given navigate Revenue Collection>>Reverse Payment
 When enters <TIN> on Find Payment page
@@ -39,7 +41,8 @@ Examples:
 |TIN		|
 |B0013357	|
 
-@SUC:05-16
+#@SUC:05-16
+ @trial2
 Scenario Outline: UAT_M7_16-04-Verify the Process of Validation Failed
 Given navigate Revenue Collection>>Reverse Payment
 When enters <TIN> on Find Payment page

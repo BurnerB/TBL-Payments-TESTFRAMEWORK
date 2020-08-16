@@ -3,7 +3,7 @@ Feature: [SUC:05-02] Allocate New Cash Till
  @trial1
 Scenario: UAT_M7_02-01-UAT_M7_02-02-Verify the Process of Allocate Cash Till
 Given User navigates to the login page
-When Enters the username "userb" and password "Passw0rd" to login
+When Enters the username "cchisala" and password "Passw0rd" to login
 Then User should be logged in 
 Given navigate to Revenue Collection>>Cash Till Maintenance
 When clicks on Request Cash Till button
@@ -26,7 +26,7 @@ Then Application Account Adjustment status should be "Approved"
  @trial1
 Scenario Outline: Cash Till Status Open
 Given User navigates to the login page
-When Enters the username "userb" and password "Passw0rd" to login
+When Enters the username "cchisala" and password "Passw0rd" to login
 Then User should be logged in 
 Given navigate to Revenue Collection>>Cash Till Maintenance
 When enters approved ref number
@@ -51,7 +51,7 @@ Examples:
  @trial1
 Scenario: UAT_M7_02-03-Verify the Process Supervisor Rejection
 Given User navigates to the login page
-When Enters the username "userb" and password "Passw0rd" to login
+When Enters the username "cchisala" and password "Passw0rd" to login
 Then User should be logged in 
 Given navigate to Revenue Collection>>Cash Till Maintenance
 When clicks on Request Cash Till button
@@ -80,7 +80,7 @@ Examples:
  @trial1
 Scenario: UAT_M7_02-04-Verify the Process Float Not Added
 Given User navigates to the login page
-When Enters the username "userb" and password "Passw0rd" to login
+When Enters the username "cchisala" and password "Passw0rd" to login
 Then User should be logged in 
 Given navigate to Revenue Collection>>Cash Till Maintenance
 When clicks on Request Cash Till button
@@ -103,7 +103,7 @@ Then Application Account Adjustment status should be "Approved"
  @trial1
 Scenario Outline: Cash Till Status Open Error
 Given User navigates to the login page
-When Enters the username "userb" and password "Passw0rd" to login
+When Enters the username "cchisala" and password "Passw0rd" to login
 Then User should be logged in 
 Given navigate to Revenue Collection>>Cash Till Maintenance
 When enters approved ref number

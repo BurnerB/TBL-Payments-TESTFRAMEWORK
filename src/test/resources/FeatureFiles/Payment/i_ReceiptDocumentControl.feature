@@ -5,7 +5,8 @@ Given User navigates to the login page
 When Enters the username "usera" and password "Passw0rd" to login
 Then User should be logged in
 
-@SUC:05-09
+#@SUC:05-09
+ @trial2
 Scenario Outline: UAT_M7_09-01-UAT_M7_09-02-Verify the Process of Receipt Document Control
 Given navigate to  Revenue Collection>>Receipt Document Control
 When enters Receipt Document Control <Cash OfficeNo> and <Receipt Number From> and <Receipt Number To> and <Distribution Status>
@@ -16,9 +17,10 @@ Then The System saves the updated Receipt Document record
 #increment the reciept Number -To after every successful run
 Examples:
 |Cash OfficeNo	|Receipt Number From|Receipt Number To|Distribution Status|
-|2|0					  |1     			  |In Stock|
+|1|0					  |1    			  |In Stock|
 
-@SUC:05-09
+#@SUC:05-09
+ @trial2
 Scenario Outline: UAT_M7_09-03-Verify the Process Unusable Receipts
 Given navigate to  Revenue Collection>>Receipt Document Control
 When enters Receipt Document Control <Cash OfficeNo> and <Receipt Number - From> and <Receipt Number - To> and <Distribution Status>
@@ -29,10 +31,11 @@ Then The System saves the updated Receipt Document record
 #increment the reciept Number -To after every successful run
 Examples:
 |Cash OfficeNo	|Receipt Number - From|Receipt Number - To|Distribution Status|
-|2|0					  |1      			  |Lost|
+|1|2					  |3      			  |Lost|
 
 
-@SUC:05-09
+#@SUC:05-09
+ @trial2
 Scenario Outline: UAT_M7_09-04-Verify the Process of Validation Failure
 Given navigate to  Revenue Collection>>Receipt Document Control
 When enters Receipt Document Control <Cash OfficeNo> and <Distribution Status> leaving other blank
@@ -45,7 +48,7 @@ Examples:
 |Cash OfficeNo	|Distribution Status|
 |1		|In Stock|
 
-@SUC:05-09
+ @trial2
 Scenario Outline: UAT_M7_09-05-Verify the Process of Issue Receipts To Cashier
 Given navigate to  Revenue Collection>>Receipt Document Control
 When enters Receipt Document Control <Cash OfficeNo> and <Receipt Number - From> and <Receipt Number - To> and <Distribution Status>
@@ -57,9 +60,10 @@ Then The System saves the updated Receipt Document record
 #increment the reciept Number -To after every successful run
 Examples:
 |Cash OfficeNo	|Receipt Number - From|Receipt Number - To|Distribution Status|Cash Office2|
-|2	|2					  |3      			  |Issued|c|
+|1	|4					  |5     			  |Issued|c|
 
- @SUC:05-09
+# @SUC:05-09
+  @trial2
 Scenario Outline: UAT_M7_09-06-Verify the Process of Issue Receipts To Cash officer
 Given navigate to  Revenue Collection>>Receipt Document Control
 When enters Receipt Document Control <Cash OfficeNo> and <Receipt Number - From> and <Receipt Number - To> and <Distribution Status>
@@ -71,10 +75,11 @@ Then The System saves the updated Receipt Document record
 #increment the reciept Number -To after every successful run
 Examples:
 |Cash OfficeNo	|Receipt Number - From|Receipt Number - To|Distribution Status|Cash Officer|
-|2	|2					  |3      			  |Issued|userb|
+|1	|3					  |4      			  |Issued|userb|
 
 
-@SUC:05-09
+#@SUC:05-09
+ @trial2
 Scenario Outline: UAT_M7_09-07-Verify the Process of Cash Office Receipt
 Given navigate to  Revenue Collection>>Receipt Document Control
 When enters Receipt Document Control <Cash OfficeNo> and <Receipt Number - From> and <Receipt Number - To> and <Distribution Status>
@@ -85,6 +90,6 @@ Then The System saves the updated Receipt Document record
 #increment the reciept Number -To after every successful run
 Examples:
 |Cash OfficeNo	|Receipt Number - From|Receipt Number - To|Distribution Status|
-|2	|3					  |4     			  |In Stock|
+|1	|0					  |1     			  |In Stock|
 
 

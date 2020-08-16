@@ -5,7 +5,8 @@ Given User navigates to the login page
 When Enters the username "tripsuser" and password "Passw0rd" to login
 Then User should be logged in
 
-@SUC:05-13
+#@SUC:05-13
+ @trial2
 Scenario Outline: UAT_M7_13-01-To verify the process of printing Cashiering Report
 Given navigate to  Reporting>>Reports
 When clicks Cashiering Report
@@ -18,7 +19,8 @@ Examples:
 |Report Name|	downloadpath	|filename|
 |Cashiering Report|	C:\Users\v-bakam\Downloads	|Cashiering Report.pdf|
 
-@SUC:05-13
+#@SUC:05-13
+ @trial2
 Scenario Outline: UAT_M7_13-02-To verify the process of printing Daily Payment Report
 Given navigate to  Reporting>>Reports
 When clicks Daily Payment Report
@@ -32,7 +34,8 @@ Examples:
 |Daily Payment Report|	C:\Users\v-bakam\Downloads	|Daily Payment Report.pdf|
 
 
-@SUC:05-13-
+#@SUC:05-13
+ @trial2
 Scenario Outline: UAT_M7_13-03-To verify the process of printing Bank Lodgement Slip
 Given navigate to Revenue Collection>>Cash Office Daily Control
 When selects Cash Office Name <cfN>
@@ -46,7 +49,8 @@ Examples:
 |cfN|	downloadpath	|filename|
 |Balaka Office3|	C:\Users\v-bakam\Downloads	|BankLodgementSlip.pdf|
 
-@SUC:05-13-
+#@SUC:05-13
+ @trial2
 Scenario Outline: UAT_M7_13-04-To verify the process of printing Unreconciled Till Report
 Given navigate to Revenue Collection>>Cash Office Daily Control
 When selects Cash Office Name <cfN>
@@ -60,7 +64,8 @@ Examples:
 |cfN|	downloadpath	|filename|
 |Balaka Office3|	C:\Users\v-bakam\Downloads	|BankLodgementSlip.pdf|
 
-@SUC:05-13-
+#@SUC:05-13
+ @trial2
 Scenario Outline: UAT_M7_13-05-To verify the process of printing Cash Office Enquiry (Cash Office Summary Report)
 Given navigate to Revenue Collection>>Cash Office Daily Control
 When selects Cash Office Name <cfN>
@@ -72,7 +77,8 @@ Examples:
 |cfN|	downloadpath	|filename|
 |Balaka Office3|	C:\Users\v-bakam\Downloads	|CashOfficeSummary.pdf|
 
-@SUC:05-13
+#@SUC:05-13
+ @trial2
 Scenario Outline: UAT_M7_13-06-To verify the process of printing Receipt Document Summary
 Given navigate to  Reporting>>Reports
 When clicks Receipt Document Summary
@@ -86,7 +92,8 @@ Examples:
 |Receipt Document Summary|	C:\Users\v-bakam\Downloads	|Receipt Document Summary.pdf|
 
 
-@SUC:05-13
+#@SUC:05-13
+ @trial2
 Scenario Outline: UAT_M7_13-07-Print Report Validation Error
 Given navigate to  Reporting>>Reports
 When clicks Receipt Document Summary
@@ -102,7 +109,8 @@ Examples:
 |Receipt Document Summary|	C:\Users\v-bakam\Downloads	|Receipt Document Summary.pdf|
 
 
-@SUC:05-13
+#@SUC:05-13
+ @trial2
 Scenario Outline: UAT_M7_13-08-Abandon Report
 Given navigate to  Reporting>>Reports
 When clicks Cashiering Report

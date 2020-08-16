@@ -3,7 +3,7 @@ Feature: [05-05-01] Suspend Cash Till
   @trial1
 Scenario: UAT_M7_05-01-UAT_M7_05-02-Verify the Process of Suspend Cash Till
   Given User navigates to the login page
-  When Enters the username "userb" and password "Passw0rd" to login
+  When Enters the username "cchisala" and password "Passw0rd" to login
   Then User should be logged in
 Given navigate to Revenue Collection>>Cash Till Maintenance
 When enters approved ref number

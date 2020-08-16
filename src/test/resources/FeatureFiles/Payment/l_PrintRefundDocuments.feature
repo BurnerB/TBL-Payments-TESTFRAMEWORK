@@ -5,7 +5,8 @@ Given User navigates to the login page
 When Enters the username "cashofficer4" and password "Passw0rd" to login
 Then User should be logged in
 
-@SUC:13-11
+#@SUC:13-11
+ @trial2
 Scenario Outline: UAT_M7_14-01-Verify the Process of print Taxpayer documents
 Given navigate to  Revenue Collection>>Receive Payment
 When click on Find Button
@@ -25,7 +26,8 @@ Examples:
 |Taxpayer Classification Type|TIN		|Name of Person Paying|amount|TaxType|Amount Allocated|
 |Individual					 |P0017167	|Geet Hireman		  |100|PAYE	|	1000		|
 
-@SUC:13-11
+#@SUC:13-11
+ @trial2
 Scenario Outline: UAT_M7_14-02-Verify the Process of print Taxpayer documents
 Given navigate to  Revenue Collection>>Receive Payment
 When click on Find Button
@@ -45,7 +47,8 @@ Examples:
 |Taxpayer Classification Type|TIN		|Name of Person Paying|amount|TaxType|Amount Allocated|
 |Individual					 |P0017167	|Geet Hireman		  |100|PAYE	|	1000		|
 
-@SUC:13-11
+#@SUC:13-11
+ @trial2
 Scenario Outline: UAT_M7_14-03-Verify the Process of print Taxpayer documents
 Given navigate to  Revenue Collection>>Receive Payment
 When click on Find Button

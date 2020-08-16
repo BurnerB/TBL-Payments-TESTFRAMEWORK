@@ -5,7 +5,8 @@ Given User navigates to the login page
 When Enters the username "tripsuser" and password "Passw0rd" to login
 Then User should be logged in
 
-@SUC:05-19
+#@SUC:05-19
+ @trial2
 Scenario Outline: UAT_M7_19-01-UAT_M7_19-02-Verify the Process of Payment Bulk Upload
 Given navigate Revenue Collection>>Bulk Payment
 When user clicks on browse button
@@ -15,9 +16,10 @@ And Then click Save Button on upload
 
 Examples:
 |path|
-|C:\Users\v-bakam\IdeaProjects\BazePayments\src\test\resources\Bulk Upload Template.csv|
+|C:\Users\v-bakam\Downloads\Bulk Upload Template.csv|
 
-@SUC:05-19
+#@SUC:05-19
+ @trial2
 Scenario Outline: UAT_M7_19-03-Verify the Process of Payment Bulk Upload
 Given navigate Revenue Collection>>Bulk Payment
 When user clicks on browse button
@@ -27,4 +29,4 @@ And Then click Save Button on upload
 
 Examples:
 |path|
-|C:\Users\v-bakam\IdeaProjects\BazePayments\src\test\resources\test.PNG|
+|C:\Users\v-bakam\Downloads\id_doc.png|

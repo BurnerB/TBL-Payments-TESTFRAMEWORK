@@ -713,7 +713,7 @@ public class stepDefinitions extends BaseClass{
     
     @Then("^Payment Summary window displayed (.+)$")
     public void payment_summary_window_displayed(String tin) throws Throwable {
-    	driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+//    	driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
     	Thread.sleep(8000);
         String paymentSummaryLabel = driver.findElement(By.id("PaymentSummary:TaxpayerHeader")).getText();
         Assert.assertEquals(paymentSummaryLabel, "Taxpayer Account");
