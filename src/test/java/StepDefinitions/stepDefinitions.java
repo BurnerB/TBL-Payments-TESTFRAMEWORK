@@ -291,7 +291,7 @@ public class stepDefinitions extends BaseClass{
     	//click on the ref number of the specific cash till on the dropdown
     	WebElement refNumber =driver.findElement(By.xpath("//li[@data-label='"+sharedatastep.P_CRMARN+"']"));
 
-//        WebElement refNumber =driver.findElement(By.xpath("//li[@data-label='CT00001801']"));
+//        WebElement refNumber =driver.findElement(By.xpath("//li[@data-label='CT00003021']"));
     	Thread.sleep(2000);
     	refNumber.click();
     }

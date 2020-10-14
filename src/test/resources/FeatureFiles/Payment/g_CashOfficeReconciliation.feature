@@ -65,7 +65,7 @@ Examples:
 
   Examples:
    |cfN|	downloadpath	|filename|
-   |Njanje|	C:\Users\v-bakam\Downloads	|UnreconciledTillReport.pdf|
+   |Njanje|	C:\Users\barnaby.kamau\Downloads	|UnreconciledTillReport.pdf|
 
 #@SUC:05-11
 @trial1
@@ -103,7 +103,7 @@ Then Report download should be generate <downloadpath> and <filename>
 
 Examples:
 |cfN|	downloadpath	|filename|
-|Kenya Q/A|	C:\Users\v-bakam\Downloads	|CashOfficeSummary.pdf|
+|Kenya Q/A|	C:\Users\barnaby.kamau\Downloads	|CashOfficeSummary.pdf|
 
 #@SUC:05-11
 @trial1
@@ -122,7 +122,7 @@ Then Report download should be generate <downloadpath> and <filename>
 
 Examples:
 |cfN|	downloadpath	|filename|
-|Kenya Q/A|	C:\Users\v-bakam\Downloads	|BankLodgementSlip.pdf|
+|Kenya Q/A|	C:\Users\barnaby.kamau\Downloads	|BankLodgementSlip.pdf|
 
 #@SUC:05-11
 @trial1

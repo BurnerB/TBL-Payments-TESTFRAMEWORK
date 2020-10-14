@@ -12,11 +12,11 @@ Given navigate Revenue Collection>>Bulk Payment
 When user clicks on browse button
 And Selects the file to be uploaded <path>
 And Then click Save Button on upload
-#Then message is displayed "Bulk payment process successfully commenced"
+Then message is displayed "Bulk payment process successfully commenced"
 
 Examples:
 |path|
-|C:\Users\v-bakam\Downloads\Bulk Upload Template.csv|
+|C:\Users\barnaby.kamau\Desktop\Bulk Upload Template.csv|
 
 #@SUC:05-19
  @trial2
@@ -25,8 +25,8 @@ Given navigate Revenue Collection>>Bulk Payment
 When user clicks on browse button
 And Selects the file to be uploaded <path>
 And Then click Save Button on upload
-#Then message is displayed "Please upload CSV file only"
+Then message is displayed "Please upload CSV file only"
 
 Examples:
 |path|
-|C:\Users\v-bakam\Downloads\id_doc.png|
+|C:\Users\barnaby.kamau\Desktop\id_doc.png|
