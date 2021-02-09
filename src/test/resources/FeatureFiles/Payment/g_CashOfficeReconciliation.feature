@@ -35,7 +35,7 @@ Examples:
 @trial1
 Scenario Outline: UAT_M5_11-05-Verify the Process of Invalid Data
  Given User navigates to the login page
- When Enters the username "cashsupervisor13" and password "Passw0rd" to login
+ When Enters the username "cashsupervisor10" and password "Passw0rd" to login
  Then User should be logged in
 Given navigate to Revenue Collection>>Cash Office Daily Control
 When selects Cash Office Name <cfN>
@@ -47,13 +47,13 @@ Then message is displayed "Enter Correct Adjustment Amount"
 
 Examples:
 |cfN|
-|Njanje|
+|Jan26Office|
 
 #@SUC:05-11
 @trial1
  Scenario Outline: UAT_M5_11-06-Verify the Process of Unreconciled Report
  Given User navigates to the login page
- When Enters the username "cashsupervisor13" and password "Passw0rd" to login
+ When Enters the username "cashsupervisor10" and password "Passw0rd" to login
  Then User should be logged in
   Given navigate to Revenue Collection>>Cash Office Daily Control
   When selects Cash Office Name <cfN>
@@ -65,13 +65,13 @@ Examples:
 
   Examples:
    |cfN|	downloadpath	|filename|
-   |Njanje|	C:\Users\barnaby.kamau\Downloads	|UnreconciledTillReport.pdf|
+   |Jan26Office|	C:\Users\barnaby.kamau\Downloads	|UnreconciledTillReport.pdf|
 
 #@SUC:05-11
 @trial1
 Scenario Outline: UAT_M5_11-04-Verify the Process of Unreconciled Tills
  Given User navigates to the login page
- When Enters the username "cchisala" and password "Passw0rd" to login
+ When Enters the username "cashofficer3" and password "Passw0rd" to login
  Then User should be logged in
 Given navigate to Revenue Collection>>Cash Office Daily Control
 When selects Cash Office Name <cfN>
@@ -84,7 +84,7 @@ Then clicks on Save Button
 
 Examples:
 |cfN|Adjustment Reason|
-|Kenya Q/A|Calculation Error|
+|Jan26Office|Calculation Error|
 
 
 
@@ -92,7 +92,7 @@ Examples:
 @trial1
 Scenario Outline: UAT_M5_11-07-Verify the Process of Cash Office Summary Report
  Given User navigates to the login page
- When Enters the username "cchisala" and password "Passw0rd" to login
+ When Enters the username "tripsuser" and password "Passw0rd" to login
  Then User should be logged in
 Given navigate to Revenue Collection>>Cash Office Daily Control
 When selects Cash Office Name <cfN>
@@ -103,17 +103,16 @@ Then Report download should be generate <downloadpath> and <filename>
 
 Examples:
 |cfN|	downloadpath	|filename|
-|Kenya Q/A|	C:\Users\barnaby.kamau\Downloads	|CashOfficeSummary.pdf|
+|Balaka Office3|	C:\Users\barnaby.kamau\Downloads	|CashOfficeSummary.pdf|
 
 #@SUC:05-11
 @trial1
 Scenario Outline: UAT_M5_11-08-Verify the Process of Bank Lodgement Report
  Given User navigates to the login page
- When Enters the username "cchisala" and password "Passw0rd" to login
+ When Enters the username "tripsuser" and password "Passw0rd" to login
  Then User should be logged in
 Given navigate to Revenue Collection>>Cash Office Daily Control
 When selects Cash Office Name <cfN>
-And clicks Open Cash Office
 And clicks reconcile Cash Office
 And clicks Generate Bank Lodgement Report button
 #Then message is displayed "CashTills have been detected for this Cash Office"
@@ -122,13 +121,13 @@ Then Report download should be generate <downloadpath> and <filename>
 
 Examples:
 |cfN|	downloadpath	|filename|
-|Kenya Q/A|	C:\Users\barnaby.kamau\Downloads	|BankLodgementSlip.pdf|
+|Balaka Office3|	C:\Users\barnaby.kamau\Downloads	|BankLodgementSlip.pdf|
 
 #@SUC:05-11
 @trial1
 Scenario Outline: UAT_M5_15-01-UAT_M5_15-02-Verify the Process of Open a Cash Office
  Given User navigates to the login page
- When Enters the username "cchisala" and password "Passw0rd" to login
+ When Enters the username "tripsuser" and password "Passw0rd" to login
  Then User should be logged in
  Given navigate to Revenue Collection>>Cash Office Daily Control
  When selects Cash Office Name <cfN>
@@ -137,4 +136,4 @@ Scenario Outline: UAT_M5_15-01-UAT_M5_15-02-Verify the Process of Open a Cash Of
 
  Examples:
   |cfN|
-  |Kenya Q/A|
+  |Balaka Office3|

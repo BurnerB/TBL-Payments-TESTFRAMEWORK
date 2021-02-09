@@ -3,7 +3,7 @@ Feature: [SUC:05-02] Allocate New Cash Till
   @trial1
   Scenario: UAT_M7_02-01-UAT_M7_02-02-Verify the Process of Allocate Cash Till
     Given User navigates to the login page
-    When Enters the username "cchisala" and password "Passw0rd" to login
+    When Enters the username "cashofficer3" and password "Passw0rd" to login
     Then User should be logged in
     Given navigate to Revenue Collection>>Cash Till Maintenance
     When clicks on Request Cash Till button
@@ -19,6 +19,8 @@ Feature: [SUC:05-02] Allocate New Cash Till
     When enters reference number in search results
     Then switch to frame
     When Click selected Reference Number
+    Then switch to frame1
+    Then Wait for text "Cash Till Reference" to load in frame "WebResource_RevenueCollectionApplicationAngular"
     And clicks Approve from the dropdown
     And click save on Payments
     Then Application Account Adjustment status should be "Approved"
@@ -26,7 +28,7 @@ Feature: [SUC:05-02] Allocate New Cash Till
   @trial1
   Scenario Outline: Cash Till Status Open
     Given User navigates to the login page
-    When Enters the username "cchisala" and password "Passw0rd" to login
+    When Enters the username "cashofficer3" and password "Passw0rd" to login
     Then User should be logged in
     Given navigate to Revenue Collection>>Cash Till Maintenance
     When enters approved ref number
@@ -51,7 +53,7 @@ Feature: [SUC:05-02] Allocate New Cash Till
   @trial1
   Scenario: UAT_M7_02-03-Verify the Process Supervisor Rejection
     Given User navigates to the login page
-    When Enters the username "cchisala" and password "Passw0rd" to login
+    When Enters the username "cashofficer3" and password "Passw0rd" to login
     Then User should be logged in
     Given navigate to Revenue Collection>>Cash Till Maintenance
     When clicks on Request Cash Till button
@@ -67,6 +69,8 @@ Feature: [SUC:05-02] Allocate New Cash Till
     When enters reference number in search results
     Then switch to frame
     When Click selected Reference Number
+    Then switch to frame1
+    Then Wait for text "Cash Till Reference" to load in frame "WebResource_RevenueCollectionApplicationAngular"
     And clicks Decline from the dropdown
     Then Enter Outcome Notes <Notes>
     And Enter Outcome Reason for Taxpayer accounting
@@ -80,7 +84,7 @@ Feature: [SUC:05-02] Allocate New Cash Till
   @trial1
   Scenario: UAT_M7_02-04-Verify the Process Float Not Added
     Given User navigates to the login page
-    When Enters the username "cchisala" and password "Passw0rd" to login
+    When Enters the username "cashofficer3" and password "Passw0rd" to login
     Then User should be logged in
     Given navigate to Revenue Collection>>Cash Till Maintenance
     When clicks on Request Cash Till button
@@ -96,6 +100,8 @@ Feature: [SUC:05-02] Allocate New Cash Till
     When enters reference number in search results
     Then switch to frame
     When Click selected Reference Number
+    Then switch to frame1
+    Then Wait for text "Cash Till Reference" to load in frame "WebResource_RevenueCollectionApplicationAngular"
     And clicks Approve from the dropdown
     And click save on Payments
     Then Application Account Adjustment status should be "Approved"
@@ -103,7 +109,7 @@ Feature: [SUC:05-02] Allocate New Cash Till
   @trial1
   Scenario Outline: Cash Till Status Open Error
     Given User navigates to the login page
-    When Enters the username "cchisala" and password "Passw0rd" to login
+    When Enters the username "cashofficer3" and password "Passw0rd" to login
     Then User should be logged in
     Given navigate to Revenue Collection>>Cash Till Maintenance
     When enters approved ref number

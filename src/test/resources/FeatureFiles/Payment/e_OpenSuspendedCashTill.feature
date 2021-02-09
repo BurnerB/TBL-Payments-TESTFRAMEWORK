@@ -3,7 +3,7 @@ Feature: [SUC:05-03] Open Suspended Cash Till
   @trial1
   Scenario: UAT_M7_03-01-UAT_M7_03-02-Verify the Process of Suspend Cash Till
     Given User navigates to the login page
-    When Enters the username "cchisala" and password "Passw0rd" to login
+    When Enters the username "cashofficer3" and password "Passw0rd" to login
     Then User should be logged in
     Given navigate to Revenue Collection>>Cash Till Maintenance
     When enters approved ref number
@@ -21,6 +21,8 @@ Feature: [SUC:05-03] Open Suspended Cash Till
     When enters reference number in search results
     Then switch to frame
     When Click selected Reference Number
+    Then switch to frame1
+    Then Wait for text "Cash Till Reference" to load in frame "WebResource_RevenueCollectionApplicationAngular"
     And clicks Approve from the dropdown
     And click save on Payments
     Then Application Account Adjustment status should be "Approved"
@@ -28,7 +30,7 @@ Feature: [SUC:05-03] Open Suspended Cash Till
   @trial1
   Scenario Outline: status set to open
     Given User navigates to the login page
-    When Enters the username "cchisala" and password "Passw0rd" to login
+    When Enters the username "cashofficer3" and password "Passw0rd" to login
     Then User should be logged in
     Given navigate to Revenue Collection>>Cash Till Maintenance
     When enters approved ref number
@@ -41,7 +43,7 @@ Feature: [SUC:05-03] Open Suspended Cash Till
   @trial1
   Scenario: UAT_M7_03-03-Verify the Process of Supervisor rejection
     Given User navigates to the login page
-    When Enters the username "cchisala" and password "Passw0rd" to login
+    When Enters the username "cashofficer3" and password "Passw0rd" to login
     Then User should be logged in
     Given navigate to Revenue Collection>>Cash Till Maintenance
     When enters approved ref number
@@ -61,6 +63,8 @@ Feature: [SUC:05-03] Open Suspended Cash Till
     When enters reference number in search results
     Then switch to frame
     When Click selected Reference Number
+    Then switch to frame1
+    Then Wait for text "Cash Till Reference" to load in frame "WebResource_RevenueCollectionApplicationAngular"
     And clicks Decline from the dropdown
     Then Enter Outcome Notes <Notes>
     And Enter Outcome Reason for Taxpayer accounting
@@ -74,7 +78,7 @@ Feature: [SUC:05-03] Open Suspended Cash Till
   @trial1
   Scenario Outline: status set to suspended
     Given User navigates to the login page
-    When Enters the username "cchisala" and password "Passw0rd" to login
+    When Enters the username "cashofficer3" and password "Passw0rd" to login
     Then User should be logged in
     Given navigate to Revenue Collection>>Cash Till Maintenance
     When enters approved ref number

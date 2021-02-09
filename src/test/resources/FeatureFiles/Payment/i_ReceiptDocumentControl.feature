@@ -6,7 +6,7 @@ Feature: [SUC:05-09] Receipt Document Control
     Then User should be logged in
 
 #@SUC:05-09
-  @trial2
+  @trial3
   Scenario Outline: UAT_M7_09-01-UAT_M7_09-02-Verify the Process of Receipt Document Control
     Given navigate to  Revenue Collection>>Receipt Document Control
     When enters Receipt Document Control <Cash OfficeNo> and <Receipt Number From> and <Receipt Number To> and <Distribution Status>
@@ -20,7 +20,7 @@ Feature: [SUC:05-09] Receipt Document Control
       | 1             | 0                   | 1                 | In Stock            |
 
 #@SUC:05-09
-  @trial2
+  @trial3
   Scenario Outline: UAT_M7_09-03-Verify the Process Unusable Receipts
     Given navigate to  Revenue Collection>>Receipt Document Control
     When enters Receipt Document Control <Cash OfficeNo> and <Receipt Number - From> and <Receipt Number - To> and <Distribution Status>
@@ -35,7 +35,7 @@ Feature: [SUC:05-09] Receipt Document Control
 
 
 #@SUC:05-09
-  @trial2
+  @trial3
   Scenario Outline: UAT_M7_09-04-Verify the Process of Validation Failure
     Given navigate to  Revenue Collection>>Receipt Document Control
     When enters Receipt Document Control <Cash OfficeNo> and <Distribution Status> leaving other blank
@@ -48,7 +48,7 @@ Feature: [SUC:05-09] Receipt Document Control
       | Cash OfficeNo | Distribution Status |
       | 1             | In Stock            |
 
-  @trial2
+  @trial3
   Scenario Outline: UAT_M7_09-05-Verify the Process of Issue Receipts To Cashier
     Given navigate to  Revenue Collection>>Receipt Document Control
     When enters Receipt Document Control <Cash OfficeNo> and <Receipt Number - From> and <Receipt Number - To> and <Distribution Status>
@@ -63,7 +63,7 @@ Feature: [SUC:05-09] Receipt Document Control
       | 1             | 4                     | 5                   | Issued              | c            |
 
 # @SUC:05-09
-  @trial2
+  @trial3
   Scenario Outline: UAT_M7_09-06-Verify the Process of Issue Receipts To Cash officer
     Given navigate to  Revenue Collection>>Receipt Document Control
     When enters Receipt Document Control <Cash OfficeNo> and <Receipt Number - From> and <Receipt Number - To> and <Distribution Status>
@@ -79,7 +79,7 @@ Feature: [SUC:05-09] Receipt Document Control
 
 
 #@SUC:05-09
-  @trial2
+  @trial3
   Scenario Outline: UAT_M7_09-07-Verify the Process of Cash Office Receipt
     Given navigate to  Revenue Collection>>Receipt Document Control
     When enters Receipt Document Control <Cash OfficeNo> and <Receipt Number - From> and <Receipt Number - To> and <Distribution Status>

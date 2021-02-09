@@ -25,7 +25,7 @@ Feature: [SUC:05-16] Reverse Payment
 
     Examples:
       | TIN         | comment                |
-      | MRA00000001 | Genuine miscalculation |
+      | P0017167 | Genuine miscalculation |
 
 
 #@SUC:05-16
