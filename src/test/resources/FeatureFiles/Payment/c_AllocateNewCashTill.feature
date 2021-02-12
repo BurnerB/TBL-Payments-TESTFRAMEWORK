@@ -1,6 +1,6 @@
 Feature: [SUC:05-02] Allocate New Cash Till
 
-  @trial1
+  @trial1--
   Scenario: UAT_M7_02-01-UAT_M7_02-02-Verify the Process of Allocate Cash Till
     Given User navigates to the login page
     When Enters the username "cashofficer3" and password "Passw0rd" to login
@@ -9,7 +9,7 @@ Feature: [SUC:05-02] Allocate New Cash Till
     When clicks on Request Cash Till button
     Then success message displayed
 
-  @trial1
+  @trial1--
   Scenario: Approve Cash Till
     Given Open CRM URL Module
     And Close Popup Window
