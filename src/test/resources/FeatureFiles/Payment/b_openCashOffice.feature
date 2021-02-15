@@ -2,10 +2,10 @@ Feature: [SUC:05-15] Open a Cash Office
  
  Background:
 Given User navigates to the login page
-When Enters the username "cashsupervisor10" and password "Passw0rd" to login
+When Enters the username "cashsupervisor11" and password "Passw0rd" to login
 Then User should be logged in
 
-@trial1--
+@trial1
 Scenario Outline: UAT_M7_02-01-UAT_M7_02-02-Verify the Process of Allocate Cash Till
 Given navigate to Revenue Collection>>Cash Office Daily Control
 When selects Cash Office Name <cfN>
@@ -14,4 +14,4 @@ Then System opens the Cash Office
 
 Examples:
 |cfN|
-|Jan26Office|
+|Nsonkho Revenue Collection Point 1|

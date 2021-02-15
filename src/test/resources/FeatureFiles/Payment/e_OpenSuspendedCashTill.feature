@@ -3,7 +3,7 @@ Feature: [SUC:05-03] Open Suspended Cash Till
   @trial1
   Scenario: UAT_M7_03-01-UAT_M7_03-02-Verify the Process of Suspend Cash Till
     Given User navigates to the login page
-    When Enters the username "cashofficer3" and password "Passw0rd" to login
+    When Enters the username "cashofficer11" and password "Passw0rd" to login
     Then User should be logged in
     Given navigate to Revenue Collection>>Cash Till Maintenance
     When enters approved ref number
@@ -30,7 +30,7 @@ Feature: [SUC:05-03] Open Suspended Cash Till
   @trial1
   Scenario Outline: status set to open
     Given User navigates to the login page
-    When Enters the username "cashofficer3" and password "Passw0rd" to login
+    When Enters the username "cashofficer11" and password "Passw0rd" to login
     Then User should be logged in
     Given navigate to Revenue Collection>>Cash Till Maintenance
     When enters approved ref number
@@ -43,7 +43,7 @@ Feature: [SUC:05-03] Open Suspended Cash Till
   @trial1
   Scenario: UAT_M7_03-03-Verify the Process of Supervisor rejection
     Given User navigates to the login page
-    When Enters the username "cashofficer3" and password "Passw0rd" to login
+    When Enters the username "cashofficer11" and password "Passw0rd" to login
     Then User should be logged in
     Given navigate to Revenue Collection>>Cash Till Maintenance
     When enters approved ref number
@@ -78,7 +78,7 @@ Feature: [SUC:05-03] Open Suspended Cash Till
   @trial1
   Scenario Outline: status set to suspended
     Given User navigates to the login page
-    When Enters the username "cashofficer3" and password "Passw0rd" to login
+    When Enters the username "cashofficer11" and password "Passw0rd" to login
     Then User should be logged in
     Given navigate to Revenue Collection>>Cash Till Maintenance
     When enters approved ref number

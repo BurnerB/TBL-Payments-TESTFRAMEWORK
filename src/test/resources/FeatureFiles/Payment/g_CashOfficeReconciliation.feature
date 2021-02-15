@@ -35,7 +35,7 @@ Examples:
 @trial1
 Scenario Outline: UAT_M5_11-05-Verify the Process of Invalid Data
  Given User navigates to the login page
- When Enters the username "cashsupervisor10" and password "Passw0rd" to login
+ When Enters the username "cashsupervisor11" and password "Passw0rd" to login
  Then User should be logged in
 Given navigate to Revenue Collection>>Cash Office Daily Control
 When selects Cash Office Name <cfN>
@@ -47,13 +47,13 @@ Then message is displayed "Enter Correct Adjustment Amount"
 
 Examples:
 |cfN|
-|Jan26Office|
+|Nsonkho Revenue Collection Point 1|
 
 #@SUC:05-11
 @trial1
  Scenario Outline: UAT_M5_11-06-Verify the Process of Unreconciled Report
  Given User navigates to the login page
- When Enters the username "cashsupervisor10" and password "Passw0rd" to login
+ When Enters the username "cashsupervisor11" and password "Passw0rd" to login
  Then User should be logged in
   Given navigate to Revenue Collection>>Cash Office Daily Control
   When selects Cash Office Name <cfN>
@@ -65,13 +65,13 @@ Examples:
 
   Examples:
    |cfN|	downloadpath	|filename|
-   |Jan26Office|	C:\Users\barnaby.kamau\Downloads	|UnreconciledTillReport.pdf|
+   |Nsonkho Revenue Collection Point 1|	C:\Users\barnaby.kamau\Downloads	|UnreconciledTillReport.pdf|
 
 #@SUC:05-11
 @trial1
 Scenario Outline: UAT_M5_11-04-Verify the Process of Unreconciled Tills
  Given User navigates to the login page
- When Enters the username "cashofficer3" and password "Passw0rd" to login
+ When Enters the username "cashofficer11" and password "Passw0rd" to login
  Then User should be logged in
 Given navigate to Revenue Collection>>Cash Office Daily Control
 When selects Cash Office Name <cfN>
@@ -84,7 +84,7 @@ Then clicks on Save Button
 
 Examples:
 |cfN|Adjustment Reason|
-|Jan26Office|Calculation Error|
+|Nsonkho Revenue Collection Point 1|Calculation Error|
 
 
 
