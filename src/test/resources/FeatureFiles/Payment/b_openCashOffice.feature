@@ -2,7 +2,7 @@ Feature: [SUC:05-15] Open a Cash Office
  
  Background:
 Given User navigates to the login page
-When Enters the username "cashsupervisor11" and password "Passw0rd" to login
+When Enters the username "cashsupervisor29" and password "Passw0rd" to login
 Then User should be logged in
 
 @trial1
@@ -14,4 +14,4 @@ Then System opens the Cash Office
 
 Examples:
 |cfN|
-|Nsonkho Revenue Collection Point 1|
+|Mulanje Cash office|

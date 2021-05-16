@@ -34,7 +34,7 @@ public class Hooks extends BaseClass {
 			  SimpleDateFormat sdf = new SimpleDateFormat("dd.MM.yyyy_hh.mm.ss"); 
 			  Date curDate = new Date(); String strDate = sdf.format(curDate);
 			  File screenshot_with_scenario_name = (((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE));
-			  File destPath=new File("./target/Extent_Reports/Screenshots/" + scenario.getName()+ strDate + ".png");
+			  File destPath=new File("./test-output/Screenshots/" + scenario.getName()+ strDate + ".png");
 			  try { 
 				  FileUtils.copyFile(screenshot_with_scenario_name,destPath); 
 			  } catch (

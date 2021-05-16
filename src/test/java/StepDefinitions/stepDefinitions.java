@@ -137,6 +137,19 @@ public class stepDefinitions extends BaseClass {
 
     }
 
+    @And("^close temp error box$")
+    public void close_temp_error_box() throws Throwable {
+        driver.manage().timeouts().implicitlyWait(5,TimeUnit.SECONDS);
+        WebElement  specificframe= (driver.findElement(By.id("InlineDialog1_Iframe")));
+        driver.switchTo().frame(specificframe);
+        WebElement closeBtn = driver.findElement(By.id("butBegin"));
+        closeBtn.click();
+
+        driver.switchTo().defaultContent();
+
+
+    }
+
     @Then("^System reconciles the Cash Office$")
     public void system_reconciles_the_cash_office() throws Throwable {
         Thread.sleep(4000);

@@ -4,7 +4,7 @@ Feature: [SUC:05-04] Close Cash Till
   @trial1
   Scenario: UAT_M5_04-01-UAT_M5_04-02-Verify the Process of Close Cash Till
     Given User navigates to the login page
-    When Enters the username "cashofficer11" and password "Passw0rd" to login
+    When Enters the username "cashofficer29" and password "Passw0rd" to login
     Then User should be logged in
     Given navigate to Revenue Collection>>Cash Till Maintenance
     When enters approved ref number
@@ -15,6 +15,7 @@ Feature: [SUC:05-04] Close Cash Till
   @trial1
   Scenario: Approve Cash Till
     Given Open CRM URL Module
+
     And Close Popup Window
     And Click on Case management dropdown
     And click on Revenue Collection application
@@ -32,7 +33,7 @@ Feature: [SUC:05-04] Close Cash Till
   @trial1
   Scenario Outline: set status as closed
     Given User navigates to the login page
-    When Enters the username "cashofficer11" and password "Passw0rd" to login
+    When Enters the username "cashofficer29" and password "Passw0rd" to login
     Then User should be logged in
     Given navigate to Revenue Collection>>Cash Till Maintenance
     When enters approved ref number
@@ -49,7 +50,7 @@ Feature: [SUC:05-04] Close Cash Till
 #@SUC:05-11
   Scenario: UAT_M5_04-03-Verify the Process of Cash Till Not Reconciled
     Given User navigates to the login page
-    When Enters the username "cashofficer11" and password "Passw0rd" to login
+    When Enters the username "cashofficer29" and password "Passw0rd" to login
     Then User should be logged in
     Given navigate to Revenue Collection>>Cash Till Maintenance
     When clicks on Request Cash Till button
@@ -76,7 +77,7 @@ Feature: [SUC:05-04] Close Cash Till
 #@SUC:05-11
   Scenario Outline: Cash Till Status Open
     Given User navigates to the login page
-    When Enters the username "cashofficer11" and password "Passw0rd" to login
+    When Enters the username "cashofficer29" and password "Passw0rd" to login
     Then User should be logged in
     Given navigate to Revenue Collection>>Cash Till Maintenance
     When enters approved ref number
@@ -92,7 +93,7 @@ Feature: [SUC:05-04] Close Cash Till
 #@SUC:05-11
   Scenario Outline:unreconciled errors
     Given User navigates to the login page
-    When Enters the username "cashofficer11" and password "Passw0rd" to login
+    When Enters the username "cashofficer29" and password "Passw0rd" to login
     Then User should be logged in
     Given navigate to Revenue Collection>>Cash Till Maintenance
     When enters approved ref number
@@ -109,7 +110,7 @@ Feature: [SUC:05-04] Close Cash Till
 # @SUC:05-11
   Scenario Outline: UAT_M5_04-04-Verify the Process of Cash Till Unreconciled
     Given User navigates to the login page
-    When Enters the username "cashofficer11" and password "Passw0rd" to login
+    When Enters the username "cashofficer29" and password "Passw0rd" to login
     Then User should be logged in
     Given navigate to Revenue Collection>>Cash Till Maintenance
     When enters approved ref number
